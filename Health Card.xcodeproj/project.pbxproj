@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC17E428209A6B6100441627 /* MedicalJournalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC17E427209A6B6100441627 /* MedicalJournalCell.swift */; };
+		EC17E42A209A6B7100441627 /* TreatmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC17E429209A6B7100441627 /* TreatmentCell.swift */; };
+		EC3F8A0B208F80C900F4DC45 /* CustomCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3F8A0A208F80C900F4DC45 /* CustomCalendarCell.swift */; };
+		EC44EE95209F69B00038DC12 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE81209F69AE0038DC12 /* DispatchQueue+Alamofire.swift */; };
+		EC44EE96209F69B00038DC12 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE82209F69AE0038DC12 /* Response.swift */; };
+		EC44EE97209F69B00038DC12 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE83209F69AE0038DC12 /* ParameterEncoding.swift */; };
+		EC44EE98209F69B00038DC12 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE84209F69AE0038DC12 /* SessionDelegate.swift */; };
+		EC44EE99209F69B00038DC12 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE85209F69AE0038DC12 /* SessionManager.swift */; };
+		EC44EE9A209F69B00038DC12 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EE86209F69AE0038DC12 /* Info-tvOS.plist */; };
+		EC44EE9B209F69B00038DC12 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE87209F69AF0038DC12 /* ServerTrustPolicy.swift */; };
+		EC44EE9C209F69B00038DC12 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE88209F69AF0038DC12 /* ResponseSerialization.swift */; };
+		EC44EE9D209F69B00038DC12 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE89209F69AF0038DC12 /* Validation.swift */; };
+		EC44EE9E209F69B00038DC12 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE8A209F69AF0038DC12 /* NetworkReachabilityManager.swift */; };
+		EC44EE9F209F69B00038DC12 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE8B209F69AF0038DC12 /* Alamofire.swift */; };
+		EC44EEA0209F69B00038DC12 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EE8C209F69AF0038DC12 /* Info.plist */; };
+		EC44EEA1209F69B00038DC12 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE8D209F69AF0038DC12 /* Notifications.swift */; };
+		EC44EEA2209F69B00038DC12 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE8E209F69AF0038DC12 /* TaskDelegate.swift */; };
+		EC44EEA3209F69B00038DC12 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE8F209F69B00038DC12 /* MultipartFormData.swift */; };
+		EC44EEA4209F69B00038DC12 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE90209F69B00038DC12 /* Request.swift */; };
+		EC44EEA5209F69B00038DC12 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE91209F69B00038DC12 /* Result.swift */; };
+		EC44EEA6209F69B00038DC12 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE92209F69B00038DC12 /* AFError.swift */; };
+		EC44EEA7209F69B00038DC12 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE93209F69B00038DC12 /* Timeline.swift */; };
+		EC44EEAF209F69C80038DC12 /* Info-watchOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EEA9209F69C70038DC12 /* Info-watchOS.plist */; };
+		EC44EEB0209F69C80038DC12 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EEAA209F69C70038DC12 /* Info-tvOS.plist */; };
+		EC44EEB1209F69C80038DC12 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EEAB209F69C70038DC12 /* SwiftyJSON.swift */; };
+		EC44EEB2209F69C80038DC12 /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EEAC209F69C70038DC12 /* Info-iOS.plist */; };
+		EC44EEB3209F69C80038DC12 /* Info-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EEAD209F69C70038DC12 /* Info-macOS.plist */; };
+		EC497F3B2076EBB30004D01D /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC497F3A2076EBB20004D01D /* CardViewController.swift */; };
+		EC497F3D2076EBC20004D01D /* MedicalJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC497F3C2076EBC20004D01D /* MedicalJournalViewController.swift */; };
+		EC497F3F2076EBCD0004D01D /* TreatmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC497F3E2076EBCD0004D01D /* TreatmentViewController.swift */; };
+		EC497F412076EBDA0004D01D /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC497F402076EBDA0004D01D /* AppointmentViewController.swift */; };
+		EC497F432076EC760004D01D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC497F422076EC760004D01D /* TabBarController.swift */; };
+		EC4AD0BF208E40E300D99FDD /* UICollectionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0AC208E40DD00D99FDD /* UICollectionViewDelegates.swift */; };
+		EC4AD0C0208E40E300D99FDD /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC4AD0AD208E40DE00D99FDD /* Info-tvOS.plist */; };
+		EC4AD0C1208E40E300D99FDD /* InternalActionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0AE208E40DE00D99FDD /* InternalActionFunctions.swift */; };
+		EC4AD0C2208E40E300D99FDD /* JTAppleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0AF208E40DE00D99FDD /* JTAppleCell.swift */; };
+		EC4AD0C3208E40E300D99FDD /* CalendarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0B0208E40DE00D99FDD /* CalendarEnums.swift */; };
+		EC4AD0C4208E40E300D99FDD /* CalendarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0B1208E40DF00D99FDD /* CalendarStructs.swift */; };
+		EC4AD0C5208E40E300D99FDD /* JTAppleCalendarVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0B2208E40DF00D99FDD /* JTAppleCalendarVariables.swift */; };
+		EC4AD0C6208E40E300D99FDD /* InternalQueryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0B3208E40DF00D99FDD /* InternalQueryFunctions.swift */; };
+		EC4AD0C7208E40E300D99FDD /* JTAppleCalendarLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0B4208E40DF00D99FDD /* JTAppleCalendarLayoutProtocol.swift */; };
+		EC4AD0C8208E40E300D99FDD /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC4AD0B5208E40E000D99FDD /* Info-iOS.plist */; };
+		EC4AD0C9208E40E300D99FDD /* JTAppleCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0B7208E40E000D99FDD /* JTAppleCalendarView.swift */; };
+		EC4AD0CA208E40E300D99FDD /* JTAppleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0B8208E40E100D99FDD /* JTAppleCollectionReusableView.swift */; };
+		EC4AD0CB208E40E300D99FDD /* UserInteractionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0B9208E40E100D99FDD /* UserInteractionFunctions.swift */; };
+		EC4AD0CC208E40E300D99FDD /* JTAppleCalendarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0BA208E40E200D99FDD /* JTAppleCalendarDelegateProtocol.swift */; };
+		EC4AD0CD208E40E300D99FDD /* GlobalFunctionsAndExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0BB208E40E200D99FDD /* GlobalFunctionsAndExtensions.swift */; };
+		EC4AD0CE208E40E300D99FDD /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0BC208E40E200D99FDD /* JTAppleCalendarLayout.swift */; };
+		EC4AD0CF208E40E300D99FDD /* JTCalendarProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0BD208E40E300D99FDD /* JTCalendarProtocols.swift */; };
+		EC4AD0D0208E40E300D99FDD /* UIScrollViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4AD0BE208E40E300D99FDD /* UIScrollViewDelegates.swift */; };
+		EC4F26B8206D50FA00C7AB12 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26A2206D50F900C7AB12 /* IQTextView.swift */; };
+		EC4F26B9206D50FA00C7AB12 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26A4206D50F900C7AB12 /* IQPreviousNextView.swift */; };
+		EC4F26BA206D50FA00C7AB12 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26A5206D50F900C7AB12 /* IQTitleBarButtonItem.swift */; };
+		EC4F26BB206D50FA00C7AB12 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26A6206D50F900C7AB12 /* IQBarButtonItem.swift */; };
+		EC4F26BC206D50FA00C7AB12 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26A7206D50F900C7AB12 /* IQToolbar.swift */; };
+		EC4F26BD206D50FA00C7AB12 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26A8206D50F900C7AB12 /* IQUIView+IQKeyboardToolbar.swift */; };
+		EC4F26BE206D50FA00C7AB12 /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26A9206D50F900C7AB12 /* IQInvocation.swift */; };
+		EC4F26BF206D50FA00C7AB12 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26AB206D50F900C7AB12 /* IQKeyboardManagerConstantsInternal.swift */; };
+		EC4F26C0206D50FA00C7AB12 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26AC206D50F900C7AB12 /* IQKeyboardManagerConstants.swift */; };
+		EC4F26C1206D50FA00C7AB12 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EC4F26AE206D50F900C7AB12 /* IQKeyboardManager.bundle */; };
+		EC4F26C2206D50FA00C7AB12 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26AF206D50F900C7AB12 /* IQKeyboardReturnKeyHandler.swift */; };
+		EC4F26C3206D50FA00C7AB12 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26B0206D50F900C7AB12 /* IQKeyboardManager.swift */; };
+		EC4F26C4206D50FA00C7AB12 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26B3206D50F900C7AB12 /* IQUIScrollView+Additions.swift */; };
+		EC4F26C5206D50FA00C7AB12 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26B4206D50F900C7AB12 /* IQUIViewController+Additions.swift */; };
+		EC4F26C6206D50FA00C7AB12 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26B5206D50F900C7AB12 /* IQUITextFieldView+Additions.swift */; };
+		EC4F26C7206D50FA00C7AB12 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26B6206D50F900C7AB12 /* IQUIView+Hierarchy.swift */; };
+		EC4F26C8206D50FA00C7AB12 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F26B7206D50F900C7AB12 /* IQNSArray+Sort.swift */; };
+		EC5A8F49207663EB00711B57 /* UIStoryboardSegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A8F48207663EB00711B57 /* UIStoryboardSegueFromRight.swift */; };
+		EC5A8F4B2076654B00711B57 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A8F4A2076654B00711B57 /* InitialViewController.swift */; };
+		EC5A8F4D2076666500711B57 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A8F4C2076666500711B57 /* PasswordViewController.swift */; };
+		EC5A8F4F2076667100711B57 /* NemIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A8F4E2076667100711B57 /* NemIDViewController.swift */; };
+		EC5A8F512076679D00711B57 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A8F502076679D00711B57 /* AboutViewController.swift */; };
+		EC63778E205B28A000CB91A4 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC63778D205B28A000CB91A4 /* VideoViewController.swift */; };
+		EC637790205B2CD500CB91A4 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC63778F205B2CD500CB91A4 /* DesignableUITextField.swift */; };
+		EC637792205BDB5B00CB91A4 /* nurse.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EC637791205BDB5B00CB91A4 /* nurse.mp4 */; };
+		EC637794205C234100CB91A4 /* MMSlidingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC637793205C234100CB91A4 /* MMSlidingButton.swift */; };
+		EC7D10E9205AF2BF00779343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7D10E8205AF2BF00779343 /* AppDelegate.swift */; };
+		EC7D10EE205AF2BF00779343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7D10EC205AF2BF00779343 /* Main.storyboard */; };
+		EC7D10F0205AF2BF00779343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC7D10EF205AF2BF00779343 /* Assets.xcassets */; };
+		EC7D10F3205AF2BF00779343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7D10F1205AF2BF00779343 /* LaunchScreen.storyboard */; };
+		EC7E9A5C205B21B9002D8D25 /* BackgroundVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7E9A5B205B21B9002D8D25 /* BackgroundVideo.swift */; };
+		EC7E9A5F205B22A5002D8D25 /* videoDoctor.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EC7E9A5E205B22A5002D8D25 /* videoDoctor.mp4 */; };
+		ECF70DA620911B67002B38A9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF70DA520911B67002B38A9 /* UIColorExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC17E427209A6B6100441627 /* MedicalJournalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalJournalCell.swift; sourceTree = "<group>"; };
+		EC17E429209A6B7100441627 /* TreatmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentCell.swift; sourceTree = "<group>"; };
+		EC3F8A0A208F80C900F4DC45 /* CustomCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendarCell.swift; sourceTree = "<group>"; };
+		EC44EE81209F69AE0038DC12 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		EC44EE82209F69AE0038DC12 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		EC44EE83209F69AE0038DC12 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		EC44EE84209F69AE0038DC12 /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		EC44EE85209F69AE0038DC12 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		EC44EE86209F69AE0038DC12 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		EC44EE87209F69AF0038DC12 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		EC44EE88209F69AF0038DC12 /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
+		EC44EE89209F69AF0038DC12 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		EC44EE8A209F69AF0038DC12 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		EC44EE8B209F69AF0038DC12 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		EC44EE8C209F69AF0038DC12 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC44EE8D209F69AF0038DC12 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		EC44EE8E209F69AF0038DC12 /* TaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
+		EC44EE8F209F69B00038DC12 /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		EC44EE90209F69B00038DC12 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		EC44EE91209F69B00038DC12 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		EC44EE92209F69B00038DC12 /* AFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
+		EC44EE93209F69B00038DC12 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		EC44EE94209F69B00038DC12 /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
+		EC44EEA9209F69C70038DC12 /* Info-watchOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
+		EC44EEAA209F69C70038DC12 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		EC44EEAB209F69C70038DC12 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		EC44EEAC209F69C70038DC12 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		EC44EEAD209F69C70038DC12 /* Info-macOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
+		EC44EEAE209F69C70038DC12 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		EC497F3A2076EBB20004D01D /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		EC497F3C2076EBC20004D01D /* MedicalJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalJournalViewController.swift; sourceTree = "<group>"; };
+		EC497F3E2076EBCD0004D01D /* TreatmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentViewController.swift; sourceTree = "<group>"; };
+		EC497F402076EBDA0004D01D /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		EC497F422076EC760004D01D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EC4AD0AC208E40DD00D99FDD /* UICollectionViewDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewDelegates.swift; sourceTree = "<group>"; };
+		EC4AD0AD208E40DE00D99FDD /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		EC4AD0AE208E40DE00D99FDD /* InternalActionFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalActionFunctions.swift; sourceTree = "<group>"; };
+		EC4AD0AF208E40DE00D99FDD /* JTAppleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTAppleCell.swift; sourceTree = "<group>"; };
+		EC4AD0B0208E40DE00D99FDD /* CalendarEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEnums.swift; sourceTree = "<group>"; };
+		EC4AD0B1208E40DF00D99FDD /* CalendarStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarStructs.swift; sourceTree = "<group>"; };
+		EC4AD0B2208E40DF00D99FDD /* JTAppleCalendarVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarVariables.swift; sourceTree = "<group>"; };
+		EC4AD0B3208E40DF00D99FDD /* InternalQueryFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalQueryFunctions.swift; sourceTree = "<group>"; };
+		EC4AD0B4208E40DF00D99FDD /* JTAppleCalendarLayoutProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarLayoutProtocol.swift; sourceTree = "<group>"; };
+		EC4AD0B5208E40E000D99FDD /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		EC4AD0B6208E40E000D99FDD /* JTAppleCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTAppleCalendar.h; sourceTree = "<group>"; };
+		EC4AD0B7208E40E000D99FDD /* JTAppleCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarView.swift; sourceTree = "<group>"; };
+		EC4AD0B8208E40E100D99FDD /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTAppleCollectionReusableView.swift; sourceTree = "<group>"; };
+		EC4AD0B9208E40E100D99FDD /* UserInteractionFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractionFunctions.swift; sourceTree = "<group>"; };
+		EC4AD0BA208E40E200D99FDD /* JTAppleCalendarDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarDelegateProtocol.swift; sourceTree = "<group>"; };
+		EC4AD0BB208E40E200D99FDD /* GlobalFunctionsAndExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctionsAndExtensions.swift; sourceTree = "<group>"; };
+		EC4AD0BC208E40E200D99FDD /* JTAppleCalendarLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarLayout.swift; sourceTree = "<group>"; };
+		EC4AD0BD208E40E300D99FDD /* JTCalendarProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTCalendarProtocols.swift; sourceTree = "<group>"; };
+		EC4AD0BE208E40E300D99FDD /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewDelegates.swift; sourceTree = "<group>"; };
+		EC4F26A2206D50F900C7AB12 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
+		EC4F26A4206D50F900C7AB12 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
+		EC4F26A5206D50F900C7AB12 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		EC4F26A6206D50F900C7AB12 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
+		EC4F26A7206D50F900C7AB12 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
+		EC4F26A8206D50F900C7AB12 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		EC4F26A9206D50F900C7AB12 /* IQInvocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQInvocation.swift; sourceTree = "<group>"; };
+		EC4F26AB206D50F900C7AB12 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		EC4F26AC206D50F900C7AB12 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		EC4F26AE206D50F900C7AB12 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		EC4F26AF206D50F900C7AB12 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		EC4F26B0206D50F900C7AB12 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManager.swift; sourceTree = "<group>"; };
+		EC4F26B1206D50F900C7AB12 /* IQKeyboardManagerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerSwift.h; sourceTree = "<group>"; };
+		EC4F26B3206D50F900C7AB12 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		EC4F26B4206D50F900C7AB12 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		EC4F26B5206D50F900C7AB12 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		EC4F26B6206D50F900C7AB12 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		EC4F26B7206D50F900C7AB12 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		EC5A8F48207663EB00711B57 /* UIStoryboardSegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardSegueFromRight.swift; sourceTree = "<group>"; };
+		EC5A8F4A2076654B00711B57 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		EC5A8F4C2076666500711B57 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		EC5A8F4E2076667100711B57 /* NemIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NemIDViewController.swift; sourceTree = "<group>"; };
+		EC5A8F502076679D00711B57 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		EC63778D205B28A000CB91A4 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		EC63778F205B2CD500CB91A4 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		EC637791205BDB5B00CB91A4 /* nurse.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nurse.mp4; sourceTree = "<group>"; };
+		EC637793205C234100CB91A4 /* MMSlidingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSlidingButton.swift; sourceTree = "<group>"; };
+		EC7D10E5205AF2BF00779343 /* Health Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC7D10E8205AF2BF00779343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC7D10ED205AF2BF00779343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC7D10EF205AF2BF00779343 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC7D10F2205AF2BF00779343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC7D10F4205AF2BF00779343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC7E9A5B205B21B9002D8D25 /* BackgroundVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundVideo.swift; sourceTree = "<group>"; };
+		EC7E9A5E205B22A5002D8D25 /* videoDoctor.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoDoctor.mp4; sourceTree = "<group>"; };
+		ECF70DA520911B67002B38A9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = "Health Card/Custom elements/UIColorExtension.swift"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC7D10E2205AF2BF00779343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC17E424209A6A5200441627 /* Login Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EC5A8F4A2076654B00711B57 /* InitialViewController.swift */,
+				EC5A8F502076679D00711B57 /* AboutViewController.swift */,
+				EC5A8F4C2076666500711B57 /* PasswordViewController.swift */,
+				EC5A8F4E2076667100711B57 /* NemIDViewController.swift */,
+			);
+			path = "Login Screens";
+			sourceTree = "<group>";
+		};
+		EC17E425209A6A7300441627 /* Main Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EC497F422076EC760004D01D /* TabBarController.swift */,
+				EC497F3A2076EBB20004D01D /* CardViewController.swift */,
+				EC497F3C2076EBC20004D01D /* MedicalJournalViewController.swift */,
+				EC497F3E2076EBCD0004D01D /* TreatmentViewController.swift */,
+				EC497F402076EBDA0004D01D /* AppointmentViewController.swift */,
+			);
+			path = "Main Screens";
+			sourceTree = "<group>";
+		};
+		EC17E426209A6AC100441627 /* Custom elements */ = {
+			isa = PBXGroup;
+			children = (
+				EC44EEA8209F69B40038DC12 /* SwiftyJSON */,
+				EC44EE80209F69A20038DC12 /* Alamofire */,
+				EC5A8F48207663EB00711B57 /* UIStoryboardSegueFromRight.swift */,
+				ECF70DA520911B67002B38A9 /* UIColorExtension.swift */,
+				EC63778F205B2CD500CB91A4 /* DesignableUITextField.swift */,
+				EC637793205C234100CB91A4 /* MMSlidingButton.swift */,
+				EC7E9A5B205B21B9002D8D25 /* BackgroundVideo.swift */,
+				EC63778D205B28A000CB91A4 /* VideoViewController.swift */,
+				EC3F8A0A208F80C900F4DC45 /* CustomCalendarCell.swift */,
+				EC17E427209A6B6100441627 /* MedicalJournalCell.swift */,
+				EC17E429209A6B7100441627 /* TreatmentCell.swift */,
+			);
+			path = "Custom elements";
+			sourceTree = "<group>";
+		};
+		EC44EE80209F69A20038DC12 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				EC44EE92209F69B00038DC12 /* AFError.swift */,
+				EC44EE94209F69B00038DC12 /* Alamofire.h */,
+				EC44EE8B209F69AF0038DC12 /* Alamofire.swift */,
+				EC44EE81209F69AE0038DC12 /* DispatchQueue+Alamofire.swift */,
+				EC44EE86209F69AE0038DC12 /* Info-tvOS.plist */,
+				EC44EE8C209F69AF0038DC12 /* Info.plist */,
+				EC44EE8F209F69B00038DC12 /* MultipartFormData.swift */,
+				EC44EE8A209F69AF0038DC12 /* NetworkReachabilityManager.swift */,
+				EC44EE8D209F69AF0038DC12 /* Notifications.swift */,
+				EC44EE83209F69AE0038DC12 /* ParameterEncoding.swift */,
+				EC44EE90209F69B00038DC12 /* Request.swift */,
+				EC44EE82209F69AE0038DC12 /* Response.swift */,
+				EC44EE88209F69AF0038DC12 /* ResponseSerialization.swift */,
+				EC44EE91209F69B00038DC12 /* Result.swift */,
+				EC44EE87209F69AF0038DC12 /* ServerTrustPolicy.swift */,
+				EC44EE84209F69AE0038DC12 /* SessionDelegate.swift */,
+				EC44EE85209F69AE0038DC12 /* SessionManager.swift */,
+				EC44EE8E209F69AF0038DC12 /* TaskDelegate.swift */,
+				EC44EE93209F69B00038DC12 /* Timeline.swift */,
+				EC44EE89209F69AF0038DC12 /* Validation.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		EC44EEA8209F69B40038DC12 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				EC44EEAC209F69C70038DC12 /* Info-iOS.plist */,
+				EC44EEAD209F69C70038DC12 /* Info-macOS.plist */,
+				EC44EEAA209F69C70038DC12 /* Info-tvOS.plist */,
+				EC44EEA9209F69C70038DC12 /* Info-watchOS.plist */,
+				EC44EEAE209F69C70038DC12 /* SwiftyJSON.h */,
+				EC44EEAB209F69C70038DC12 /* SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		EC4AD0AB208E40D100D99FDD /* JTAppleCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				EC4AD0B0208E40DE00D99FDD /* CalendarEnums.swift */,
+				EC4AD0B1208E40DF00D99FDD /* CalendarStructs.swift */,
+				EC4AD0BB208E40E200D99FDD /* GlobalFunctionsAndExtensions.swift */,
+				EC4AD0B5208E40E000D99FDD /* Info-iOS.plist */,
+				EC4AD0AD208E40DE00D99FDD /* Info-tvOS.plist */,
+				EC4AD0AE208E40DE00D99FDD /* InternalActionFunctions.swift */,
+				EC4AD0B3208E40DF00D99FDD /* InternalQueryFunctions.swift */,
+				EC4AD0B6208E40E000D99FDD /* JTAppleCalendar.h */,
+				EC4AD0BA208E40E200D99FDD /* JTAppleCalendarDelegateProtocol.swift */,
+				EC4AD0BC208E40E200D99FDD /* JTAppleCalendarLayout.swift */,
+				EC4AD0B4208E40DF00D99FDD /* JTAppleCalendarLayoutProtocol.swift */,
+				EC4AD0B2208E40DF00D99FDD /* JTAppleCalendarVariables.swift */,
+				EC4AD0B7208E40E000D99FDD /* JTAppleCalendarView.swift */,
+				EC4AD0AF208E40DE00D99FDD /* JTAppleCell.swift */,
+				EC4AD0B8208E40E100D99FDD /* JTAppleCollectionReusableView.swift */,
+				EC4AD0BD208E40E300D99FDD /* JTCalendarProtocols.swift */,
+				EC4AD0AC208E40DD00D99FDD /* UICollectionViewDelegates.swift */,
+				EC4AD0BE208E40E300D99FDD /* UIScrollViewDelegates.swift */,
+				EC4AD0B9208E40E100D99FDD /* UserInteractionFunctions.swift */,
+			);
+			path = JTAppleCalendar;
+			sourceTree = "<group>";
+		};
+		EC4F26A0206D50F900C7AB12 /* IQKeyboardManagerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				EC4F26A1206D50F900C7AB12 /* IQTextView */,
+				EC4F26A3206D50F900C7AB12 /* IQToolbar */,
+				EC4F26AA206D50F900C7AB12 /* Constants */,
+				EC4F26AD206D50F900C7AB12 /* Resources */,
+				EC4F26AF206D50F900C7AB12 /* IQKeyboardReturnKeyHandler.swift */,
+				EC4F26B0206D50F900C7AB12 /* IQKeyboardManager.swift */,
+				EC4F26B1206D50F900C7AB12 /* IQKeyboardManagerSwift.h */,
+				EC4F26B2206D50F900C7AB12 /* Categories */,
+			);
+			path = IQKeyboardManagerSwift;
+			sourceTree = "<group>";
+		};
+		EC4F26A1206D50F900C7AB12 /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				EC4F26A2206D50F900C7AB12 /* IQTextView.swift */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		EC4F26A3206D50F900C7AB12 /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				EC4F26A4206D50F900C7AB12 /* IQPreviousNextView.swift */,
+				EC4F26A5206D50F900C7AB12 /* IQTitleBarButtonItem.swift */,
+				EC4F26A6206D50F900C7AB12 /* IQBarButtonItem.swift */,
+				EC4F26A7206D50F900C7AB12 /* IQToolbar.swift */,
+				EC4F26A8206D50F900C7AB12 /* IQUIView+IQKeyboardToolbar.swift */,
+				EC4F26A9206D50F900C7AB12 /* IQInvocation.swift */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		EC4F26AA206D50F900C7AB12 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EC4F26AB206D50F900C7AB12 /* IQKeyboardManagerConstantsInternal.swift */,
+				EC4F26AC206D50F900C7AB12 /* IQKeyboardManagerConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EC4F26AD206D50F900C7AB12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC4F26AE206D50F900C7AB12 /* IQKeyboardManager.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC4F26B2206D50F900C7AB12 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				EC4F26B3206D50F900C7AB12 /* IQUIScrollView+Additions.swift */,
+				EC4F26B4206D50F900C7AB12 /* IQUIViewController+Additions.swift */,
+				EC4F26B5206D50F900C7AB12 /* IQUITextFieldView+Additions.swift */,
+				EC4F26B6206D50F900C7AB12 /* IQUIView+Hierarchy.swift */,
+				EC4F26B7206D50F900C7AB12 /* IQNSArray+Sort.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		EC7D10DC205AF2BF00779343 = {
+			isa = PBXGroup;
+			children = (
+				EC7D10E7205AF2BF00779343 /* Health Card */,
+				EC7D10E6205AF2BF00779343 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC7D10E6205AF2BF00779343 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC7D10E5205AF2BF00779343 /* Health Card.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC7D10E7205AF2BF00779343 /* Health Card */ = {
+			isa = PBXGroup;
+			children = (
+				EC7D10E8205AF2BF00779343 /* AppDelegate.swift */,
+				EC17E424209A6A5200441627 /* Login Screens */,
+				EC17E425209A6A7300441627 /* Main Screens */,
+				EC17E426209A6AC100441627 /* Custom elements */,
+				EC7D10EC205AF2BF00779343 /* Main.storyboard */,
+				EC7D10EF205AF2BF00779343 /* Assets.xcassets */,
+				EC7D10F1205AF2BF00779343 /* LaunchScreen.storyboard */,
+				EC7D10F4205AF2BF00779343 /* Info.plist */,
+				EC7E9A5D205B21C3002D8D25 /* Additional files */,
+				EC7D10FA205B1B3800779343 /* Frameworks */,
+			);
+			path = "Health Card";
+			sourceTree = "<group>";
+		};
+		EC7D10FA205B1B3800779343 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC4F26A0206D50F900C7AB12 /* IQKeyboardManagerSwift */,
+				EC4AD0AB208E40D100D99FDD /* JTAppleCalendar */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC7E9A5D205B21C3002D8D25 /* Additional files */ = {
+			isa = PBXGroup;
+			children = (
+				EC7E9A5E205B22A5002D8D25 /* videoDoctor.mp4 */,
+				EC637791205BDB5B00CB91A4 /* nurse.mp4 */,
+			);
+			path = "Additional files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC7D10E4205AF2BF00779343 /* Health Card */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC7D10F7205AF2BF00779343 /* Build configuration list for PBXNativeTarget "Health Card" */;
+			buildPhases = (
+				EC7D10E1205AF2BF00779343 /* Sources */,
+				EC7D10E2205AF2BF00779343 /* Frameworks */,
+				EC7D10E3205AF2BF00779343 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Health Card";
+			productName = "Health Card";
+			productReference = EC7D10E5205AF2BF00779343 /* Health Card.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC7D10DD205AF2BF00779343 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Narcis Zait";
+				TargetAttributes = {
+					EC7D10E4205AF2BF00779343 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EC7D10E0205AF2BF00779343 /* Build configuration list for PBXProject "Health Card" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC7D10DC205AF2BF00779343;
+			productRefGroup = EC7D10E6205AF2BF00779343 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC7D10E4205AF2BF00779343 /* Health Card */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC7D10E3205AF2BF00779343 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC44EE9A209F69B00038DC12 /* Info-tvOS.plist in Resources */,
+				EC44EEB2209F69C80038DC12 /* Info-iOS.plist in Resources */,
+				EC7E9A5F205B22A5002D8D25 /* videoDoctor.mp4 in Resources */,
+				EC637792205BDB5B00CB91A4 /* nurse.mp4 in Resources */,
+				EC4AD0C0208E40E300D99FDD /* Info-tvOS.plist in Resources */,
+				EC44EEAF209F69C80038DC12 /* Info-watchOS.plist in Resources */,
+				EC4F26C1206D50FA00C7AB12 /* IQKeyboardManager.bundle in Resources */,
+				EC44EEB0209F69C80038DC12 /* Info-tvOS.plist in Resources */,
+				EC44EEB3209F69C80038DC12 /* Info-macOS.plist in Resources */,
+				EC4AD0C8208E40E300D99FDD /* Info-iOS.plist in Resources */,
+				EC7D10F3205AF2BF00779343 /* LaunchScreen.storyboard in Resources */,
+				EC7D10F0205AF2BF00779343 /* Assets.xcassets in Resources */,
+				EC44EEA0209F69B00038DC12 /* Info.plist in Resources */,
+				EC7D10EE205AF2BF00779343 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC7D10E1205AF2BF00779343 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC4AD0C7208E40E300D99FDD /* JTAppleCalendarLayoutProtocol.swift in Sources */,
+				EC4F26BA206D50FA00C7AB12 /* IQTitleBarButtonItem.swift in Sources */,
+				EC44EEA3209F69B00038DC12 /* MultipartFormData.swift in Sources */,
+				EC497F432076EC760004D01D /* TabBarController.swift in Sources */,
+				EC44EE9B209F69B00038DC12 /* ServerTrustPolicy.swift in Sources */,
+				EC5A8F49207663EB00711B57 /* UIStoryboardSegueFromRight.swift in Sources */,
+				EC4F26BF206D50FA00C7AB12 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				EC637790205B2CD500CB91A4 /* DesignableUITextField.swift in Sources */,
+				EC44EE99209F69B00038DC12 /* SessionManager.swift in Sources */,
+				EC497F3D2076EBC20004D01D /* MedicalJournalViewController.swift in Sources */,
+				EC4F26C7206D50FA00C7AB12 /* IQUIView+Hierarchy.swift in Sources */,
+				EC44EE9E209F69B00038DC12 /* NetworkReachabilityManager.swift in Sources */,
+				EC5A8F4F2076667100711B57 /* NemIDViewController.swift in Sources */,
+				EC4AD0C2208E40E300D99FDD /* JTAppleCell.swift in Sources */,
+				EC7E9A5C205B21B9002D8D25 /* BackgroundVideo.swift in Sources */,
+				EC17E42A209A6B7100441627 /* TreatmentCell.swift in Sources */,
+				EC497F3B2076EBB30004D01D /* CardViewController.swift in Sources */,
+				EC4F26BB206D50FA00C7AB12 /* IQBarButtonItem.swift in Sources */,
+				EC4AD0CD208E40E300D99FDD /* GlobalFunctionsAndExtensions.swift in Sources */,
+				EC4AD0CB208E40E300D99FDD /* UserInteractionFunctions.swift in Sources */,
+				EC63778E205B28A000CB91A4 /* VideoViewController.swift in Sources */,
+				ECF70DA620911B67002B38A9 /* UIColorExtension.swift in Sources */,
+				EC44EE97209F69B00038DC12 /* ParameterEncoding.swift in Sources */,
+				EC3F8A0B208F80C900F4DC45 /* CustomCalendarCell.swift in Sources */,
+				EC4F26BD206D50FA00C7AB12 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				EC44EE98209F69B00038DC12 /* SessionDelegate.swift in Sources */,
+				EC4AD0C1208E40E300D99FDD /* InternalActionFunctions.swift in Sources */,
+				EC44EEA4209F69B00038DC12 /* Request.swift in Sources */,
+				EC4AD0C3208E40E300D99FDD /* CalendarEnums.swift in Sources */,
+				EC4AD0CA208E40E300D99FDD /* JTAppleCollectionReusableView.swift in Sources */,
+				EC44EEA1209F69B00038DC12 /* Notifications.swift in Sources */,
+				EC4F26BC206D50FA00C7AB12 /* IQToolbar.swift in Sources */,
+				EC4AD0C9208E40E300D99FDD /* JTAppleCalendarView.swift in Sources */,
+				EC44EE9C209F69B00038DC12 /* ResponseSerialization.swift in Sources */,
+				EC5A8F512076679D00711B57 /* AboutViewController.swift in Sources */,
+				EC4AD0CE208E40E300D99FDD /* JTAppleCalendarLayout.swift in Sources */,
+				EC4F26B9206D50FA00C7AB12 /* IQPreviousNextView.swift in Sources */,
+				EC4F26C6206D50FA00C7AB12 /* IQUITextFieldView+Additions.swift in Sources */,
+				EC44EE9D209F69B00038DC12 /* Validation.swift in Sources */,
+				EC4F26C2206D50FA00C7AB12 /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				EC17E428209A6B6100441627 /* MedicalJournalCell.swift in Sources */,
+				EC4AD0D0208E40E300D99FDD /* UIScrollViewDelegates.swift in Sources */,
+				EC44EEA2209F69B00038DC12 /* TaskDelegate.swift in Sources */,
+				EC44EE95209F69B00038DC12 /* DispatchQueue+Alamofire.swift in Sources */,
+				EC44EEA7209F69B00038DC12 /* Timeline.swift in Sources */,
+				EC44EE96209F69B00038DC12 /* Response.swift in Sources */,
+				EC4AD0CF208E40E300D99FDD /* JTCalendarProtocols.swift in Sources */,
+				EC4F26C3206D50FA00C7AB12 /* IQKeyboardManager.swift in Sources */,
+				EC4AD0C4208E40E300D99FDD /* CalendarStructs.swift in Sources */,
+				EC4AD0C6208E40E300D99FDD /* InternalQueryFunctions.swift in Sources */,
+				EC4AD0C5208E40E300D99FDD /* JTAppleCalendarVariables.swift in Sources */,
+				EC5A8F4B2076654B00711B57 /* InitialViewController.swift in Sources */,
+				EC44EE9F209F69B00038DC12 /* Alamofire.swift in Sources */,
+				EC5A8F4D2076666500711B57 /* PasswordViewController.swift in Sources */,
+				EC44EEB1209F69C80038DC12 /* SwiftyJSON.swift in Sources */,
+				EC497F3F2076EBCD0004D01D /* TreatmentViewController.swift in Sources */,
+				EC44EEA5209F69B00038DC12 /* Result.swift in Sources */,
+				EC4F26C5206D50FA00C7AB12 /* IQUIViewController+Additions.swift in Sources */,
+				EC44EEA6209F69B00038DC12 /* AFError.swift in Sources */,
+				EC4AD0BF208E40E300D99FDD /* UICollectionViewDelegates.swift in Sources */,
+				EC4AD0CC208E40E300D99FDD /* JTAppleCalendarDelegateProtocol.swift in Sources */,
+				EC4F26BE206D50FA00C7AB12 /* IQInvocation.swift in Sources */,
+				EC497F412076EBDA0004D01D /* AppointmentViewController.swift in Sources */,
+				EC4F26C8206D50FA00C7AB12 /* IQNSArray+Sort.swift in Sources */,
+				EC637794205C234100CB91A4 /* MMSlidingButton.swift in Sources */,
+				EC7D10E9205AF2BF00779343 /* AppDelegate.swift in Sources */,
+				EC4F26C0206D50FA00C7AB12 /* IQKeyboardManagerConstants.swift in Sources */,
+				EC4F26B8206D50FA00C7AB12 /* IQTextView.swift in Sources */,
+				EC4F26C4206D50FA00C7AB12 /* IQUIScrollView+Additions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC7D10EC205AF2BF00779343 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC7D10ED205AF2BF00779343 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC7D10F1205AF2BF00779343 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC7D10F2205AF2BF00779343 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC7D10F5205AF2BF00779343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC7D10F6205AF2BF00779343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC7D10F8205AF2BF00779343 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C5N5BYSRY5;
+				INFOPLIST_FILE = "Health Card/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.narciszait.Health-Card";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EC7D10F9205AF2BF00779343 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C5N5BYSRY5;
+				INFOPLIST_FILE = "Health Card/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.narciszait.Health-Card";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC7D10E0205AF2BF00779343 /* Build configuration list for PBXProject "Health Card" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC7D10F5205AF2BF00779343 /* Debug */,
+				EC7D10F6205AF2BF00779343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC7D10F7205AF2BF00779343 /* Build configuration list for PBXNativeTarget "Health Card" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC7D10F8205AF2BF00779343 /* Debug */,
+				EC7D10F9205AF2BF00779343 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC7D10DD205AF2BF00779343 /* Project object */;
+}
