@@ -15,13 +15,11 @@
 		EC44EE97209F69B00038DC12 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE83209F69AE0038DC12 /* ParameterEncoding.swift */; };
 		EC44EE98209F69B00038DC12 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE84209F69AE0038DC12 /* SessionDelegate.swift */; };
 		EC44EE99209F69B00038DC12 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE85209F69AE0038DC12 /* SessionManager.swift */; };
-		EC44EE9A209F69B00038DC12 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EE86209F69AE0038DC12 /* Info-tvOS.plist */; };
 		EC44EE9B209F69B00038DC12 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE87209F69AF0038DC12 /* ServerTrustPolicy.swift */; };
 		EC44EE9C209F69B00038DC12 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE88209F69AF0038DC12 /* ResponseSerialization.swift */; };
 		EC44EE9D209F69B00038DC12 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE89209F69AF0038DC12 /* Validation.swift */; };
 		EC44EE9E209F69B00038DC12 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE8A209F69AF0038DC12 /* NetworkReachabilityManager.swift */; };
 		EC44EE9F209F69B00038DC12 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE8B209F69AF0038DC12 /* Alamofire.swift */; };
-		EC44EEA0209F69B00038DC12 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EE8C209F69AF0038DC12 /* Info.plist */; };
 		EC44EEA1209F69B00038DC12 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE8D209F69AF0038DC12 /* Notifications.swift */; };
 		EC44EEA2209F69B00038DC12 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE8E209F69AF0038DC12 /* TaskDelegate.swift */; };
 		EC44EEA3209F69B00038DC12 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE8F209F69B00038DC12 /* MultipartFormData.swift */; };
@@ -29,11 +27,7 @@
 		EC44EEA5209F69B00038DC12 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE91209F69B00038DC12 /* Result.swift */; };
 		EC44EEA6209F69B00038DC12 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE92209F69B00038DC12 /* AFError.swift */; };
 		EC44EEA7209F69B00038DC12 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EE93209F69B00038DC12 /* Timeline.swift */; };
-		EC44EEAF209F69C80038DC12 /* Info-watchOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EEA9209F69C70038DC12 /* Info-watchOS.plist */; };
-		EC44EEB0209F69C80038DC12 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EEAA209F69C70038DC12 /* Info-tvOS.plist */; };
 		EC44EEB1209F69C80038DC12 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC44EEAB209F69C70038DC12 /* SwiftyJSON.swift */; };
-		EC44EEB2209F69C80038DC12 /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EEAC209F69C70038DC12 /* Info-iOS.plist */; };
-		EC44EEB3209F69C80038DC12 /* Info-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC44EEAD209F69C70038DC12 /* Info-macOS.plist */; };
 		EC497F3B2076EBB30004D01D /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC497F3A2076EBB20004D01D /* CardViewController.swift */; };
 		EC497F3D2076EBC20004D01D /* MedicalJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC497F3C2076EBC20004D01D /* MedicalJournalViewController.swift */; };
 		EC497F3F2076EBCD0004D01D /* TreatmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC497F3E2076EBCD0004D01D /* TreatmentViewController.swift */; };
@@ -101,13 +95,11 @@
 		EC44EE83209F69AE0038DC12 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		EC44EE84209F69AE0038DC12 /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
 		EC44EE85209F69AE0038DC12 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		EC44EE86209F69AE0038DC12 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		EC44EE87209F69AF0038DC12 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		EC44EE88209F69AF0038DC12 /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
 		EC44EE89209F69AF0038DC12 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		EC44EE8A209F69AF0038DC12 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		EC44EE8B209F69AF0038DC12 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
-		EC44EE8C209F69AF0038DC12 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC44EE8D209F69AF0038DC12 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		EC44EE8E209F69AF0038DC12 /* TaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
 		EC44EE8F209F69B00038DC12 /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
@@ -116,11 +108,7 @@
 		EC44EE92209F69B00038DC12 /* AFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
 		EC44EE93209F69B00038DC12 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		EC44EE94209F69B00038DC12 /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
-		EC44EEA9209F69C70038DC12 /* Info-watchOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
-		EC44EEAA209F69C70038DC12 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		EC44EEAB209F69C70038DC12 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		EC44EEAC209F69C70038DC12 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		EC44EEAD209F69C70038DC12 /* Info-macOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		EC44EEAE209F69C70038DC12 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 		EC497F3A2076EBB20004D01D /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		EC497F3C2076EBC20004D01D /* MedicalJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalJournalViewController.swift; sourceTree = "<group>"; };
@@ -243,8 +231,6 @@
 				EC44EE94209F69B00038DC12 /* Alamofire.h */,
 				EC44EE8B209F69AF0038DC12 /* Alamofire.swift */,
 				EC44EE81209F69AE0038DC12 /* DispatchQueue+Alamofire.swift */,
-				EC44EE86209F69AE0038DC12 /* Info-tvOS.plist */,
-				EC44EE8C209F69AF0038DC12 /* Info.plist */,
 				EC44EE8F209F69B00038DC12 /* MultipartFormData.swift */,
 				EC44EE8A209F69AF0038DC12 /* NetworkReachabilityManager.swift */,
 				EC44EE8D209F69AF0038DC12 /* Notifications.swift */,
@@ -266,10 +252,6 @@
 		EC44EEA8209F69B40038DC12 /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				EC44EEAC209F69C70038DC12 /* Info-iOS.plist */,
-				EC44EEAD209F69C70038DC12 /* Info-macOS.plist */,
-				EC44EEAA209F69C70038DC12 /* Info-tvOS.plist */,
-				EC44EEA9209F69C70038DC12 /* Info-watchOS.plist */,
 				EC44EEAE209F69C70038DC12 /* SwiftyJSON.h */,
 				EC44EEAB209F69C70038DC12 /* SwiftyJSON.swift */,
 			);
@@ -477,19 +459,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC44EE9A209F69B00038DC12 /* Info-tvOS.plist in Resources */,
-				EC44EEB2209F69C80038DC12 /* Info-iOS.plist in Resources */,
 				EC7E9A5F205B22A5002D8D25 /* videoDoctor.mp4 in Resources */,
 				EC637792205BDB5B00CB91A4 /* nurse.mp4 in Resources */,
 				EC4AD0C0208E40E300D99FDD /* Info-tvOS.plist in Resources */,
-				EC44EEAF209F69C80038DC12 /* Info-watchOS.plist in Resources */,
 				EC4F26C1206D50FA00C7AB12 /* IQKeyboardManager.bundle in Resources */,
-				EC44EEB0209F69C80038DC12 /* Info-tvOS.plist in Resources */,
-				EC44EEB3209F69C80038DC12 /* Info-macOS.plist in Resources */,
 				EC4AD0C8208E40E300D99FDD /* Info-iOS.plist in Resources */,
 				EC7D10F3205AF2BF00779343 /* LaunchScreen.storyboard in Resources */,
 				EC7D10F0205AF2BF00779343 /* Assets.xcassets in Resources */,
-				EC44EEA0209F69B00038DC12 /* Info.plist in Resources */,
 				EC7D10EE205AF2BF00779343 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
