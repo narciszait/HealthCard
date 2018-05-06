@@ -16,7 +16,7 @@ class PasswordViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad();
         self.navigationController?.navigationBar.isHidden = false;
-    }
+    } 
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder();
