@@ -11,7 +11,7 @@ import UIKit
 class PasswordViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var cprTextField: UITextField!;
-    @IBOutlet weak var passwordTextField: UITextField!;
+    @IBOutlet weak var passwordTextField: UITextField!; 
     
     override func viewDidLoad() {
         super.viewDidLoad();
