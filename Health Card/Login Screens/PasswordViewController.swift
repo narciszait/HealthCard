@@ -11,7 +11,7 @@ import UIKit
 class PasswordViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var cprTextField: UITextField!;
-    @IBOutlet weak var passwordTextField: UITextField!; 
+    @IBOutlet weak var passwordTextField: UITextField!;
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -33,8 +33,19 @@ class PasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginAction(_ sender: Any) {
-        self.performSegue(withIdentifier: "nemIDSegue", sender: self);
-        print("should next");
+        if (cprTextField.text! == "" || passwordTextField.text! == "") {
+            self.showAlerts(title: "Error", message: "Username and/or password cannot be empty");
+        }
+        else {
+            self.performSegue(withIdentifier: "nemIDSegue", sender: self);
+            print("should next");
+        }
+    }
+    
+    func showAlerts(title: String, message: String) {
+        let alert = UIAlertController(title: "\(title)", message: "\(message)", preferredStyle: UIAlertControllerStyle.alert);
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil));
+        self.present(alert, animated: true, completion: nil);
     }
     
 }
