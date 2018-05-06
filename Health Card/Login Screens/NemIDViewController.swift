@@ -11,6 +11,7 @@ import UIKit
 class NemIDViewController: UIViewController, SlideButtonDelegate {
 
     @IBOutlet weak var slideToLoginButton: MMSlidingButton!;
+    @IBOutlet weak var nemdIDCodeTextField: DesignableUITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,16 +43,5 @@ class NemIDViewController: UIViewController, SlideButtonDelegate {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent;
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -10,8 +10,6 @@ import UIKit
 
 class PasswordViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var cardImageView: UIImageView!;
-    @IBOutlet weak var cardLabel: UILabel!;
     @IBOutlet weak var cprTextField: UITextField!;
     @IBOutlet weak var passwordTextField: UITextField!;
     

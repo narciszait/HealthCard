@@ -381,6 +381,7 @@
                         <barButtonItem key="backBarButtonItem" id="pcX-FR-qnf"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="nemdIDCodeTextField" destination="X85-Tx-E6u" id="Ely-MQ-dg9"/>
                         <outlet property="slideToLoginButton" destination="ufn-8I-Ng1" id="ww5-Pe-GfW"/>
                         <segue destination="VJw-pq-P4x" kind="custom" identifier="showTheMain" customClass="UIStoryboardSegueFromRight" customModule="Health_Card" customModuleProvider="target" id="lDd-0e-kVD"/>
                     </connections>
