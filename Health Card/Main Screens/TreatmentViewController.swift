@@ -11,12 +11,15 @@ import UIKit
 class TreatmentViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var treatmentTableView: UITableView!;
+    var receipts = [Treatment]();
     
     override func viewDidLoad() {
         super.viewDidLoad();
 
         // Do any additional setup after loading the view.
         treatmentTableView.tableFooterView = UIView();
+        let tabBarController = self.tabBarController  as! TabBarController
+        receipts = tabBarController.treatment;
     }
 
     @IBAction func renewSubscription(_ sender: Any) {
@@ -29,14 +32,15 @@ class TreatmentViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1;
+        return receipts.count;
+        //        return 1;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = treatmentTableView.dequeueReusableCell(withIdentifier: "treatmentCell") as! TreatmentCell;
-        cell.medicationLabel.text = "Panodil";
-        cell.takeMedicationEveryLabel.text = " 2 x 8h";
-        cell.endOfPeriodForMedicationLabel.text = " in 5 days";
+        cell.medicationLabel.text = receipts[indexPath.row].medication!
+        cell.takeMedicationEveryLabel.text = receipts[indexPath.row].repeatInterval!;
+        cell.endOfPeriodForMedicationLabel.text = receipts[indexPath.row].endPeriod!;
         return cell;
     }
     

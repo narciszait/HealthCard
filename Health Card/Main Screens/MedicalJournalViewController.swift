@@ -11,23 +11,27 @@ import UIKit
 class MedicalJournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var medicalJournalTableView: UITableView!;
+    var illness = [History]();
     
     override func viewDidLoad() {
         super.viewDidLoad();
 
         // Do any additional setup after loading the view.
         medicalJournalTableView.tableFooterView = UIView();
+        let tabBarController = self.tabBarController  as! TabBarController
+        illness = tabBarController.history;
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1;
+        return illness.count;
+        //        return 1;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = medicalJournalTableView.dequeueReusableCell(withIdentifier: "medicalJournalCell") as! MedicalJournalCell;
-        cell.medicalConditionLabel.text = "Influenza";
-        cell.periodOfTimeLabel.text = "2 weeks";
-        cell.fullyRecoveredLabel.text = "Yes";
+        cell.medicalConditionLabel.text = illness[indexPath.row].diagnostic!;
+        cell.periodOfTimeLabel.text = illness[indexPath.row].period;
+        cell.fullyRecoveredLabel.text = illness[indexPath.row].status;
         return cell;
     }
     

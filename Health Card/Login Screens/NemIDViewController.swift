@@ -39,6 +39,8 @@ class NemIDViewController: UIViewController, SlideButtonDelegate, URLSessionDele
         if let nemdIDCodeIsPresent = nemIDChallenge{
             nemdIDCodeTextField.text = nemdIDCodeIsPresent;
         }
+        
+        nemIdCodeToVerifyTextField.text = "165240";
     }
     
     func buttonStatus(status: String, sender: MMSlidingButton) {

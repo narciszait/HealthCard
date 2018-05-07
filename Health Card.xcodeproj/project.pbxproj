@@ -89,6 +89,10 @@
 		ECE6110D20A0909F003CBE58 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE6110520A0909D003CBE58 /* SVIndefiniteAnimatedView.m */; };
 		ECE6110E20A0909F003CBE58 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE6110820A0909E003CBE58 /* SVProgressAnimatedView.m */; };
 		ECE6110F20A0909F003CBE58 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE6110A20A0909E003CBE58 /* SVProgressHUD.m */; };
+		ECE6111120A0D000003CBE58 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE6111020A0D000003CBE58 /* Patient.swift */; };
+		ECE6111320A0D015003CBE58 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE6111220A0D015003CBE58 /* History.swift */; };
+		ECE6111520A0D020003CBE58 /* Treatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE6111420A0D020003CBE58 /* Treatment.swift */; };
+		ECE6111720A0D029003CBE58 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE6111620A0D029003CBE58 /* Doctor.swift */; };
 		ECF70DA620911B67002B38A9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF70DA520911B67002B38A9 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -187,6 +191,10 @@
 		ECE6110820A0909E003CBE58 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
 		ECE6110920A0909E003CBE58 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
 		ECE6110A20A0909E003CBE58 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		ECE6111020A0D000003CBE58 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		ECE6111220A0D015003CBE58 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		ECE6111420A0D020003CBE58 /* Treatment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treatment.swift; sourceTree = "<group>"; };
+		ECE6111620A0D029003CBE58 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		ECF70DA520911B67002B38A9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = "Health Card/Custom elements/UIColorExtension.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -425,6 +433,10 @@
 			isa = PBXGroup;
 			children = (
 				ECA9A59C209F8C590048FA68 /* NetworkConnection.swift */,
+				ECE6111020A0D000003CBE58 /* Patient.swift */,
+				ECE6111220A0D015003CBE58 /* History.swift */,
+				ECE6111420A0D020003CBE58 /* Treatment.swift */,
+				ECE6111620A0D029003CBE58 /* Doctor.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -527,9 +539,11 @@
 			files = (
 				EC4AD0C7208E40E300D99FDD /* JTAppleCalendarLayoutProtocol.swift in Sources */,
 				EC4F26BA206D50FA00C7AB12 /* IQTitleBarButtonItem.swift in Sources */,
+				ECE6111320A0D015003CBE58 /* History.swift in Sources */,
 				EC44EEA3209F69B00038DC12 /* MultipartFormData.swift in Sources */,
 				EC497F432076EC760004D01D /* TabBarController.swift in Sources */,
 				EC44EE9B209F69B00038DC12 /* ServerTrustPolicy.swift in Sources */,
+				ECE6111520A0D020003CBE58 /* Treatment.swift in Sources */,
 				EC5A8F49207663EB00711B57 /* UIStoryboardSegueFromRight.swift in Sources */,
 				EC4F26BF206D50FA00C7AB12 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				EC637790205B2CD500CB91A4 /* DesignableUITextField.swift in Sources */,
@@ -554,12 +568,14 @@
 				EC4F26BD206D50FA00C7AB12 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				ECE6110C20A0909F003CBE58 /* SVRadialGradientLayer.m in Sources */,
 				EC44EE98209F69B00038DC12 /* SessionDelegate.swift in Sources */,
+				ECE6111120A0D000003CBE58 /* Patient.swift in Sources */,
 				EC4AD0C1208E40E300D99FDD /* InternalActionFunctions.swift in Sources */,
 				EC44EEA4209F69B00038DC12 /* Request.swift in Sources */,
 				EC4AD0C3208E40E300D99FDD /* CalendarEnums.swift in Sources */,
 				EC4AD0CA208E40E300D99FDD /* JTAppleCollectionReusableView.swift in Sources */,
 				EC44EEA1209F69B00038DC12 /* Notifications.swift in Sources */,
 				EC4F26BC206D50FA00C7AB12 /* IQToolbar.swift in Sources */,
+				ECE6111720A0D029003CBE58 /* Doctor.swift in Sources */,
 				EC4AD0C9208E40E300D99FDD /* JTAppleCalendarView.swift in Sources */,
 				EC44EE9C209F69B00038DC12 /* ResponseSerialization.swift in Sources */,
 				EC5A8F512076679D00711B57 /* AboutViewController.swift in Sources */,
