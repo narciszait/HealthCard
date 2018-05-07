@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardViewController: UIViewController {
+class CardViewController: UIViewController, URLSessionDelegate, URLSessionDataDelegate {
 
     @IBOutlet weak var firstNameLabel: UILabel!;
     @IBOutlet weak var lastNameLabel: UILabel!;
@@ -17,11 +17,20 @@ class CardViewController: UIViewController {
     @IBOutlet weak var doctorAddressLabel: UILabel!;
     @IBOutlet weak var doctorPhoneLabel: UILabel!;
     
+    var cprNr: String?;
+    var token: String?;
+    var nextCall: String?;
     
     override func viewDidLoad() {
         super.viewDidLoad();
-
+        
         // Do any additional setup after loading the view.
+        let tbvc = self.tabBarController  as! TabBarController
+        nextCall = tbvc.nextCall;
+        
+        print("0----- card View -----0")
+        print(nextCall);
+        print("0----- card View -----0")
     }
 
     override func didReceiveMemoryWarning() {

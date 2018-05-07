@@ -381,6 +381,7 @@
                         <barButtonItem key="backBarButtonItem" id="pcX-FR-qnf"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="nemIdCodeToVerifyTextField" destination="lvT-5U-Gxo" id="D5Q-Xu-GQY"/>
                         <outlet property="nemdIDCodeTextField" destination="X85-Tx-E6u" id="Ely-MQ-dg9"/>
                         <outlet property="slideToLoginButton" destination="ufn-8I-Ng1" id="ww5-Pe-GfW"/>
                         <segue destination="VJw-pq-P4x" kind="custom" identifier="showTheMain" customClass="UIStoryboardSegueFromRight" customModule="Health_Card" customModuleProvider="target" id="lDd-0e-kVD"/>
@@ -903,7 +904,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tap-92-trW">
-                                                            <rect key="frame" x="40" y="36" width="40" height="40"/>
+                                                            <rect key="frame" x="40" y="35.5" width="40" height="40"/>
                                                             <color key="backgroundColor" red="0.23619577288627625" green="0.1773742139339447" blue="0.2932550311088562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="QWe-SE-oXi"/>
@@ -916,7 +917,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn6-l0-Szm">
-                                                            <rect key="frame" x="39" y="45.5" width="42" height="21"/>
+                                                            <rect key="frame" x="39" y="45" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
