@@ -63,7 +63,8 @@ class PasswordViewController: UIViewController, UITextFieldDelegate, URLSessionD
              atm the nodejs server is running on my machine, which has the ip address (at my home network) of 192.168.0.100 and it running on port 8443
              172.30.210.79
              */
-            var request = URLRequest(url: URL(string: "http://localhost:3000/api/patient/login")!); //172.30.210.79:8443/login
+            // https://pacific-reaches-57767.herokuapp.com/api/ http://localhost:3000/api/patient/login
+            var request = URLRequest(url: URL(string: "https://pacific-reaches-57767.herokuapp.com/api/login")!); //172.30.210.79:8443/login
             request.httpMethod = "POST";
             request.setValue(("application/json"), forHTTPHeaderField: "Content-Type");
             let postBody = ["_cpr": cprTextField.text!, "password": passwordTextField.text!];
