@@ -64,7 +64,7 @@ class PasswordViewController: UIViewController, UITextFieldDelegate, URLSessionD
              172.30.210.79
              */
             // https://pacific-reaches-57767.herokuapp.com/api/ http://localhost:3000/api/patient/login
-            var request = URLRequest(url: URL(string: "https://pacific-reaches-57767.herokuapp.com/api/login")!); //172.30.210.79:8443/login
+            var request = URLRequest(url: URL(string: "https://pacific-reaches-57767.herokuapp.com/api/patient/login")!); //172.30.210.79:8443/login
             request.httpMethod = "POST";
             request.setValue(("application/json"), forHTTPHeaderField: "Content-Type");
             let postBody = ["_cpr": cprTextField.text!, "password": passwordTextField.text!];
@@ -91,6 +91,7 @@ class PasswordViewController: UIViewController, UITextFieldDelegate, URLSessionD
                     }
                 } else {
                     if let returnedJSON = (try? JSON(data: data)) {
+                        print(returnedJSON);
                         self.cprNr = returnedJSON["cpr"].stringValue;
                         self.nemIDChallenge = returnedJSON["nemid"].stringValue;
                         self.token = returnedJSON["token"].stringValue;

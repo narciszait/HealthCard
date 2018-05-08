@@ -37,54 +37,58 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
          atm the nodejs server is running on my machine, which has the ip address (at my home network) of 192.168.0.100 and it running on port 8443
          172.30.210.79
          */
-        var request = URLRequest(url: URL(string: self.nextCall!+self.cprNr!)!); //localhost:3000/api/patient/cprNr
-        request.httpMethod = "GET";
-        request.setValue(("application/json"), forHTTPHeaderField: "Content-Type");
-        request.setValue("Bearer \(self.token!)", forHTTPHeaderField: "Authorization");
         
-        print("1");
-        
-        loginTask = loginSession.dataTask(with: request, completionHandler: { (data, response, error) in
-            print("1.5");
-            guard let data = data, error == nil else {
-                print("error= \(String(describing: error))");
-                DispatchQueue.main.async {
-                    self.showAlerts(title: "Error", message: "Error: \(error!.localizedDescription) \n Try again later.");
-                    SVProgressHUD.dismiss();
-                }
-                return
-            };
-            print("2");
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 401 {
-                print ("status should be 200, but is \(httpStatus.statusCode)");
-                DispatchQueue.main.async {
-                    self.showAlerts(title: "Error", message: "Could not get user data. \n Try again later");
-                }
-            } else {
-                print("3");
-                if let returnedJSON = (try? JSON(data: data)) {
-                    print(returnedJSON);
-                    self.doctor = Doctor(name: returnedJSON["doctor"]["name"].string!, address: returnedJSON["doctor"]["address"].string!, phone: returnedJSON["doctor"]["phone"].string!);
-                    print(self.doctor);
-                    self.patient = Patient(cpr: returnedJSON["_cpr"].stringValue, address: returnedJSON["address"].string!, name: returnedJSON["name"].string!, lastName: returnedJSON["last_name"].string!);
-                    print(self.patient);
-
-                    for (index,subJson):(String, JSON) in returnedJSON["history"] {
-                        self.history.append(History(diagnostic: subJson["diagnostic"].string!, period: subJson["period"].string!, status: subJson["status"].string!));
-                    }
-                    
-                    for (index,subJson):(String, JSON) in returnedJSON["receipt"] {
-                        self.treatment.append(Treatment(medication: subJson["medication"].string!, repeatInterval: subJson["repeat"].string!, endPeriod: subJson["endperiod"].string!));
-                    }
-                    
+        if let cpr = cprNr {
+            var request = URLRequest(url: URL(string: "https://pacific-reaches-57767.herokuapp.com/api/patient/\(cpr)")!); //localhost:3000/api/patient/cprNr
+            request.httpMethod = "GET";
+            request.setValue(("application/json"), forHTTPHeaderField: "Content-Type");
+            request.setValue("Bearer \(self.token!)", forHTTPHeaderField: "Authorization");
+            
+            print("1");
+            
+            loginTask = loginSession.dataTask(with: request, completionHandler: { (data, response, error) in
+                print("1.5");
+                guard let data = data, error == nil else {
+                    print("error= \(String(describing: error))");
                     DispatchQueue.main.async {
-                        UIApplication.shared.isNetworkActivityIndicatorVisible = false;
+                        self.showAlerts(title: "Error", message: "Error: \(error!.localizedDescription) \n Try again later.");
                         SVProgressHUD.dismiss();
                     }
+                    return
+                };
+                print("2");
+                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 401 {
+                    print ("status should be 200, but is \(httpStatus.statusCode)");
+                    DispatchQueue.main.async {
+                        self.showAlerts(title: "Error", message: "Could not get user data. \n Try again later");
+                    }
+                } else {
+                    print("3");
+                    if let returnedJSON = (try? JSON(data: data)) {
+                        print(returnedJSON);
+                        self.doctor = Doctor(name: returnedJSON["doctor"]["name"].string!, address: returnedJSON["doctor"]["address"].string!, phone: returnedJSON["doctor"]["phone"].string!);
+                        print(self.doctor);
+                        self.patient = Patient(cpr: returnedJSON["_cpr"].stringValue, address: returnedJSON["address"].string!, name: returnedJSON["name"].string!, lastName: returnedJSON["last_name"].string!);
+                        print(self.patient);
+                        
+                        for (index,subJson):(String, JSON) in returnedJSON["history"] {
+                            self.history.append(History(diagnostic: subJson["diagnostic"].string!, period: subJson["period"].string!, status: subJson["status"].string!));
+                        }
+                        
+                        for (index,subJson):(String, JSON) in returnedJSON["receipt"] {
+                            self.treatment.append(Treatment(medication: subJson["medication"].string!, repeatInterval: subJson["repeat"].string!, endPeriod: subJson["endperiod"].string!));
+                        }
+                        
+                        DispatchQueue.main.async {
+                            UIApplication.shared.isNetworkActivityIndicatorVisible = false;
+                            SVProgressHUD.dismiss();
+                        }
+                    }
                 }
-            }
-        });
-        loginTask.resume();
+            });
+            loginTask.resume();
+        }
+        
     }
     
     func showAlerts(title: String, message: String) {

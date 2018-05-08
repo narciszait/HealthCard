@@ -57,7 +57,7 @@ class NemIDViewController: UIViewController, SlideButtonDelegate, URLSessionDele
                      atm the nodejs server is running on my machine, which has the ip address (at my home network) of 192.168.0.100 and it running on port 8443
                      172.30.210.79
                      */
-                    var request = URLRequest(url: URL(string: self.nextCall!)!); //172.30.210.79:8443/login
+                    var request = URLRequest(url: URL(string: "https://pacific-reaches-57767.herokuapp.com/api/patient/2f")!); //172.30.210.79:8443/login
                     request.httpMethod = "POST";
                     request.setValue(("application/json"), forHTTPHeaderField: "Content-Type");
                     request.setValue("Bearer \(self.token!)", forHTTPHeaderField: "Authorization");
