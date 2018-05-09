@@ -40,6 +40,12 @@ class NemIDViewController: UIViewController, SlideButtonDelegate, URLSessionDele
             nemdIDCodeTextField.text = nemdIDCodeIsPresent;
         }
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(getPatientInfo));
+        tap.numberOfTapsRequired = 2;
+        self.view.addGestureRecognizer(tap);
+    }
+    
+    @objc func getPatientInfo(){
         nemIdCodeToVerifyTextField.text = "165240";
     }
     
@@ -94,6 +100,8 @@ class NemIDViewController: UIViewController, SlideButtonDelegate, URLSessionDele
                                     UIApplication.shared.isNetworkActivityIndicatorVisible = false;
                                     SVProgressHUD.dismiss();
                                     self.performSegue(withIdentifier: "showTheMain", sender: self);
+                                    UserDefaults.standard.set(true, forKey: "firstLoginSuccessful");
+                                    UserDefaults.standard.set(self.cprNr, forKey: "citizenCPR");
                                 }
                             }
                         }

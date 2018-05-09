@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A49141F11C20353F10C7251 /* Pods_Health_Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C513F1AB442A520EBB43ADDE /* Pods_Health_Card.framework */; };
 		EC17E428209A6B6100441627 /* MedicalJournalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC17E427209A6B6100441627 /* MedicalJournalCell.swift */; };
 		EC17E42A209A6B7100441627 /* TreatmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC17E429209A6B7100441627 /* TreatmentCell.swift */; };
 		EC3F8A0B208F80C900F4DC45 /* CustomCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3F8A0A208F80C900F4DC45 /* CustomCalendarCell.swift */; };
@@ -84,6 +85,7 @@
 		EC7E9A5C205B21B9002D8D25 /* BackgroundVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7E9A5B205B21B9002D8D25 /* BackgroundVideo.swift */; };
 		EC7E9A5F205B22A5002D8D25 /* videoDoctor.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EC7E9A5E205B22A5002D8D25 /* videoDoctor.mp4 */; };
 		ECA9A59D209F8C590048FA68 /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9A59C209F8C590048FA68 /* NetworkConnection.swift */; };
+		ECDD9F9020A3796800E5C868 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDD9F8F20A3796800E5C868 /* LocalAuthentication.framework */; };
 		ECE6110B20A0909F003CBE58 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ECE6110220A0909B003CBE58 /* SVProgressHUD.bundle */; };
 		ECE6110C20A0909F003CBE58 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE6110420A0909C003CBE58 /* SVRadialGradientLayer.m */; };
 		ECE6110D20A0909F003CBE58 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE6110520A0909D003CBE58 /* SVIndefiniteAnimatedView.m */; };
@@ -97,6 +99,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BD0C3E40F2BB973C24AB2B0 /* Pods-Health Card.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health Card.release.xcconfig"; path = "Pods/Target Support Files/Pods-Health Card/Pods-Health Card.release.xcconfig"; sourceTree = "<group>"; };
+		432B883EB98C07E01134EFAB /* Pods-Health Card.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Health Card.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Health Card/Pods-Health Card.debug.xcconfig"; sourceTree = "<group>"; };
+		C513F1AB442A520EBB43ADDE /* Pods_Health_Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC17E427209A6B6100441627 /* MedicalJournalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalJournalCell.swift; sourceTree = "<group>"; };
 		EC17E429209A6B7100441627 /* TreatmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentCell.swift; sourceTree = "<group>"; };
 		EC3F8A0A208F80C900F4DC45 /* CustomCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendarCell.swift; sourceTree = "<group>"; };
@@ -180,6 +185,7 @@
 		EC7E9A5B205B21B9002D8D25 /* BackgroundVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundVideo.swift; sourceTree = "<group>"; };
 		EC7E9A5E205B22A5002D8D25 /* videoDoctor.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoDoctor.mp4; sourceTree = "<group>"; };
 		ECA9A59C209F8C590048FA68 /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
+		ECDD9F8F20A3796800E5C868 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		ECE6110020A09099003CBE58 /* Health Card-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Health Card-Bridging-Header.h"; sourceTree = "<group>"; };
 		ECE6110120A0909A003CBE58 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		ECE6110220A0909B003CBE58 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -203,12 +209,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECDD9F9020A3796800E5C868 /* LocalAuthentication.framework in Frameworks */,
+				3A49141F11C20353F10C7251 /* Pods_Health_Card.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48DC152DA893AC0D303294C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD9F8F20A3796800E5C868 /* LocalAuthentication.framework */,
+				C513F1AB442A520EBB43ADDE /* Pods_Health_Card.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A936D752292AC9492FEB7240 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				432B883EB98C07E01134EFAB /* Pods-Health Card.debug.xcconfig */,
+				1BD0C3E40F2BB973C24AB2B0 /* Pods-Health Card.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EC17E424209A6A5200441627 /* Login Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +408,8 @@
 			children = (
 				EC7D10E7205AF2BF00779343 /* Health Card */,
 				EC7D10E6205AF2BF00779343 /* Products */,
+				A936D752292AC9492FEB7240 /* Pods */,
+				48DC152DA893AC0D303294C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -465,9 +493,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC7D10F7205AF2BF00779343 /* Build configuration list for PBXNativeTarget "Health Card" */;
 			buildPhases = (
+				D7C45DF35F1E8E24F3AB8105 /* [CP] Check Pods Manifest.lock */,
 				EC7D10E1205AF2BF00779343 /* Sources */,
 				EC7D10E2205AF2BF00779343 /* Frameworks */,
 				EC7D10E3205AF2BF00779343 /* Resources */,
+				8A3A464E76DB0B03D3C5174B /* [CP] Embed Pods Frameworks */,
+				59AE0EA053FA021E733436FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -531,6 +562,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59AE0EA053FA021E733436FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Health Card/Pods-Health Card-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A3A464E76DB0B03D3C5174B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Health Card/Pods-Health Card-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JSONWebToken/JWT.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Health Card/Pods-Health Card-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7C45DF35F1E8E24F3AB8105 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Health Card-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC7D10E1205AF2BF00779343 /* Sources */ = {
@@ -753,6 +838,7 @@
 		};
 		EC7D10F8205AF2BF00779343 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 432B883EB98C07E01134EFAB /* Pods-Health Card.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -771,6 +857,7 @@
 		};
 		EC7D10F9205AF2BF00779343 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD0C3E40F2BB973C24AB2B0 /* Pods-Health Card.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

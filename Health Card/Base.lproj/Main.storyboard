@@ -32,12 +32,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
-                                        <integer key="value" value="100"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="gpw-Qq-DqV"/>
+                                    <action selector="loginAction:" destination="FTL-1c-6D4" eventType="touchUpInside" id="RkS-QY-oit"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Yellow Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ElS-u9-Nxh">
@@ -85,6 +85,10 @@
                     <navigationItem key="navigationItem" id="ogw-z4-5PO">
                         <barButtonItem key="backBarButtonItem" title=" Back" id="i62-PX-U5s"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showPasswordScreenSegue" id="3GS-sE-Ygv"/>
+                        <segue destination="VJw-pq-P4x" kind="show" identifier="touchIDSegue" customClass="UIStoryboardSegueFromRight" customModule="Health_Card" customModuleProvider="target" id="CyB-pX-xdW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFx-We-FKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,8 +150,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
-                                        <integer key="value" value="100"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -400,7 +404,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="mC6-XX-gTt">
-                                <rect key="frame" x="38" y="398" width="300" height="200"/>
+                                <rect key="frame" x="38" y="398" width="299" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Ixj-iL-jeE"/>
                                     <constraint firstAttribute="width" constant="200" id="KXY-gF-Mfc"/>
@@ -419,25 +423,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor Name" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXA-eI-R9m">
-                                <rect key="frame" x="258" y="70" width="102" height="20.5"/>
+                                <rect key="frame" x="257" y="70" width="102" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor Address" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moG-KD-gMH">
-                                <rect key="frame" x="240.5" y="111" width="119.5" height="20.5"/>
+                                <rect key="frame" x="239.5" y="111" width="119.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor Phone" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qxe-Oi-fA4">
-                                <rect key="frame" x="254.5" y="151" width="105.5" height="20.5"/>
+                                <rect key="frame" x="253.5" y="151" width="105.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-fx-Lxk">
-                                <rect key="frame" x="304" y="20" width="52" height="30"/>
+                                <rect key="frame" x="303" y="20" width="52" height="30"/>
                                 <color key="backgroundColor" red="0.23529411764705882" green="0.1764705882352941" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Log out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -452,7 +456,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CPR" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0uD-Jg-Wyw" customClass="DesignableUITextField" customModule="Health_Card" customModuleProvider="target">
-                                <rect key="frame" x="16" y="348" width="344" height="30"/>
+                                <rect key="frame" x="16" y="348" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.23529411764705882" green="0.17254901960784313" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1061,6 +1065,7 @@
         <image name="user" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6jg-Ib-11P"/>
+        <segue reference="CyB-pX-xdW"/>
+        <segue reference="mf7-jM-LtQ"/>
     </inferredMetricsTieBreakers>
 </document>

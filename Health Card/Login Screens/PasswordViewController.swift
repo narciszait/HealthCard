@@ -30,10 +30,18 @@ class PasswordViewController: UIViewController, UITextFieldDelegate, URLSessionD
         super.viewDidLoad();
         self.navigationController?.navigationBar.isHidden = false;
         
-        cprTextField.text = "1234567890";
-        passwordTextField.text = "pass";
+        
         
         loginSession = Foundation.URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: OperationQueue.main);
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(getPatientInfo));
+        tap.numberOfTapsRequired = 2;
+        self.view.addGestureRecognizer(tap);
+    }
+    
+    @objc func getPatientInfo(){
+        cprTextField.text = "1234567890";
+        passwordTextField.text = "pass";
     } 
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -29,11 +29,13 @@ class CardViewController: UIViewController, URLSessionDelegate, URLSessionDataDe
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        
+        self.view.setNeedsLayout();
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated);
+        self.view.setNeedsLayout();
         let tabBarController = self.tabBarController  as! TabBarController;
         
         if let firstName = tabBarController.patient?.firstName {

@@ -1,0 +1,6 @@
+framework module Pods_Health_Card {
+  umbrella header "Pods-Health Card-umbrella.h"
+
+  export *
+  module * { export * }
+}

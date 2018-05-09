@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JWT
 
 class AboutViewController: UIViewController {
 
@@ -16,7 +17,8 @@ class AboutViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.isHidden = false;
         
-//        print(JWT.encode(claims: [], algorithm: .hs256("SecretKey".data(using: .utf8)!)));
+        let string = JWT.encode(claims: ["":""], algorithm: .hs256("SecretKey".data(using: .utf8)!));
+        print(string);
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

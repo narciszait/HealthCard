@@ -25,8 +25,14 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.cprNr = UserDefaults.standard.value(forKey: "citizenCPR") as? String;
         loginSession = Foundation.URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: OperationQueue.main);
         getPatientInfo();
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        self.view.setNeedsLayout();
     }
     
     func getPatientInfo(){
@@ -80,6 +86,7 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
                         }
                         
                         DispatchQueue.main.async {
+                            self.view.setNeedsLayout();
                             UIApplication.shared.isNetworkActivityIndicatorVisible = false;
                             SVProgressHUD.dismiss();
                         }
