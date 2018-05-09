@@ -703,7 +703,7 @@
                                     <segue destination="Z55-4o-EFK" kind="unwind" unwindAction="segueToMeWithSegue:" id="7ZZ-vg-qGY"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="155" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yed-3Y-JLw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="155" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yed-3Y-JLw">
                                 <rect key="frame" x="0.0" y="60" width="375" height="558"/>
                                 <color key="backgroundColor" red="1" green="0.75686274509803919" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -930,7 +930,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tap-92-trW">
-                                                            <rect key="frame" x="40" y="36" width="40" height="40"/>
+                                                            <rect key="frame" x="40" y="35.5" width="40" height="40"/>
                                                             <color key="backgroundColor" red="0.23619577288627625" green="0.1773742139339447" blue="0.2932550311088562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="QWe-SE-oXi"/>
@@ -943,7 +943,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn6-l0-Szm">
-                                                            <rect key="frame" x="39" y="45.5" width="42" height="21"/>
+                                                            <rect key="frame" x="39" y="45" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
