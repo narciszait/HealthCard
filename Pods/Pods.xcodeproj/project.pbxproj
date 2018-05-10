@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01E0F8628CD3FE5892D9036F9A8E36CB /* Pods_Health_Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Health_Card.framework; path = "Pods-Health Card.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E0F8628CD3FE5892D9036F9A8E36CB /* Pods_Health_Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E30C511054D13D5064579D134BE716 /* Pods-Health Card-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Health Card-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0A434FDAC99F1660E87CBFD4A3A5A5AD /* Pods-Health Card.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Health Card.debug.xcconfig"; sourceTree = "<group>"; };
 		14AD9CB94C4112E10B789F167C3847EC /* JOSEHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JOSEHeader.swift; path = Sources/JOSEHeader.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		738D59CFB2491A9840E09EF225EEB666 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/HMAC.swift; sourceTree = "<group>"; };
 		7B735E4BCDB7D154C8258835F082B817 /* Pods-Health Card-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Health Card-acknowledgements.plist"; sourceTree = "<group>"; };
 		8F82B093AFF2C625A09162874402F925 /* HMACCommonCrypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMACCommonCrypto.swift; path = Sources/HMACCommonCrypto.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3C87FD87B14DAB5E07B10B180A4DFF3 /* Decode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decode.swift; path = Sources/Decode.swift; sourceTree = "<group>"; };
 		A8477F8FD776F5D9A0C333B8B0A9BB81 /* Pods-Health Card.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Health Card.modulemap"; sourceTree = "<group>"; };
 		C0D7628E747C99A30A2F9ECFCA0EA5AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		D5ABB3286346469839DA7FAF0F2062B8 /* ClaimSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClaimSet.swift; path = Sources/ClaimSet.swift; sourceTree = "<group>"; };
 		E17520EFF486EBA8939446A7B889A904 /* JSONWebToken-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONWebToken-umbrella.h"; sourceTree = "<group>"; };
 		E28D0DB4DDF6D1525DAD1478CB0558D5 /* Pods-Health Card.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Health Card.release.xcconfig"; sourceTree = "<group>"; };
-		F93EEB191351D5C2AF80281F605C04F3 /* JWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JWT.framework; path = JSONWebToken.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93EEB191351D5C2AF80281F605C04F3 /* JWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +154,6 @@
 				216205ED0AB264CF0AD3BDD680A87F8D /* JWT.swift */,
 				B7E87098414A057C1608F198B12B6A23 /* Support Files */,
 			);
-			name = JSONWebToken;
 			path = JSONWebToken;
 			sourceTree = "<group>";
 		};
@@ -326,7 +325,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Health Card/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Health Card/Pods-Health Card.modulemap";
@@ -456,7 +455,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Health Card/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Health Card/Pods-Health Card.modulemap";

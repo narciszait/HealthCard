@@ -96,7 +96,6 @@ class NemIDViewController: UIViewController, SlideButtonDelegate, URLSessionDele
                                 self.nextCall = returnedJSON["request"]["url"].stringValue;
                                 
                                 DispatchQueue.main.async {
-                                    self.canContinueLoggingIn = true;
                                     UIApplication.shared.isNetworkActivityIndicatorVisible = false;
                                     SVProgressHUD.dismiss();
                                     self.performSegue(withIdentifier: "showTheMain", sender: self);
@@ -118,6 +117,7 @@ class NemIDViewController: UIViewController, SlideButtonDelegate, URLSessionDele
             controller.cprNr = self.cprNr;
             controller.token = self.token;
             controller.nextCall = self.nextCall;
+            controller.view.setNeedsLayout();
         }
     }
 

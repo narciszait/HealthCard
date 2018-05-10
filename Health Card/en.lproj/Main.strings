@@ -1,0 +1,150 @@
+
+/* Class = "UILabel"; text = "month"; ObjectID = "0T8-cV-kwJ"; */
+"0T8-cV-kwJ.text" = "month";
+
+/* Class = "UITextField"; placeholder = "CPR"; ObjectID = "0uD-Jg-Wyw"; */
+"0uD-Jg-Wyw.placeholder" = "CPR";
+
+/* Class = "UILabel"; text = "2 x 8 h"; ObjectID = "24i-3T-XGe"; */
+"24i-3T-XGe.text" = "2 x 8 h";
+
+/* Class = "UITabBarItem"; title = "Yellow Card"; ObjectID = "3d3-F6-hNd"; */
+"3d3-F6-hNd.title" = "Yellow Card";
+
+/* Class = "UITextView"; text = "   In order to continue logging in, please provide the corresponding 6 digit number from your nemID card"; ObjectID = "8VZ-kV-dQp"; */
+"8VZ-kV-dQp.text" = "   In order to continue logging in, please provide the corresponding 6 digit number from your nemID card";
+
+/* Class = "UITextView"; text = "   In order to login, please provide your CPR number and your password"; ObjectID = "92H-gT-iGj"; */
+"92H-gT-iGj.text" = "   In order to login, please provide your CPR number and your password";
+
+/* Class = "UITabBarItem"; title = "Treatment"; ObjectID = "9Lo-nZ-crm"; */
+"9Lo-nZ-crm.title" = "Treatment";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Aod-7X-Mkw"; */
+"Aod-7X-Mkw.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Sat"; ObjectID = "Axu-mm-YbZ"; */
+"Axu-mm-YbZ.text" = "Sat";
+
+/* Class = "UILabel"; text = "Mobile Yellow Card"; ObjectID = "ElS-u9-Nxh"; */
+"ElS-u9-Nxh.text" = "Mobile Yellow Card";
+
+/* Class = "UIButton"; normalTitle = "Log out"; ObjectID = "F1c-VI-vgz"; */
+"F1c-VI-vgz.normalTitle" = "Log out";
+
+/* Class = "UILabel"; text = "Panodil"; ObjectID = "G1D-B8-jpP"; */
+"G1D-B8-jpP.text" = "Panodil";
+
+/* Class = "UILabel"; text = "Fri"; ObjectID = "LC5-Pg-omz"; */
+"LC5-Pg-omz.text" = "Fri";
+
+/* Class = "UILabel"; text = "Mon"; ObjectID = "MBe-7J-jno"; */
+"MBe-7J-jno.text" = "Mon";
+
+/* Class = "UIButton"; normalTitle = "Log out"; ObjectID = "Nlg-sa-Rgh"; */
+"Nlg-sa-Rgh.normalTitle" = "Log out";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "Od1-Pd-UEJ"; */
+"Od1-Pd-UEJ.text" = "Last Name";
+
+/* Class = "UILabel"; text = "Doctor Name"; ObjectID = "QXA-eI-R9m"; */
+"QXA-eI-R9m.text" = "Doctor Name";
+
+/* Class = "UILabel"; text = "Doctor Phone"; ObjectID = "Qxe-Oi-fA4"; */
+"Qxe-Oi-fA4.text" = "Doctor Phone";
+
+/* Class = "UITextField"; placeholder = "CPR number"; ObjectID = "RiJ-Eh-cFv"; */
+"RiJ-Eh-cFv.placeholder" = "CPR number";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "Tzp-JJ-Ns9"; */
+"Tzp-JJ-Ns9.text" = "Address";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Vn6-l0-Szm"; */
+"Vn6-l0-Szm.text" = "Label";
+
+/* Class = "UILabel"; text = "2 weeks"; ObjectID = "WCI-12-O5f"; */
+"WCI-12-O5f.text" = "2 weeks";
+
+/* Class = "UILabel"; text = "Period of time"; ObjectID = "Wvr-gU-Fmg"; */
+"Wvr-gU-Fmg.text" = "Period of time";
+
+/* Class = "UITextField"; placeholder = "NemID Code"; ObjectID = "X85-Tx-E6u"; */
+"X85-Tx-E6u.placeholder" = "NemID Code";
+
+/* Class = "UILabel"; text = "Thu"; ObjectID = "XVu-RS-SSV"; */
+"XVu-RS-SSV.text" = "Thu";
+
+/* Class = "UILabel"; text = "Medical Condition"; ObjectID = "YiN-bI-jVO"; */
+"YiN-bI-jVO.text" = "Medical Condition";
+
+/* Class = "UILabel"; text = "Wed"; ObjectID = "bo2-XS-UUo"; */
+"bo2-XS-UUo.text" = "Wed";
+
+/* Class = "UILabel"; text = "year"; ObjectID = "c8Y-lx-GPG"; */
+"c8Y-lx-GPG.text" = "year";
+
+/* Class = "UIButton"; normalTitle = "Log out"; ObjectID = "cXX-hc-pMl"; */
+"cXX-hc-pMl.normalTitle" = "Log out";
+
+/* Class = "UILabel"; text = "Take every"; ObjectID = "g9o-nC-tia"; */
+"g9o-nC-tia.text" = "Take every";
+
+/* Class = "UIBarButtonItem"; title = " Back"; ObjectID = "i62-PX-U5s"; */
+"i62-PX-U5s.title" = " Back";
+
+/* Class = "UIButton"; normalTitle = "Log out"; ObjectID = "j9V-fx-Lxk"; */
+"j9V-fx-Lxk.normalTitle" = "Log out";
+
+/* Class = "UILabel"; text = "5 days"; ObjectID = "jrJ-kW-8sD"; */
+"jrJ-kW-8sD.text" = "5 days";
+
+/* Class = "UIButton"; normalTitle = "Renew subscription"; ObjectID = "l0c-xc-OHJ"; */
+"l0c-xc-OHJ.normalTitle" = "Renew subscription";
+
+/* Class = "UITabBarItem"; title = "Medical Journal"; ObjectID = "l4s-7I-pBl"; */
+"l4s-7I-pBl.title" = "Medical Journal";
+
+/* Class = "UILabel"; text = "End of period"; ObjectID = "lVh-VV-48a"; */
+"lVh-VV-48a.text" = "End of period";
+
+/* Class = "UITextField"; placeholder = "Corresponding NemID Code"; ObjectID = "lvT-5U-Gxo"; */
+"lvT-5U-Gxo.placeholder" = "Corresponding NemID Code";
+
+/* Class = "UILabel"; text = "Doctor Address"; ObjectID = "moG-KD-gMH"; */
+"moG-KD-gMH.text" = "Doctor Address";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "nxg-8Q-sTX"; */
+"nxg-8Q-sTX.text" = "First Name";
+
+/* Class = "UILabel"; text = "Tue"; ObjectID = "nzT-Ze-x20"; */
+"nzT-Ze-x20.text" = "Tue";
+
+/* Class = "UITabBarItem"; title = "Appointment"; ObjectID = "pDH-g4-Hiu"; */
+"pDH-g4-Hiu.title" = "Appointment";
+
+/* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "peJ-jA-pAg"; */
+"peJ-jA-pAg.normalTitle" = "Log In";
+
+/* Class = "UILabel"; text = "Influenza"; ObjectID = "pvf-1u-kRQ"; */
+"pvf-1u-kRQ.text" = "Influenza";
+
+/* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "tu2-z9-R0P"; */
+"tu2-z9-R0P.normalTitle" = "Log In";
+
+/* Class = "UILabel"; text = "To make an appointment, please select a date from the calendar."; ObjectID = "xAp-kS-TOs"; */
+"xAp-kS-TOs.text" = "To make an appointment, please select a date from the calendar.";
+
+/* Class = "UILabel"; text = "Medication"; ObjectID = "xM6-7V-D7o"; */
+"xM6-7V-D7o.text" = "Medication";
+
+/* Class = "UILabel"; text = "Yes"; ObjectID = "xhr-vw-Z14"; */
+"xhr-vw-Z14.text" = "Yes";
+
+/* Class = "UILabel"; text = "Sun"; ObjectID = "yjI-5z-qrO"; */
+"yjI-5z-qrO.text" = "Sun";
+
+/* Class = "UILabel"; text = "Fully recovered"; ObjectID = "yqa-Z4-hfc"; */
+"yqa-Z4-hfc.text" = "Fully recovered";
+
+/* Class = "UIButton"; normalTitle = "About Mobile Yellow Card"; ObjectID = "zL7-Jk-OLh"; */
+"zL7-Jk-OLh.normalTitle" = "About Mobile Yellow Card";

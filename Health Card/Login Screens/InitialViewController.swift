@@ -16,17 +16,31 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        print(NetworkConnection.shared.baseServerAddress);
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(getPatientInfo));
-//        tap.numberOfTapsRequired = 2;
-//        self.view.addGestureRecognizer(tap);
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(getPatientInfo));
+        tap.numberOfTapsRequired = 2;
+        self.view.addGestureRecognizer(tap);
     }
     
-//    @objc func getPatientInfo(){
-//        let string = JWT.encode(claims: ["":""], algorithm: .hs256("SecretKey".data(using: .utf8)!));
-//        print(string);
-//        self.performSegue(withIdentifier: "touchIDSegue", sender: self);
-//    }
+    @objc func getPatientInfo(){
+        let string = JWT.encode(claims: ["":""], algorithm: .hs256("SecretKey".data(using: .utf8)!));
+        print(string);
+        self.performSegue(withIdentifier: "touchIDSegue", sender: self);
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
+        self.navigationController?.navigationBar.isHidden = true;
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent;
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     //self.performSegue(withIdentifier: "touchIDSegue", sender: self);
     @IBAction func loginAction(_ sender: Any) {
@@ -54,15 +68,15 @@ class InitialViewController: UIViewController {
                         }
                         if laError.code == .userCancel {
                             print("cancel");
-//                            DispatchQueue.main.async{
-//                                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
-//                            }
+                            DispatchQueue.main.async{
+                                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+                            }
                         }
                         if laError.code == .authenticationFailed {
                             print("failed");
-//                            DispatchQueue.main.async{
-//                                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
-//                            }
+                            DispatchQueue.main.async{
+                                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+                            }
                         }
                     }
                 }
@@ -86,32 +100,18 @@ class InitialViewController: UIViewController {
     
     @IBAction func segueToMe(segue: UIStoryboardSegue) {
         // segue back
+        print("back to Main");
         UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
         UserDefaults.standard.set("", forKey: "citizenCPR");
     }
     
-    override func segueForUnwinding(to toViewController: UIViewController, from fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
-        
-        if let id = identifier {
-            if id == "returnToMainViewController" {
-                let unwindSegue = UIStoryboardUnwindSegueFromRight(identifier: id, source: fromViewController, destination: toViewController)
-                return unwindSegue
-            }
-        }
-        return super.segueForUnwinding(to: toViewController, from: fromViewController, identifier: identifier)!
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true;
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent;
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+//    override func segueForUnwinding(to toViewController: UIViewController, from fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+//        if let id = identifier {
+//            if id == "returnToMainViewController" {
+//                let unwindSegue = UIStoryboardUnwindSegueFromRight(identifier: id, source: fromViewController, destination: toViewController)
+//                return unwindSegue
+//            }
+//        }
+//        return super.segueForUnwinding(to: toViewController, from: fromViewController, identifier: identifier)!
+//    }
 }

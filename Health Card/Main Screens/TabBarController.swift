@@ -11,6 +11,7 @@ import UIKit
 class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDelegate {
     
     var cprNr: String?;
+    var cprNrFromUserDefaults: String?
     var token: String?;
     var nextCall: String?;
     var patient: Patient?;
@@ -25,7 +26,7 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.cprNr = UserDefaults.standard.value(forKey: "citizenCPR") as? String;
+        cprNrFromUserDefaults = UserDefaults.standard.value(forKey: "citizenCPR") as? String;
         loginSession = Foundation.URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: OperationQueue.main);
         getPatientInfo();
     }
@@ -36,6 +37,7 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
     }
     
     func getPatientInfo(){
+        print("TabBarController getting Patient Info");
         UIApplication.shared.isNetworkActivityIndicatorVisible = true;
         SVProgressHUD.show();
         /*
@@ -43,8 +45,13 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
          atm the nodejs server is running on my machine, which has the ip address (at my home network) of 192.168.0.100 and it running on port 8443
          172.30.210.79
          */
-        
-        if let cpr = cprNr {
+        var cpr: String;
+        if (cprNr != nil) {
+            cpr = cprNr!;
+        } else {
+            cpr = cprNrFromUserDefaults!;
+        }
+//        if let cpr = cprNr  {
             var request = URLRequest(url: URL(string: "https://pacific-reaches-57767.herokuapp.com/api/patient/\(cpr)")!); //localhost:3000/api/patient/cprNr
             request.httpMethod = "GET";
             request.setValue(("application/json"), forHTTPHeaderField: "Content-Type");
@@ -76,15 +83,15 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
                         print(self.doctor);
                         self.patient = Patient(cpr: returnedJSON["_cpr"].stringValue, address: returnedJSON["address"].string!, name: returnedJSON["name"].string!, lastName: returnedJSON["last_name"].string!);
                         print(self.patient);
-                        
+
                         for (index,subJson):(String, JSON) in returnedJSON["history"] {
                             self.history.append(History(diagnostic: subJson["diagnostic"].string!, period: subJson["period"].string!, status: subJson["status"].string!));
                         }
-                        
+
                         for (index,subJson):(String, JSON) in returnedJSON["receipt"] {
                             self.treatment.append(Treatment(medication: subJson["medication"].string!, repeatInterval: subJson["repeat"].string!, endPeriod: subJson["endperiod"].string!));
                         }
-                        
+
                         DispatchQueue.main.async {
                             self.view.setNeedsLayout();
                             UIApplication.shared.isNetworkActivityIndicatorVisible = false;
@@ -94,7 +101,7 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
                 }
             });
             loginTask.resume();
-        }
+//        }
         
     }
     
