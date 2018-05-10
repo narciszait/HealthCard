@@ -66,6 +66,13 @@ class CardViewController: UIViewController, URLSessionDelegate, URLSessionDataDe
             cprTextField.text = cprNr;
         }
     }
+    
+    @IBAction func logoutFromYellowCard(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
+        UserDefaults.standard.set("", forKey: "citizenCPR");
+        self.performSegue(withIdentifier: "backToMainFromYellowCard", sender: self);
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();

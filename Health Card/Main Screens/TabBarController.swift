@@ -56,7 +56,7 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
             request.httpMethod = "GET";
             request.setValue(("application/json"), forHTTPHeaderField: "Content-Type");
             request.setValue("Bearer \(self.token!)", forHTTPHeaderField: "Authorization");
-            
+            print("request to \(request) + \(self.token)");
             print("1");
             
             loginTask = loginSession.dataTask(with: request, completionHandler: { (data, response, error) in

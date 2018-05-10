@@ -130,4 +130,11 @@ class AppointmentViewController: UIViewController, JTAppleCalendarViewDelegate, 
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setupViewsOfCalendar(from: visibleDates);
     }
+    
+    @IBAction func logoutFromCalendar(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
+        UserDefaults.standard.set("", forKey: "citizenCPR");
+        self.performSegue(withIdentifier: "backToMainFromCalendar", sender: self);
+    }
+    
 }

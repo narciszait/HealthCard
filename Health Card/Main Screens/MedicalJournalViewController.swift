@@ -39,5 +39,10 @@ class MedicalJournalViewController: UIViewController, UITableViewDelegate, UITab
         return 100;
     }
 
-
+    @IBAction func logoutFromHistory(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
+        UserDefaults.standard.set("", forKey: "citizenCPR");
+        self.performSegue(withIdentifier: "backToMainFromHistory", sender: self);
+    }
+    
 }

@@ -43,7 +43,7 @@ class UIStoryboardUnwindSegueFromRight: UIStoryboardSegue {
     override func perform()
     {
         let src = self.source as UIViewController
-        let dst = self.destination as UIViewController
+        let dst = self.destination as! InitialViewController
         
         src.view.superview?.insertSubview(dst.view, belowSubview: src.view)
         src.view.transform = CGAffineTransform(translationX: 0, y: 0)

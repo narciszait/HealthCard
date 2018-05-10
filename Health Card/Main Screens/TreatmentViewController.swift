@@ -47,5 +47,11 @@ class TreatmentViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 155;
     }
-
+    
+    @IBAction func logoutFromTreatment(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
+        UserDefaults.standard.set("", forKey: "citizenCPR");
+        self.performSegue(withIdentifier: "backToMainFromTreatment", sender: self);
+    }
+    
 }

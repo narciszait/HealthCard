@@ -442,7 +442,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Hlh-GQ-kRa" kind="unwind" unwindAction="segueToMeWithSegue:" id="FzU-Hd-L3O"/>
+                                    <action selector="logoutFromYellowCard:" destination="xIX-jB-8he" eventType="touchUpInside" id="9ZP-g2-7q5"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CPR" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0uD-Jg-Wyw" customClass="DesignableUITextField" customModule="Health_Card" customModuleProvider="target">
@@ -521,10 +521,10 @@
                         <outlet property="doctorPhoneLabel" destination="Qxe-Oi-fA4" id="hmy-v5-WFj"/>
                         <outlet property="firstNameLabel" destination="nxg-8Q-sTX" id="Ku3-C3-aQv"/>
                         <outlet property="lastNameLabel" destination="Od1-Pd-UEJ" id="Lm4-f5-GGa"/>
+                        <segue destination="afu-wf-XBA" kind="show" identifier="backToMainFromYellowCard" id="ngg-wK-baf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWl-Xf-nOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Hlh-GQ-kRa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5540" y="-722.78860569715152"/>
         </scene>
@@ -586,7 +586,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="bdT-mx-ORM" kind="unwind" unwindAction="segueToMeWithSegue:" id="aQh-uo-bRe"/>
+                                    <action selector="logoutFromHistory:" destination="aK3-ko-eZq" eventType="touchUpInside" id="sX9-gA-xBE"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q6d-mw-91Q">
@@ -687,10 +687,10 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="medicalJournalTableView" destination="Q6d-mw-91Q" id="czo-pO-fSz"/>
+                        <segue destination="afu-wf-XBA" kind="show" identifier="backToMainFromHistory" id="cN1-F8-4oi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZO-cy-jgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="bdT-mx-ORM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5541.6000000000004" y="62.518740629685162"/>
         </scene>
@@ -714,7 +714,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Z55-4o-EFK" kind="unwind" unwindAction="segueToMeWithSegue:" id="7ZZ-vg-qGY"/>
+                                    <action selector="logoutFromTreatment:" destination="xhC-3R-vvF" eventType="touchUpInside" id="t47-zl-rI8"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="155" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yed-3Y-JLw">
@@ -833,10 +833,10 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="treatmentTableView" destination="yed-3Y-JLw" id="am0-wi-TbB"/>
+                        <segue destination="afu-wf-XBA" kind="show" identifier="backToMainFromTreatment" id="jM6-z7-BkE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLg-9v-cr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Z55-4o-EFK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5540" y="825.33733133433293"/>
         </scene>
@@ -1021,7 +1021,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="nwu-ZN-Fww" kind="unwind" unwindAction="segueToMeWithSegue:" id="pt5-0L-y4u"/>
+                                    <action selector="logoutFromCalendar:" destination="w6r-yt-AhT" eventType="touchUpInside" id="KxC-tS-WQd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1044,10 +1044,10 @@
                         <outlet property="calendarView" destination="WV4-bp-BaK" id="tq9-Qa-wsA"/>
                         <outlet property="month" destination="0T8-cV-kwJ" id="2Sx-56-ffF"/>
                         <outlet property="year" destination="c8Y-lx-GPG" id="3YC-mW-n1N"/>
+                        <segue destination="afu-wf-XBA" kind="show" identifier="backToMainFromCalendar" id="xRg-HX-bkJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ytC-CH-95t" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="nwu-ZN-Fww" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5540" y="1640.3298350824589"/>
         </scene>
@@ -1082,7 +1082,8 @@
         <image name="user" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lDd-0e-kVD"/>
-        <segue reference="6jg-Ib-11P"/>
+        <segue reference="ngg-wK-baf"/>
+        <segue reference="CyB-pX-xdW"/>
+        <segue reference="mf7-jM-LtQ"/>
     </inferredMetricsTieBreakers>
 </document>
