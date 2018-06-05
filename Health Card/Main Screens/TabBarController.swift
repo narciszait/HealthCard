@@ -34,6 +34,24 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         self.view.setNeedsLayout();
+        
+        if (UserDefaults.standard.bool(forKey: "firstLoginSuccessful")) {
+            if (!UserDefaults.standard.bool(forKey: "showedBiometricPrompt")) {
+                let alert = UIAlertController(title: "Use biometric?", message: "Do you want to use your phone's biometrics to login next time? \n You can use the biometric login until you log out of the application", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (alertAction) in
+                    print("Yes to biometric");
+                    UserDefaults.standard.set(true, forKey: "firstLoginSuccessful");
+                    UserDefaults.standard.set(true, forKey: "showedBiometricPrompt");
+                }));
+                alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (alertAction) in
+                    print("No to biometric");
+                    UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
+                }))
+                
+                self.present(alert, animated: true);
+            }
+        }
     }
     
     func getPatientInfo(){

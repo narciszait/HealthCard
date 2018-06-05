@@ -44,47 +44,53 @@ class InitialViewController: UIViewController {
     
     //self.performSegue(withIdentifier: "touchIDSegue", sender: self);
     @IBAction func loginAction(_ sender: Any) {
-        if (UserDefaults.standard.value(forKey: "firstLoginSuccessful") as? Bool ?? false){
+        if (UserDefaults.standard.bool(forKey: "firstLoginSuccessful")){
 //            authenticateUserUsingTouchId()
-            let laContext = LAContext();
-            let touchIDAvailable = laContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil);
-            
-            if touchIDAvailable {
-                laContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authenticate") { (authenticated, error) in
-                    if authenticated {
-                        DispatchQueue.main.async{
-                            self.performSegue(withIdentifier: "touchIDSegue", sender: self);
-                        }
-                        
-                    } else {
-                        print(error?.localizedDescription);
-                        let laError = error as! LAError;
-                        if laError.code == .userFallback {
-                            print("fallback");
+            if (UserDefaults.standard.bool(forKey: "showedBiometricPrompt")){
+                let laContext = LAContext();
+                let touchIDAvailable = laContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil);
+                
+                if touchIDAvailable {
+                    laContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authenticate") { (authenticated, error) in
+                        if authenticated {
                             DispatchQueue.main.async{
-                                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+                                self.performSegue(withIdentifier: "touchIDSegue", sender: self);
                             }
                             
-                        }
-                        if laError.code == .userCancel {
-                            print("cancel");
-                            DispatchQueue.main.async{
-                                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+                        } else {
+                            print(error?.localizedDescription);
+                            let laError = error as! LAError;
+                            if laError.code == .userFallback {
+                                print("fallback");
+                                DispatchQueue.main.async{
+                                    self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+                                }
+                                
                             }
-                        }
-                        if laError.code == .authenticationFailed {
-                            print("failed");
-                            DispatchQueue.main.async{
-                                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+                            if laError.code == .userCancel {
+                                print("cancel");
+                                DispatchQueue.main.async{
+                                    self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+                                }
+                            }
+                            if laError.code == .authenticationFailed {
+                                print("failed");
+                                DispatchQueue.main.async{
+                                    self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+                                }
                             }
                         }
                     }
+                } else {
+                    print("no touch id");
+                    self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
                 }
-            } else {
-                print("no touch id");
+            }
+            else {
                 self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
             }
-        } else {
+        }
+        else {
             self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
         }
     }

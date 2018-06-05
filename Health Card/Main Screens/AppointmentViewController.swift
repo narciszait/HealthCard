@@ -134,6 +134,7 @@ class AppointmentViewController: UIViewController, JTAppleCalendarViewDelegate, 
     @IBAction func logoutFromCalendar(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
         UserDefaults.standard.set("", forKey: "citizenCPR");
+        UserDefaults.standard.set(false, forKey:"showedBiometricPrompt");
         self.performSegue(withIdentifier: "backToMainFromCalendar", sender: self);
     }
     

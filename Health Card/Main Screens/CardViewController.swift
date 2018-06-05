@@ -70,6 +70,7 @@ class CardViewController: UIViewController, URLSessionDelegate, URLSessionDataDe
     @IBAction func logoutFromYellowCard(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
         UserDefaults.standard.set("", forKey: "citizenCPR");
+        UserDefaults.standard.set(false, forKey:"showedBiometricPrompt");
         self.performSegue(withIdentifier: "backToMainFromYellowCard", sender: self);
     }
     
