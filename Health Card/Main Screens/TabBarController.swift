@@ -98,9 +98,9 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
                     if let returnedJSON = (try? JSON(data: data)) {
                         print(returnedJSON);
                         self.doctor = Doctor(name: returnedJSON["doctor"]["name"].string!, address: returnedJSON["doctor"]["address"].string!, phone: returnedJSON["doctor"]["phone"].string!);
-                        print(self.doctor);
+//                        print(self.doctor);
                         self.patient = Patient(cpr: returnedJSON["_cpr"].stringValue, address: returnedJSON["address"].string!, name: returnedJSON["name"].string!, lastName: returnedJSON["last_name"].string!);
-                        print(self.patient);
+//                        print(self.patient);
 
                         for (index,subJson):(String, JSON) in returnedJSON["history"] {
                             self.history.append(History(diagnostic: subJson["diagnostic"].string!, period: subJson["period"].string!, status: subJson["status"].string!));

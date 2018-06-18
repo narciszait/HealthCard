@@ -42,10 +42,8 @@ class InitialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //self.performSegue(withIdentifier: "touchIDSegue", sender: self);
     @IBAction func loginAction(_ sender: Any) {
         if (UserDefaults.standard.bool(forKey: "firstLoginSuccessful")){
-//            authenticateUserUsingTouchId()
             if (UserDefaults.standard.bool(forKey: "showedBiometricPrompt")){
                 let laContext = LAContext();
                 let touchIDAvailable = laContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil);
@@ -110,14 +108,4 @@ class InitialViewController: UIViewController {
         UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
         UserDefaults.standard.set("", forKey: "citizenCPR");
     }
-    
-//    override func segueForUnwinding(to toViewController: UIViewController, from fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
-//        if let id = identifier {
-//            if id == "returnToMainViewController" {
-//                let unwindSegue = UIStoryboardUnwindSegueFromRight(identifier: id, source: fromViewController, destination: toViewController)
-//                return unwindSegue
-//            }
-//        }
-//        return super.segueForUnwinding(to: toViewController, from: fromViewController, identifier: identifier)!
-//    }
 }

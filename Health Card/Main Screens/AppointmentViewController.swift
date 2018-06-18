@@ -16,7 +16,7 @@ class AppointmentViewController: UIViewController, JTAppleCalendarViewDelegate, 
     let formatter = DateFormatter();
     
     let outsideMonthColor = UIColor(colorWithHexValue: 0xCB9A13);
-    let monthColor = UIColor.white // UIColor.black;
+    let monthColor = UIColor.red // UIColor.black;
     let selectedMonthColor = UIColor(colorWithHexValue: 0xFFC115); // UIColor.white; // UIColor(colorWithHexValue: 0xff0000);
     let currentDateSelectedViewColor = UIColor(colorWithHexValue: 0x4e3f5d);
     

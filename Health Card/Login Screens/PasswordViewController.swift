@@ -40,7 +40,7 @@ class PasswordViewController: UIViewController, UITextFieldDelegate, URLSessionD
     }
     
     @objc func getPatientInfo(){
-        cprTextField.text = "1234567890";
+        cprTextField.text = "2154325595"; //2154325595
         passwordTextField.text = "pass";
     } 
     
@@ -136,14 +136,3 @@ class PasswordViewController: UIViewController, UITextFieldDelegate, URLSessionD
     }
     
 }
-
-//                    let jsonSwifty = try? JSON(data:data);
-//                    print(jsonSwifty!);
-////                    let json = try? JSONSerialization.jsonObject(with: data, options: []) as! [String: Any];
-//                    print(jsonSwifty!["request"]["url"]);
-//
-//                    self.cprNr = jsonSwifty!["cpr"].stringValue;
-//                    self.nemIDChallenge = jsonSwifty!["nemid"].stringValue;
-//                    self.token = jsonSwifty!["token"].stringValue;
-////                    let nextCall = try? JSONSerialization.jsonObject(with: json!["request"]!, options: []) as! [String: Any];
-////                    self.next =
