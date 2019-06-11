@@ -3,316 +3,1140 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		039D41FAE2DD868260758D89001EC69A /* HMACCommonCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F82B093AFF2C625A09162874402F925 /* HMACCommonCrypto.swift */; };
-		1C8DE41099A890D58CA488076828B350 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216205ED0AB264CF0AD3BDD680A87F8D /* JWT.swift */; };
-		39EB588A59EA7A7FE14C5B00A4997800 /* Pods-Health Card-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A9969A11C326C4AD147CD51DE98090 /* Pods-Health Card-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BFCB70093CDC6323C4CDC56A8309182 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C0C7DBD85D9C446CF41B5A4C2EF362 /* Claims.swift */; };
-		43CB9FBF4F563866570B3AADCC6E6949 /* ClaimSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ABB3286346469839DA7FAF0F2062B8 /* ClaimSet.swift */; };
-		5225B5598072D741D8303EB9D122925E /* JSONWebToken-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E17520EFF486EBA8939446A7B889A904 /* JSONWebToken-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D5490C4D59F4170AB2EE20A9DC87820 /* JOSEHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD9CB94C4112E10B789F167C3847EC /* JOSEHeader.swift */; };
-		5F7B8955B7CFB46DCF40C334C1FA868D /* Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5637FD46B5360726794B76040A3AC3E6 /* Encode.swift */; };
-		81D4E5A583268304120A47BFCAFD56F5 /* Pods-Health Card-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3427F8263E06983D1A5FEB5AC93B44A /* Pods-Health Card-dummy.m */; };
-		9673E6DC1978A3570F513DFB20F5D33A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9D738A06230ED68D87E31FD99FB674CA /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19576547D82E31266340D7D283E791B1 /* Base64.swift */; };
-		B37E22D2C326CEDE8C0B899C0BDD573D /* JSONWebToken-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D0B53AA37B1EE954A77BA23919F78E /* JSONWebToken-dummy.m */; };
-		B5F5B5C06333376202D27E88D7D5BF09 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C87FD87B14DAB5E07B10B180A4DFF3 /* Decode.swift */; };
-		D86844F60046B5C66BF80E3105FE2930 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D59CFB2491A9840E09EF225EEB666 /* HMAC.swift */; };
-		DE8D73E25DFDA9B8462FF1F652F9028A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		023D622D74F27795FF7277C12AB3B86E /* NoneAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B956DC3EEEA46678B9CADCFD78A49A /* NoneAlgorithm.swift */; };
+		02C0EF5EAF1245F0F326F91532C9D199 /* ECEncryptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF89167C053589D6EBD19E90C10EF4 /* ECEncryptable.swift */; };
+		069775BAEC89A8DA571F5BD2F2D8053F /* Contracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE6321AEBCAE593A43E86CD5E0E964 /* Contracts.swift */; };
+		070AA1A8E58FF4C39CF26C4EC9929EB4 /* LoggerAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F69977D242E39A42935CF45A5BD6BAC /* LoggerAPI-dummy.m */; };
+		0B7F8BECB6F6F63BB14DB49E4FA07E1E /* ClosureAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E6C03569CB8A26609621AA77149D59 /* ClosureAliases.swift */; };
+		0CA6C237EBB571B5B388F79FE50CC70F /* CryptorRSADigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE525D5E1BF01FF04BF92443F23BAC /* CryptorRSADigest.swift */; };
+		0E6869881895019F51ED6BCC6E1C37DE /* Pods-Health Card-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 698099457AB70152CAA5EE11B0C135FA /* Pods-Health Card-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		188A46AF1A69E8F247DC9853E2F0F3D4 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5CBDA22975718B8B7E4253CEEC6695 /* Claims.swift */; };
+		19B92C19C9069A100FA079F6AC824DAB /* CryptorRSAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FDAEAC94A154D764CEC1595795BEC5 /* CryptorRSAConstants.swift */; };
+		2180AE5A2227F70FE88F1871CCCE8895 /* KituraContracts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91D0A1DB69A60E30F55C9643F02221B /* KituraContracts.framework */; };
+		241748E3999CCB2FB81556DB2EE5083C /* EllipticCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E386A6818B6E1EB616D143479FDD4E /* EllipticCurve.swift */; };
+		265F81B5E83DB897F377B0CB0E3BAD95 /* BlueCryptor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65779D178957FA97414D1237A040C2B8 /* BlueCryptor-dummy.m */; };
+		2C93956CED6ECE964674698EDD7C27ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022136A41A8439B0DEA51DE8828B887 /* Foundation.framework */; };
+		2CCAAC755754BC1C17F72F3E964F3949 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022136A41A8439B0DEA51DE8828B887 /* Foundation.framework */; };
+		2EF4737210333BFF9BD2AEF1BD28BB03 /* SwiftJWT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C69BB0ECE4EADFB2C91FF0EFD11C4C0 /* SwiftJWT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31C6E893E32DA12AF0DC6D41BC41C128 /* ECPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2EADD284DAEF0EEDF2DE15B6FB143F /* ECPrivateKey.swift */; };
+		33A1BB44AEC4A8268BE944C0DA04F76F /* SSLPointerTricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00970619DE909ACE3BA8F3085C54FE18 /* SSLPointerTricks.swift */; };
+		3513DBF0285D6A60BB75743007738120 /* SSLPointerTricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469239F9638F03CA5BE553D3B860B347 /* SSLPointerTricks.swift */; };
+		388A7F27C350F4DC250C6456DFA6599E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA58298537B3FFFE2B7399F586300511 /* Extensions.swift */; };
+		3AC097852FBD7D52D4535943EDE56579 /* Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71397D8880723E3FA33D6B396803E05 /* Coder.swift */; };
+		3CECFB3A36E4ADC0BA6ABF1BC6D064C3 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5157F5866903DCFCEDEEC277FA8B73 /* JWT.swift */; };
+		3E532B7B79221E5CC456C14F7E37F773 /* KeyDerivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4A45FCE7F8371EDA093A65674E0651 /* KeyDerivation.swift */; };
+		3E5D6B053A1E947167604DCD6A250391 /* JWTDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164055A833749DF0BD34CF23FA37A063 /* JWTDecoder.swift */; };
+		42B03F89A57EC970A69139D9475443A4 /* ClaimsOpenID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0481D81B1B1E0C9353CFC044A9AFDCC /* ClaimsOpenID.swift */; };
+		43568AE7DAB9639BB9BFD79D0FEC3E27 /* JWTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A1E7BA6632EC7A2E0D9244C92D3EAD /* JWTError.swift */; };
+		4619F44A026F80E4DEF15C47388211BE /* ECError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D79CE34E9AC3C708F72973914E4D5B5 /* ECError.swift */; };
+		497138EEDC6A2390C04177C3B90F296F /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49D86D6FC80EE9A4C0B11397557A26B /* Updatable.swift */; };
+		4E20D6E1D59D79FC0728B4315E9A626E /* Pods-Health Card-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A222FDADA9C1855D5E0CDEEA7D082A /* Pods-Health Card-dummy.m */; };
+		4E4E9FE14E6FAD118B20F94F4CF55354 /* BodyFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDDF9D12BCD9C8CFCF3DFFC15770E2 /* BodyFormat.swift */; };
+		5078CAC607A95429512000F63D6F2E09 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C462D7C948C42362F7A6BCBA7591D /* Crypto.swift */; };
+		52554A5605FA2E4AFA7B18E1FD1AE117 /* CryptorRSAKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2318797A8DC9C3563FDAC301939764 /* CryptorRSAKey.swift */; };
+		5B61A392E5470A5B63F250C88F8A4120 /* VerifierAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F4514E22C1C655F5890B0E7D109A1 /* VerifierAlgorithm.swift */; };
+		6356FAFAC1E4AE60D2CF97B31578856C /* QueryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86507F63842D73AFFB862C5CDA084D95 /* QueryEncoder.swift */; };
+		63AFF2CBF3C880EE554CB849B71B2778 /* JWTSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD16B5E4B8D1F7415C33A3A6C7C0B28D /* JWTSigner.swift */; };
+		66D16DFC7B1AF2A91D2F4CB274D3253F /* KituraContracts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 058CB766018100A14F4F19CEE3E66DAD /* KituraContracts-dummy.m */; };
+		68C7BD26C3CA5E2DF560640A13ED4F67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022136A41A8439B0DEA51DE8828B887 /* Foundation.framework */; };
+		7113636DA94F63376B17562E3A20B71D /* ECPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D683AF0E344F08A5A78F0208070589 /* ECPublicKey.swift */; };
+		71204D2770BEC08919F7817ABAB011A6 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFCE0658771FC36E8F63B7C531A0114 /* Digest.swift */; };
+		7181D06D4801E846D040F651D80135D5 /* BlueRSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A60E4C0F0B3A6E0EA1DB23DC6DF489 /* BlueRSA.swift */; };
+		7280CF0DF061FB412EB61E5ABA6D8B7A /* SSLPointerTricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AB1500F263778FEB70008E53CE27ED /* SSLPointerTricks.swift */; };
+		7948F28406951AA33DD6D236A93924E3 /* ASN1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC22656DC645ED87608C374A86B96D3 /* ASN1.swift */; };
+		79DCE1DC140F2ADC4C5D68489FA8ADCB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4650307CE2860A98F1A25134EEBE4 /* Utilities.swift */; };
+		7A4F6ADD2141DF806CE96148C6EB3A35 /* ECDecryptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99234B0ACF0A12311385E341A4C27323 /* ECDecryptable.swift */; };
+		7AAB5FFCA6D4B66F661B143D36580A2F /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DDD3BB2E1C50B16373E90BE3FB1325 /* Cryptor.swift */; };
+		7E86AC1039BEBBBA158B1823816B6C5D /* BlueHMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C5D0B74C27929E4D01DB69123C7C8A /* BlueHMAC.swift */; };
+		810DD7DCDB8A990B09B4C2F58FBE5364 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F791480CA6AFE02B04B1B41CE0AF602 /* HMAC.swift */; };
+		87A9ACBA94B8A0C1AB4C905BF4F02308 /* Cryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E598C57FD9B7D7459857692B7625A22B /* Cryptor.framework */; };
+		88BB314343D5F1E44CE8F75C8BDC76F9 /* CryptorRSAUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C6CE98040C4FC22BF7A68A71C3727C /* CryptorRSAUtilities.swift */; };
+		88FC8ACA64FA1F58D812E417F8A93766 /* BlueRSA-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C198112109F94A5F71FB5E7348FBB1A /* BlueRSA-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A355AD5821BCDD38DD705091CCC57B7 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6D0FA350C916F5F5CB99669313B37E /* Data+Extensions.swift */; };
+		8B9F4202A109DD25F1B03C033885E5AA /* JWTEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F46742A631CD09907B642D29B130B20 /* JWTEncoder.swift */; };
+		8DDB74202F0C32C0CA9B7C49E88C0A7F /* SignerAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669D20F9C3D039D182DF26F843C9BFB3 /* SignerAlgorithm.swift */; };
+		94C2B4699DB7CCA073B556039D038810 /* BlueECC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB13983670DCF6724354701D1696082 /* BlueECC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98FCB62E16B28D4367BDB464A144C7D1 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069185A415ADBDEAF4EEE33F1DE81E83 /* Random.swift */; };
+		9ABC5C14CF886BFAA6FA0CD89F67BA3F /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB835B0B6CB9232867B9CD87ECC3C921 /* LoggerAPI.framework */; };
+		9F1375C894BEDBC5123BEA2F4ADD567B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022136A41A8439B0DEA51DE8828B887 /* Foundation.framework */; };
+		A272BCE8FF24E48003257E9BB43E13D4 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455314FF3BB0D9DCC3BB81D5744A884 /* Status.swift */; };
+		A8F643A54D6BA1AD8A92351E130E28A1 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E2AF41B4D8D25A0BF328C2E5A9F49 /* Header.swift */; };
+		A927FCAB1451228EE777C3FD92DB31CD /* ValidateClaimsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795549C08352456F3B974D5419E9FA1 /* ValidateClaimsResult.swift */; };
+		AC230D5731545B0DA98E11031F5C18C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022136A41A8439B0DEA51DE8828B887 /* Foundation.framework */; };
+		B7DCB25F0735B4CB16BA70DA698015EA /* BlueECC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7ED3C9010AE5E0B2AD620EDA68B66 /* BlueECC-dummy.m */; };
+		BE2F9A93222A51484C9F6912758FA420 /* BlueCryptor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD29864D7A44EBC7F0557E5B947FDCE8 /* BlueCryptor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE50566E50E7356A603B43D073678741 /* StreamCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35538FEBEDB01225AEFBA12F82B6BD3 /* StreamCryptor.swift */; };
+		BEF3E1CCC36B8EC7C1E98EDBA4568196 /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB835B0B6CB9232867B9CD87ECC3C921 /* LoggerAPI.framework */; };
+		BF88F995BC22DE30E79D47575F768159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022136A41A8439B0DEA51DE8828B887 /* Foundation.framework */; };
+		C023B25320D0534B1CE0CC67E322E126 /* BlueECDSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB33378F0CEEC69978E14E82844C09 /* BlueECDSA.swift */; };
+		C16BCB76792B537151E7B9B6CDF45FD0 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD62BA1046AC2A66DEBB940797C08E /* Data+Extensions.swift */; };
+		C892648168798E65B598A71BCCD3B909 /* ECSignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A71A2C77269D628926E5CE1E9A091 /* ECSignable.swift */; };
+		C8BDF2022C84049E9894674C6DC85997 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022136A41A8439B0DEA51DE8828B887 /* Foundation.framework */; };
+		C9F5B8A0161493DE7F1AF37FE3D7D47F /* KituraContracts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ADDDA8F7B3C148AE03B963FE93C162B2 /* KituraContracts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB9DD194F73D60331E38D5C26D3F951C /* ClaimsStandardJWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530BBB19BB2EFF20BEB865052C123BCE /* ClaimsStandardJWT.swift */; };
+		CD5B24A8EE9E2B86B07FE522019D7834 /* CryptorRSA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8489357DE4A2AC660D4A68366BD7ACFE /* CryptorRSA.framework */; };
+		D33E11D2605270C460AA4701726BAC48 /* ECSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE2D1F161D18A90DFE0F60AA4172EE9 /* ECSignature.swift */; };
+		DD21F9C132B6D1651030D6A298E51F56 /* BodyEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBECCC502E9A3E4EF72E4DCEDC778821 /* BodyEncoder.swift */; };
+		DE565ECBA3DF25165AF8F991D572BD5E /* BlueRSA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AD6D4AC8D598CD171A96EBF269EBFF /* BlueRSA-dummy.m */; };
+		E23185A99198C4742C5D1F6544CCA27D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3376BDDA60C78C3BE4254AE75ABB33A /* Logger.swift */; };
+		E251FC927A22E920ABA456EFA714F8D2 /* RSAKeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3625D91730DF3D7A760EC6874D8A0 /* RSAKeyType.swift */; };
+		E580418EE74CFA2EC2F97156A5D930DD /* ClaimsMicroProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C47E81EC18DAE681798DB61EA9789E /* ClaimsMicroProfile.swift */; };
+		EDD206DBCB8F6F7C9B664B266A35D42F /* Data+Base64URLEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31838977EDC83C9E818F4A6A35483B6 /* Data+Base64URLEncoded.swift */; };
+		EE4967E225267773DC34380A24C8F52C /* JWTVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7BFF4AD601A6ACFCD5355990FF5B89 /* JWTVerifier.swift */; };
+		EF82735CE6FD74DE79172A2AE6EFEFDB /* LoggerAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9504AC0711B5E3AF6D0D5BB9ABFE0A6 /* LoggerAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF83D9C80F07613A4044C9A312DCA7C1 /* CryptorRSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E938CCAF6B9958AE43B71D820C3B790 /* CryptorRSA.swift */; };
+		F126F81E6C491E4EC6017E8CB596A437 /* SwiftJWT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3E953D999FD6952F0CCAE4222D16CC /* SwiftJWT-dummy.m */; };
+		F48486FFDF171830E0EA206F1CA800C0 /* BodyDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C7ACE92191EA8F0C139A75E2A79C36 /* BodyDecoder.swift */; };
+		F5BAD2418B23D73410407EAD2F102781 /* CryptorRSAErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC86F4F4D53CC5AD40A7D4AD52A5150 /* CryptorRSAErrors.swift */; };
+		F92E38A38241C4080331D2F7113861E6 /* CryptorECC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B5AA010D587F5F249E26759F3FA11C /* CryptorECC.framework */; };
+		FA887736F4656B9071DFD1B90858B334 /* QueryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9CE93FEA0947709A4F459C842248EB /* QueryDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		572B9A10488B3F710C6B5FAE7266A425 /* PBXContainerItemProxy */ = {
+		1652BAE4E13A5DCBA8DF26FBB7BBC370 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 04ACCD651C30E7B6FE864F0FFE983BA5;
-			remoteInfo = JSONWebToken;
+			remoteGlobalIDString = DC144A4132E1AF6D69F7C76CDD5EB738;
+			remoteInfo = BlueCryptor;
+		};
+		16F7D194C8063F781A04D44E1EAB7DDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 095C1594CAC7DD740572EBF2C3982443;
+			remoteInfo = KituraContracts;
+		};
+		2EAAA3CFB0622A7867B49CC2627E45DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50A1101C5B7AEC40C025C665C91607AC;
+			remoteInfo = SwiftJWT;
+		};
+		2F31431980E50CDBF5E4E74830935AFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C515C5A46F015A439DE95C0780E82F9;
+			remoteInfo = LoggerAPI;
+		};
+		2F586889FF86513A92AE47DC4F7CE0EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C515C5A46F015A439DE95C0780E82F9;
+			remoteInfo = LoggerAPI;
+		};
+		7160F61FE04F68EEEF862D5C225738B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 768F34D6EB7071A48A28DE09F065197F;
+			remoteInfo = BlueRSA;
+		};
+		AE88AA64606DE2CA66ED8E6AD07D4FB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C44FC504F940D1183D97474C2ED000A;
+			remoteInfo = BlueECC;
+		};
+		D3A8930CE9545E2A9052818BFF142C98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 768F34D6EB7071A48A28DE09F065197F;
+			remoteInfo = BlueRSA;
+		};
+		D574DDA55994617E064E65E86202EB57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC144A4132E1AF6D69F7C76CDD5EB738;
+			remoteInfo = BlueCryptor;
+		};
+		D71B2838BB1BA7D81C53064BD411FBD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C515C5A46F015A439DE95C0780E82F9;
+			remoteInfo = LoggerAPI;
+		};
+		D9AED5B7DF8FC7EF6A9DC019847659D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 095C1594CAC7DD740572EBF2C3982443;
+			remoteInfo = KituraContracts;
+		};
+		F04EA57DF6A084F84C80C5F41E736334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C44FC504F940D1183D97474C2ED000A;
+			remoteInfo = BlueECC;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01E0F8628CD3FE5892D9036F9A8E36CB /* Pods_Health_Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Health_Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		05E30C511054D13D5064579D134BE716 /* Pods-Health Card-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Health Card-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0A434FDAC99F1660E87CBFD4A3A5A5AD /* Pods-Health Card.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Health Card.debug.xcconfig"; sourceTree = "<group>"; };
-		14AD9CB94C4112E10B789F167C3847EC /* JOSEHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JOSEHeader.swift; path = Sources/JOSEHeader.swift; sourceTree = "<group>"; };
-		19015C8771499E3273D243F439F0C0C8 /* Pods-Health Card-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Health Card-resources.sh"; sourceTree = "<group>"; };
-		19576547D82E31266340D7D283E791B1 /* Base64.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base64.swift; path = Sources/Base64.swift; sourceTree = "<group>"; };
-		216205ED0AB264CF0AD3BDD680A87F8D /* JWT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWT.swift; path = Sources/JWT.swift; sourceTree = "<group>"; };
-		230A8AAF3D3F1DF6F9BB2DF10F759DC8 /* JSONWebToken.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONWebToken.xcconfig; sourceTree = "<group>"; };
-		2F3EF7BACFB23C839634A1340897546D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37A9969A11C326C4AD147CD51DE98090 /* Pods-Health Card-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Health Card-umbrella.h"; sourceTree = "<group>"; };
-		5637FD46B5360726794B76040A3AC3E6 /* Encode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Encode.swift; path = Sources/Encode.swift; sourceTree = "<group>"; };
-		5FA762B986F679975C91CE3EFA207844 /* JSONWebToken-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONWebToken-prefix.pch"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6AEE973A57BD76E43AE79AE8845E3AEF /* JSONWebToken.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JSONWebToken.modulemap; sourceTree = "<group>"; };
-		738D59CFB2491A9840E09EF225EEB666 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/HMAC.swift; sourceTree = "<group>"; };
-		7B735E4BCDB7D154C8258835F082B817 /* Pods-Health Card-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Health Card-acknowledgements.plist"; sourceTree = "<group>"; };
-		8F82B093AFF2C625A09162874402F925 /* HMACCommonCrypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMACCommonCrypto.swift; path = Sources/HMACCommonCrypto.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3C87FD87B14DAB5E07B10B180A4DFF3 /* Decode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decode.swift; path = Sources/Decode.swift; sourceTree = "<group>"; };
-		A8477F8FD776F5D9A0C333B8B0A9BB81 /* Pods-Health Card.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Health Card.modulemap"; sourceTree = "<group>"; };
-		C0D7628E747C99A30A2F9ECFCA0EA5AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3427F8263E06983D1A5FEB5AC93B44A /* Pods-Health Card-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Health Card-dummy.m"; sourceTree = "<group>"; };
-		C5C0C7DBD85D9C446CF41B5A4C2EF362 /* Claims.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Claims.swift; path = Sources/Claims.swift; sourceTree = "<group>"; };
-		C7D0B53AA37B1EE954A77BA23919F78E /* JSONWebToken-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONWebToken-dummy.m"; sourceTree = "<group>"; };
-		CC31C77BACA8C86409B41CA668B51023 /* Pods-Health Card-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Health Card-frameworks.sh"; sourceTree = "<group>"; };
-		D5ABB3286346469839DA7FAF0F2062B8 /* ClaimSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClaimSet.swift; path = Sources/ClaimSet.swift; sourceTree = "<group>"; };
-		E17520EFF486EBA8939446A7B889A904 /* JSONWebToken-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONWebToken-umbrella.h"; sourceTree = "<group>"; };
-		E28D0DB4DDF6D1525DAD1478CB0558D5 /* Pods-Health Card.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Health Card.release.xcconfig"; sourceTree = "<group>"; };
-		F93EEB191351D5C2AF80281F605C04F3 /* JWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00970619DE909ACE3BA8F3085C54FE18 /* SSLPointerTricks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLPointerTricks.swift; path = Sources/CryptorRSA/SSLPointerTricks.swift; sourceTree = "<group>"; };
+		047C462D7C948C42362F7A6BCBA7591D /* Crypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Crypto.swift; path = Sources/Cryptor/Crypto.swift; sourceTree = "<group>"; };
+		058CB766018100A14F4F19CEE3E66DAD /* KituraContracts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KituraContracts-dummy.m"; sourceTree = "<group>"; };
+		069185A415ADBDEAF4EEE33F1DE81E83 /* Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Random.swift; path = Sources/Cryptor/Random.swift; sourceTree = "<group>"; };
+		09BC47DEB23E350195FF98846D0686B4 /* BlueCryptor-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BlueCryptor-Info.plist"; sourceTree = "<group>"; };
+		0F46742A631CD09907B642D29B130B20 /* JWTEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWTEncoder.swift; path = Sources/SwiftJWT/JWTEncoder.swift; sourceTree = "<group>"; };
+		10B956DC3EEEA46678B9CADCFD78A49A /* NoneAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NoneAlgorithm.swift; path = Sources/SwiftJWT/NoneAlgorithm.swift; sourceTree = "<group>"; };
+		10C7ACE92191EA8F0C139A75E2A79C36 /* BodyDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BodyDecoder.swift; path = Sources/KituraContracts/BodyDecoder.swift; sourceTree = "<group>"; };
+		119DECCAA352AD9FF31E07E2B41307D3 /* KituraContracts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KituraContracts.framework; path = KituraContracts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		164055A833749DF0BD34CF23FA37A063 /* JWTDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWTDecoder.swift; path = Sources/SwiftJWT/JWTDecoder.swift; sourceTree = "<group>"; };
+		17BD62BA1046AC2A66DEBB940797C08E /* Data+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extensions.swift"; path = "Sources/CryptorECC/Data+Extensions.swift"; sourceTree = "<group>"; };
+		18E2F91E08BCF92DE0900628CA406CC0 /* KituraContracts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KituraContracts.modulemap; sourceTree = "<group>"; };
+		1ADDDF9D12BCD9C8CFCF3DFFC15770E2 /* BodyFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BodyFormat.swift; path = Sources/KituraContracts/BodyFormat.swift; sourceTree = "<group>"; };
+		1B3E953D999FD6952F0CCAE4222D16CC /* SwiftJWT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftJWT-dummy.m"; sourceTree = "<group>"; };
+		1C198112109F94A5F71FB5E7348FBB1A /* BlueRSA-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlueRSA-umbrella.h"; sourceTree = "<group>"; };
+		1C69BB0ECE4EADFB2C91FF0EFD11C4C0 /* SwiftJWT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftJWT-umbrella.h"; sourceTree = "<group>"; };
+		1E938CCAF6B9958AE43B71D820C3B790 /* CryptorRSA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptorRSA.swift; path = Sources/CryptorRSA/CryptorRSA.swift; sourceTree = "<group>"; };
+		1F5405D51D1566BA8921C9CA6623CAA2 /* BlueECC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlueECC.xcconfig; sourceTree = "<group>"; };
+		21AD6D4AC8D598CD171A96EBF269EBFF /* BlueRSA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BlueRSA-dummy.m"; sourceTree = "<group>"; };
+		22E7ED3C9010AE5E0B2AD620EDA68B66 /* BlueECC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BlueECC-dummy.m"; sourceTree = "<group>"; };
+		24EAEEE71E43FE0C35A904960E68CE2B /* SwiftJWT-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftJWT-prefix.pch"; sourceTree = "<group>"; };
+		2BB13983670DCF6724354701D1696082 /* BlueECC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlueECC-umbrella.h"; sourceTree = "<group>"; };
+		2BC86F4F4D53CC5AD40A7D4AD52A5150 /* CryptorRSAErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptorRSAErrors.swift; path = Sources/CryptorRSA/CryptorRSAErrors.swift; sourceTree = "<group>"; };
+		2CE56FE01C6ED9B2975B091BF8402BF5 /* BlueCryptor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BlueCryptor.modulemap; sourceTree = "<group>"; };
+		37D683AF0E344F08A5A78F0208070589 /* ECPublicKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECPublicKey.swift; path = Sources/CryptorECC/ECPublicKey.swift; sourceTree = "<group>"; };
+		3B3C8BC7F2C16D27A7F6B1BC1E33EAA5 /* BlueCryptor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlueCryptor-prefix.pch"; sourceTree = "<group>"; };
+		3B7E0C41B0C5F5FD01C3EBC17AFC9F52 /* BlueRSA.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlueRSA.xcconfig; sourceTree = "<group>"; };
+		410F6200D47BE87A32B4DF31242105BB /* CryptorRSA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CryptorRSA.framework; path = BlueRSA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45EEE64B908E00EC598FC450E64DAC8B /* BlueCryptor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlueCryptor.xcconfig; sourceTree = "<group>"; };
+		469239F9638F03CA5BE553D3B860B347 /* SSLPointerTricks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLPointerTricks.swift; path = Sources/Cryptor/SSLPointerTricks.swift; sourceTree = "<group>"; };
+		530BBB19BB2EFF20BEB865052C123BCE /* ClaimsStandardJWT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClaimsStandardJWT.swift; path = Sources/SwiftJWT/ClaimsExamples/ClaimsStandardJWT.swift; sourceTree = "<group>"; };
+		593B6F1272724EAB1810EDE4964B60D6 /* Pods-Health Card-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Health Card-acknowledgements.plist"; sourceTree = "<group>"; };
+		59CF444DAC097C0D0AEBCAEDA08A3994 /* SwiftJWT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftJWT-Info.plist"; sourceTree = "<group>"; };
+		5B72D65D2E7415B7E192749B05C7AC41 /* LoggerAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LoggerAPI.modulemap; sourceTree = "<group>"; };
+		5BCDFBFE9B3F75DA4BC01122172E4995 /* Pods-Health Card-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Health Card-frameworks.sh"; sourceTree = "<group>"; };
+		5C68806ED1EA738813B0418EEFD95B99 /* LoggerAPI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LoggerAPI-prefix.pch"; sourceTree = "<group>"; };
+		5EC38337DCE4AEEB875FEECE7858B5B0 /* KituraContracts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KituraContracts-prefix.pch"; sourceTree = "<group>"; };
+		5FFCE0658771FC36E8F63B7C531A0114 /* Digest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = Sources/Cryptor/Digest.swift; sourceTree = "<group>"; };
+		601B7827068B6D34E47C07E138CF608B /* LoggerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LoggerAPI.framework; path = LoggerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65779D178957FA97414D1237A040C2B8 /* BlueCryptor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BlueCryptor-dummy.m"; sourceTree = "<group>"; };
+		65BC552254282F499AF81499B30C40D8 /* Pods-Health Card.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Health Card.modulemap"; sourceTree = "<group>"; };
+		669D20F9C3D039D182DF26F843C9BFB3 /* SignerAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignerAlgorithm.swift; path = Sources/SwiftJWT/SignerAlgorithm.swift; sourceTree = "<group>"; };
+		66C47E81EC18DAE681798DB61EA9789E /* ClaimsMicroProfile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClaimsMicroProfile.swift; path = Sources/SwiftJWT/ClaimsExamples/ClaimsMicroProfile.swift; sourceTree = "<group>"; };
+		678EBB89D96AE5BEFDB93D7A046BC28C /* BlueECC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlueECC-prefix.pch"; sourceTree = "<group>"; };
+		698099457AB70152CAA5EE11B0C135FA /* Pods-Health Card-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Health Card-umbrella.h"; sourceTree = "<group>"; };
+		69E386A6818B6E1EB616D143479FDD4E /* EllipticCurve.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EllipticCurve.swift; path = Sources/CryptorECC/EllipticCurve.swift; sourceTree = "<group>"; };
+		6B7E4A5BADC579D25EFCA2C6F81B3E0A /* CryptorECC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CryptorECC.framework; path = BlueECC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C5CBDA22975718B8B7E4253CEEC6695 /* Claims.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Claims.swift; path = Sources/SwiftJWT/Claims.swift; sourceTree = "<group>"; };
+		6ED2A9F7452E7FDF7F259CBD112BBA59 /* SwiftJWT.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftJWT.xcconfig; sourceTree = "<group>"; };
+		73BE6321AEBCAE593A43E86CD5E0E964 /* Contracts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contracts.swift; path = Sources/KituraContracts/Contracts.swift; sourceTree = "<group>"; };
+		7ADE525D5E1BF01FF04BF92443F23BAC /* CryptorRSADigest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptorRSADigest.swift; path = Sources/CryptorRSA/CryptorRSADigest.swift; sourceTree = "<group>"; };
+		7BC22656DC645ED87608C374A86B96D3 /* ASN1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ASN1.swift; path = Sources/CryptorECC/ASN1.swift; sourceTree = "<group>"; };
+		7C08F72B322DA609FE938D689703F1A4 /* SwiftJWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftJWT.framework; path = SwiftJWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C6D0FA350C916F5F5CB99669313B37E /* Data+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extensions.swift"; path = "Sources/CryptorRSA/Data+Extensions.swift"; sourceTree = "<group>"; };
+		7C9CE93FEA0947709A4F459C842248EB /* QueryDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueryDecoder.swift; path = Sources/KituraContracts/CodableQuery/QueryDecoder.swift; sourceTree = "<group>"; };
+		7F66E24A54A16A405AAE8B970540B91E /* KituraContracts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KituraContracts.xcconfig; sourceTree = "<group>"; };
+		82B5AA010D587F5F249E26759F3FA11C /* CryptorECC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptorECC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8455314FF3BB0D9DCC3BB81D5744A884 /* Status.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Status.swift; path = Sources/Cryptor/Status.swift; sourceTree = "<group>"; };
+		8489357DE4A2AC660D4A68366BD7ACFE /* CryptorRSA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptorRSA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86507F63842D73AFFB862C5CDA084D95 /* QueryEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueryEncoder.swift; path = Sources/KituraContracts/CodableQuery/QueryEncoder.swift; sourceTree = "<group>"; };
+		872E2AF41B4D8D25A0BF328C2E5A9F49 /* Header.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Header.swift; path = Sources/SwiftJWT/Header.swift; sourceTree = "<group>"; };
+		89DDD3BB2E1C50B16373E90BE3FB1325 /* Cryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptor.swift; path = Sources/Cryptor/Cryptor.swift; sourceTree = "<group>"; };
+		89E6C03569CB8A26609621AA77149D59 /* ClosureAliases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClosureAliases.swift; path = Sources/KituraContracts/ClosureAliases.swift; sourceTree = "<group>"; };
+		8A2EADD284DAEF0EEDF2DE15B6FB143F /* ECPrivateKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECPrivateKey.swift; path = Sources/CryptorECC/ECPrivateKey.swift; sourceTree = "<group>"; };
+		8A9DFBEC7355961810D10D14E3EF17CF /* Pods_Health_Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Health_Card.framework; path = "Pods-Health Card.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F69977D242E39A42935CF45A5BD6BAC /* LoggerAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LoggerAPI-dummy.m"; sourceTree = "<group>"; };
+		912DD8101A6CCA6760AEA308B7FE556D /* BlueRSA.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BlueRSA.modulemap; sourceTree = "<group>"; };
+		91FE16258BFEB39A3D477009574620C3 /* Pods-Health Card-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Health Card-acknowledgements.markdown"; sourceTree = "<group>"; };
+		94A60E4C0F0B3A6E0EA1DB23DC6DF489 /* BlueRSA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlueRSA.swift; path = Sources/SwiftJWT/BlueRSA.swift; sourceTree = "<group>"; };
+		99234B0ACF0A12311385E341A4C27323 /* ECDecryptable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECDecryptable.swift; path = Sources/CryptorECC/ECDecryptable.swift; sourceTree = "<group>"; };
+		9964D3A792391D77D41356D43D35DDA7 /* LoggerAPI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LoggerAPI.xcconfig; sourceTree = "<group>"; };
+		9D79CE34E9AC3C708F72973914E4D5B5 /* ECError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECError.swift; path = Sources/CryptorECC/ECError.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F791480CA6AFE02B04B1B41CE0AF602 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/Cryptor/HMAC.swift; sourceTree = "<group>"; };
+		A0A1E7BA6632EC7A2E0D9244C92D3EAD /* JWTError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWTError.swift; path = Sources/SwiftJWT/JWTError.swift; sourceTree = "<group>"; };
+		A35538FEBEDB01225AEFBA12F82B6BD3 /* StreamCryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamCryptor.swift; path = Sources/Cryptor/StreamCryptor.swift; sourceTree = "<group>"; };
+		A4E88EC3EED61308B0B95736DBE3BBCB /* BlueRSA-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BlueRSA-Info.plist"; sourceTree = "<group>"; };
+		A6CDA795BAFA4666C3601A7E953C6619 /* BlueECC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BlueECC-Info.plist"; sourceTree = "<group>"; };
+		A795549C08352456F3B974D5419E9FA1 /* ValidateClaimsResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidateClaimsResult.swift; path = Sources/SwiftJWT/ValidateClaimsResult.swift; sourceTree = "<group>"; };
+		ADDDA8F7B3C148AE03B963FE93C162B2 /* KituraContracts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KituraContracts-umbrella.h"; sourceTree = "<group>"; };
+		B33B55D96BE7BC4DB19565E58911ACC8 /* Cryptor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cryptor.framework; path = BlueCryptor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C6CE98040C4FC22BF7A68A71C3727C /* CryptorRSAUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptorRSAUtilities.swift; path = Sources/CryptorRSA/CryptorRSAUtilities.swift; sourceTree = "<group>"; };
+		B9AD92E30BB4B02C377554811A3F6CCB /* LoggerAPI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LoggerAPI-Info.plist"; sourceTree = "<group>"; };
+		B9B5070476CF380752B75C5A5438A7A9 /* KituraContracts-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KituraContracts-Info.plist"; sourceTree = "<group>"; };
+		BB5157F5866903DCFCEDEEC277FA8B73 /* JWT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWT.swift; path = Sources/SwiftJWT/JWT.swift; sourceTree = "<group>"; };
+		BC1A71A2C77269D628926E5CE1E9A091 /* ECSignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECSignable.swift; path = Sources/CryptorECC/ECSignable.swift; sourceTree = "<group>"; };
+		BC4A45FCE7F8371EDA093A65674E0651 /* KeyDerivation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyDerivation.swift; path = Sources/Cryptor/KeyDerivation.swift; sourceTree = "<group>"; };
+		BD16B5E4B8D1F7415C33A3A6C7C0B28D /* JWTSigner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWTSigner.swift; path = Sources/SwiftJWT/JWTSigner.swift; sourceTree = "<group>"; };
+		C60AB69AB1A6B471D694E2B8A7ACF675 /* Pods-Health Card-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Health Card-Info.plist"; sourceTree = "<group>"; };
+		C71397D8880723E3FA33D6B396803E05 /* Coder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coder.swift; path = Sources/KituraContracts/CodableQuery/Coder.swift; sourceTree = "<group>"; };
+		C9504AC0711B5E3AF6D0D5BB9ABFE0A6 /* LoggerAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LoggerAPI-umbrella.h"; sourceTree = "<group>"; };
+		CB2318797A8DC9C3563FDAC301939764 /* CryptorRSAKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptorRSAKey.swift; path = Sources/CryptorRSA/CryptorRSAKey.swift; sourceTree = "<group>"; };
+		CB835B0B6CB9232867B9CD87ECC3C921 /* LoggerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LoggerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC39DFB5812E3302DFA880F34F15E19 /* SwiftJWT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftJWT.modulemap; sourceTree = "<group>"; };
+		CEF4650307CE2860A98F1A25134EEBE4 /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = Sources/Cryptor/Utilities.swift; sourceTree = "<group>"; };
+		D022136A41A8439B0DEA51DE8828B887 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D2F3625D91730DF3D7A760EC6874D8A0 /* RSAKeyType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RSAKeyType.swift; path = Sources/SwiftJWT/RSAKeyType.swift; sourceTree = "<group>"; };
+		D31838977EDC83C9E818F4A6A35483B6 /* Data+Base64URLEncoded.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Base64URLEncoded.swift"; path = "Sources/SwiftJWT/Data+Base64URLEncoded.swift"; sourceTree = "<group>"; };
+		D3376BDDA60C78C3BE4254AE75ABB33A /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Sources/LoggerAPI/Logger.swift; sourceTree = "<group>"; };
+		DBECCC502E9A3E4EF72E4DCEDC778821 /* BodyEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BodyEncoder.swift; path = Sources/KituraContracts/BodyEncoder.swift; sourceTree = "<group>"; };
+		DD29864D7A44EBC7F0557E5B947FDCE8 /* BlueCryptor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlueCryptor-umbrella.h"; sourceTree = "<group>"; };
+		E2AB1500F263778FEB70008E53CE27ED /* SSLPointerTricks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLPointerTricks.swift; path = Sources/CryptorECC/SSLPointerTricks.swift; sourceTree = "<group>"; };
+		E3FB33378F0CEEC69978E14E82844C09 /* BlueECDSA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlueECDSA.swift; path = Sources/SwiftJWT/BlueECDSA.swift; sourceTree = "<group>"; };
+		E49D86D6FC80EE9A4C0B11397557A26B /* Updatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updatable.swift; path = Sources/Cryptor/Updatable.swift; sourceTree = "<group>"; };
+		E598C57FD9B7D7459857692B7625A22B /* Cryptor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cryptor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5FDAEAC94A154D764CEC1595795BEC5 /* CryptorRSAConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptorRSAConstants.swift; path = Sources/CryptorRSA/CryptorRSAConstants.swift; sourceTree = "<group>"; };
+		E8A222FDADA9C1855D5E0CDEEA7D082A /* Pods-Health Card-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Health Card-dummy.m"; sourceTree = "<group>"; };
+		E91D0A1DB69A60E30F55C9643F02221B /* KituraContracts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KituraContracts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93E1D13EBD5E70D2EFAF05233B46F2B /* Pods-Health Card.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Health Card.debug.xcconfig"; sourceTree = "<group>"; };
+		EEE2D1F161D18A90DFE0F60AA4172EE9 /* ECSignature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECSignature.swift; path = Sources/CryptorECC/ECSignature.swift; sourceTree = "<group>"; };
+		EEEF89167C053589D6EBD19E90C10EF4 /* ECEncryptable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECEncryptable.swift; path = Sources/CryptorECC/ECEncryptable.swift; sourceTree = "<group>"; };
+		EF7BFF4AD601A6ACFCD5355990FF5B89 /* JWTVerifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWTVerifier.swift; path = Sources/SwiftJWT/JWTVerifier.swift; sourceTree = "<group>"; };
+		F0481D81B1B1E0C9353CFC044A9AFDCC /* ClaimsOpenID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClaimsOpenID.swift; path = Sources/SwiftJWT/ClaimsExamples/ClaimsOpenID.swift; sourceTree = "<group>"; };
+		F0E97650E64FA82DB7EE5A7FAE750A2A /* BlueECC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BlueECC.modulemap; sourceTree = "<group>"; };
+		F1C5D0B74C27929E4D01DB69123C7C8A /* BlueHMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlueHMAC.swift; path = Sources/SwiftJWT/BlueHMAC.swift; sourceTree = "<group>"; };
+		F80FDDDA1AD300DEE347936AA3111DC4 /* BlueRSA-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlueRSA-prefix.pch"; sourceTree = "<group>"; };
+		F8C7AD736E3F66243A5208BC0B01E79D /* Pods-Health Card.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Health Card.release.xcconfig"; sourceTree = "<group>"; };
+		FA58298537B3FFFE2B7399F586300511 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/KituraContracts/CodableQuery/Extensions.swift; sourceTree = "<group>"; };
+		FB9F4514E22C1C655F5890B0E7D109A1 /* VerifierAlgorithm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifierAlgorithm.swift; path = Sources/SwiftJWT/VerifierAlgorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EDE2104A27978C81AECC50E191EFD699 /* Frameworks */ = {
+		0D5CC3382BD69FB77E20A8720415E559 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9673E6DC1978A3570F513DFB20F5D33A /* Foundation.framework in Frameworks */,
+				87A9ACBA94B8A0C1AB4C905BF4F02308 /* Cryptor.framework in Frameworks */,
+				F92E38A38241C4080331D2F7113861E6 /* CryptorECC.framework in Frameworks */,
+				CD5B24A8EE9E2B86B07FE522019D7834 /* CryptorRSA.framework in Frameworks */,
+				BF88F995BC22DE30E79D47575F768159 /* Foundation.framework in Frameworks */,
+				2180AE5A2227F70FE88F1871CCCE8895 /* KituraContracts.framework in Frameworks */,
+				BEF3E1CCC36B8EC7C1E98EDBA4568196 /* LoggerAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F559617DD28719744D73BE26C741E6F3 /* Frameworks */ = {
+		2A6616A1B298A417F7A784E7EF5576F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE8D73E25DFDA9B8462FF1F652F9028A /* Foundation.framework in Frameworks */,
+				AC230D5731545B0DA98E11031F5C18C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FDBBBC60C8BABC766C174144812EA65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68C7BD26C3CA5E2DF560640A13ED4F67 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B8F16827D824A0D69B6405272AF555E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C93956CED6ECE964674698EDD7C27ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DF3E116267E15E19370CE97633B8A73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F1375C894BEDBC5123BEA2F4ADD567B /* Foundation.framework in Frameworks */,
+				9ABC5C14CF886BFAA6FA0CD89F67BA3F /* LoggerAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DA7B876678EFEE442E901FA42E87FD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CCAAC755754BC1C17F72F3E964F3949 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE1CBCD664B836639D61A181F000B9A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8BDF2022C84049E9894674C6DC85997 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01F3859D2A5741E8AC5913558A398FCF /* Targets Support Files */ = {
+		0871BA3877E99A91B29D167F18065CEE /* BlueRSA */ = {
 			isa = PBXGroup;
 			children = (
-				71AD61E2E9F8EAC0B16406B1C78DCC49 /* Pods-Health Card */,
+				1E938CCAF6B9958AE43B71D820C3B790 /* CryptorRSA.swift */,
+				E5FDAEAC94A154D764CEC1595795BEC5 /* CryptorRSAConstants.swift */,
+				7ADE525D5E1BF01FF04BF92443F23BAC /* CryptorRSADigest.swift */,
+				2BC86F4F4D53CC5AD40A7D4AD52A5150 /* CryptorRSAErrors.swift */,
+				CB2318797A8DC9C3563FDAC301939764 /* CryptorRSAKey.swift */,
+				B3C6CE98040C4FC22BF7A68A71C3727C /* CryptorRSAUtilities.swift */,
+				7C6D0FA350C916F5F5CB99669313B37E /* Data+Extensions.swift */,
+				00970619DE909ACE3BA8F3085C54FE18 /* SSLPointerTricks.swift */,
+				F0035D91132E827EC53FF27DAAB35E8F /* Support Files */,
 			);
-			name = "Targets Support Files";
+			name = BlueRSA;
+			path = BlueRSA;
 			sourceTree = "<group>";
 		};
-		71AD61E2E9F8EAC0B16406B1C78DCC49 /* Pods-Health Card */ = {
+		1F40014EF29AE847E0EF5EFCDE5DF210 /* Pods-Health Card */ = {
 			isa = PBXGroup;
 			children = (
-				2F3EF7BACFB23C839634A1340897546D /* Info.plist */,
-				A8477F8FD776F5D9A0C333B8B0A9BB81 /* Pods-Health Card.modulemap */,
-				05E30C511054D13D5064579D134BE716 /* Pods-Health Card-acknowledgements.markdown */,
-				7B735E4BCDB7D154C8258835F082B817 /* Pods-Health Card-acknowledgements.plist */,
-				C3427F8263E06983D1A5FEB5AC93B44A /* Pods-Health Card-dummy.m */,
-				CC31C77BACA8C86409B41CA668B51023 /* Pods-Health Card-frameworks.sh */,
-				19015C8771499E3273D243F439F0C0C8 /* Pods-Health Card-resources.sh */,
-				37A9969A11C326C4AD147CD51DE98090 /* Pods-Health Card-umbrella.h */,
-				0A434FDAC99F1660E87CBFD4A3A5A5AD /* Pods-Health Card.debug.xcconfig */,
-				E28D0DB4DDF6D1525DAD1478CB0558D5 /* Pods-Health Card.release.xcconfig */,
+				65BC552254282F499AF81499B30C40D8 /* Pods-Health Card.modulemap */,
+				91FE16258BFEB39A3D477009574620C3 /* Pods-Health Card-acknowledgements.markdown */,
+				593B6F1272724EAB1810EDE4964B60D6 /* Pods-Health Card-acknowledgements.plist */,
+				E8A222FDADA9C1855D5E0CDEEA7D082A /* Pods-Health Card-dummy.m */,
+				5BCDFBFE9B3F75DA4BC01122172E4995 /* Pods-Health Card-frameworks.sh */,
+				C60AB69AB1A6B471D694E2B8A7ACF675 /* Pods-Health Card-Info.plist */,
+				698099457AB70152CAA5EE11B0C135FA /* Pods-Health Card-umbrella.h */,
+				E93E1D13EBD5E70D2EFAF05233B46F2B /* Pods-Health Card.debug.xcconfig */,
+				F8C7AD736E3F66243A5208BC0B01E79D /* Pods-Health Card.release.xcconfig */,
 			);
 			name = "Pods-Health Card";
 			path = "Target Support Files/Pods-Health Card";
 			sourceTree = "<group>";
 		};
-		74A56EBC4D89C9EAA6C18F92D18CFEF3 /* Products */ = {
+		20AA3693E4AB059B3DAE23194B693C91 /* BlueECC */ = {
 			isa = PBXGroup;
 			children = (
-				F93EEB191351D5C2AF80281F605C04F3 /* JWT.framework */,
-				01E0F8628CD3FE5892D9036F9A8E36CB /* Pods_Health_Card.framework */,
+				7BC22656DC645ED87608C374A86B96D3 /* ASN1.swift */,
+				17BD62BA1046AC2A66DEBB940797C08E /* Data+Extensions.swift */,
+				99234B0ACF0A12311385E341A4C27323 /* ECDecryptable.swift */,
+				EEEF89167C053589D6EBD19E90C10EF4 /* ECEncryptable.swift */,
+				9D79CE34E9AC3C708F72973914E4D5B5 /* ECError.swift */,
+				8A2EADD284DAEF0EEDF2DE15B6FB143F /* ECPrivateKey.swift */,
+				37D683AF0E344F08A5A78F0208070589 /* ECPublicKey.swift */,
+				BC1A71A2C77269D628926E5CE1E9A091 /* ECSignable.swift */,
+				EEE2D1F161D18A90DFE0F60AA4172EE9 /* ECSignature.swift */,
+				69E386A6818B6E1EB616D143479FDD4E /* EllipticCurve.swift */,
+				E2AB1500F263778FEB70008E53CE27ED /* SSLPointerTricks.swift */,
+				EC177109D7026B78238A4272AE2F4768 /* Support Files */,
 			);
-			name = Products;
+			name = BlueECC;
+			path = BlueECC;
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		4B5F81CD5E6855ED7D6BEC517C02C361 /* KituraContracts */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				7E8C0D7D9A6898486693446D51658098 /* Pods */,
-				74A56EBC4D89C9EAA6C18F92D18CFEF3 /* Products */,
-				01F3859D2A5741E8AC5913558A398FCF /* Targets Support Files */,
+				10C7ACE92191EA8F0C139A75E2A79C36 /* BodyDecoder.swift */,
+				DBECCC502E9A3E4EF72E4DCEDC778821 /* BodyEncoder.swift */,
+				1ADDDF9D12BCD9C8CFCF3DFFC15770E2 /* BodyFormat.swift */,
+				89E6C03569CB8A26609621AA77149D59 /* ClosureAliases.swift */,
+				C71397D8880723E3FA33D6B396803E05 /* Coder.swift */,
+				73BE6321AEBCAE593A43E86CD5E0E964 /* Contracts.swift */,
+				FA58298537B3FFFE2B7399F586300511 /* Extensions.swift */,
+				7C9CE93FEA0947709A4F459C842248EB /* QueryDecoder.swift */,
+				86507F63842D73AFFB862C5CDA084D95 /* QueryEncoder.swift */,
+				FFF3F8ECC900F1ABC4356D623EB07169 /* Support Files */,
 			);
+			name = KituraContracts;
+			path = KituraContracts;
 			sourceTree = "<group>";
 		};
-		7E8C0D7D9A6898486693446D51658098 /* Pods */ = {
+		57817F135E024721B89AAD0896934DD4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8065E4CE863BBF79A8A99A0975BF952F /* JSONWebToken */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8065E4CE863BBF79A8A99A0975BF952F /* JSONWebToken */ = {
-			isa = PBXGroup;
-			children = (
-				19576547D82E31266340D7D283E791B1 /* Base64.swift */,
-				C5C0C7DBD85D9C446CF41B5A4C2EF362 /* Claims.swift */,
-				D5ABB3286346469839DA7FAF0F2062B8 /* ClaimSet.swift */,
-				A3C87FD87B14DAB5E07B10B180A4DFF3 /* Decode.swift */,
-				5637FD46B5360726794B76040A3AC3E6 /* Encode.swift */,
-				738D59CFB2491A9840E09EF225EEB666 /* HMAC.swift */,
-				8F82B093AFF2C625A09162874402F925 /* HMACCommonCrypto.swift */,
-				14AD9CB94C4112E10B789F167C3847EC /* JOSEHeader.swift */,
-				216205ED0AB264CF0AD3BDD680A87F8D /* JWT.swift */,
-				B7E87098414A057C1608F198B12B6A23 /* Support Files */,
-			);
-			path = JSONWebToken;
-			sourceTree = "<group>";
-		};
-		B7E87098414A057C1608F198B12B6A23 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C0D7628E747C99A30A2F9ECFCA0EA5AC /* Info.plist */,
-				6AEE973A57BD76E43AE79AE8845E3AEF /* JSONWebToken.modulemap */,
-				230A8AAF3D3F1DF6F9BB2DF10F759DC8 /* JSONWebToken.xcconfig */,
-				C7D0B53AA37B1EE954A77BA23919F78E /* JSONWebToken-dummy.m */,
-				5FA762B986F679975C91CE3EFA207844 /* JSONWebToken-prefix.pch */,
-				E17520EFF486EBA8939446A7B889A904 /* JSONWebToken-umbrella.h */,
+				CBC39DFB5812E3302DFA880F34F15E19 /* SwiftJWT.modulemap */,
+				6ED2A9F7452E7FDF7F259CBD112BBA59 /* SwiftJWT.xcconfig */,
+				1B3E953D999FD6952F0CCAE4222D16CC /* SwiftJWT-dummy.m */,
+				59CF444DAC097C0D0AEBCAEDA08A3994 /* SwiftJWT-Info.plist */,
+				24EAEEE71E43FE0C35A904960E68CE2B /* SwiftJWT-prefix.pch */,
+				1C69BB0ECE4EADFB2C91FF0EFD11C4C0 /* SwiftJWT-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/JSONWebToken";
+			path = "../Target Support Files/SwiftJWT";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		5D8CEDE7713905A10F7C1DF5EFD2D68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				E598C57FD9B7D7459857692B7625A22B /* Cryptor.framework */,
+				82B5AA010D587F5F249E26759F3FA11C /* CryptorECC.framework */,
+				8489357DE4A2AC660D4A68366BD7ACFE /* CryptorRSA.framework */,
+				E91D0A1DB69A60E30F55C9643F02221B /* KituraContracts.framework */,
+				CB835B0B6CB9232867B9CD87ECC3C921 /* LoggerAPI.framework */,
+				5E8C9F509DAABF94853B9821C0327C7D /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		5E8C9F509DAABF94853B9821C0327C7D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				D022136A41A8439B0DEA51DE8828B887 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		762556B165C31975D58B198113BBE98D /* SwiftJWT */ = {
+			isa = PBXGroup;
+			children = (
+				E3FB33378F0CEEC69978E14E82844C09 /* BlueECDSA.swift */,
+				F1C5D0B74C27929E4D01DB69123C7C8A /* BlueHMAC.swift */,
+				94A60E4C0F0B3A6E0EA1DB23DC6DF489 /* BlueRSA.swift */,
+				6C5CBDA22975718B8B7E4253CEEC6695 /* Claims.swift */,
+				66C47E81EC18DAE681798DB61EA9789E /* ClaimsMicroProfile.swift */,
+				F0481D81B1B1E0C9353CFC044A9AFDCC /* ClaimsOpenID.swift */,
+				530BBB19BB2EFF20BEB865052C123BCE /* ClaimsStandardJWT.swift */,
+				D31838977EDC83C9E818F4A6A35483B6 /* Data+Base64URLEncoded.swift */,
+				872E2AF41B4D8D25A0BF328C2E5A9F49 /* Header.swift */,
+				BB5157F5866903DCFCEDEEC277FA8B73 /* JWT.swift */,
+				164055A833749DF0BD34CF23FA37A063 /* JWTDecoder.swift */,
+				0F46742A631CD09907B642D29B130B20 /* JWTEncoder.swift */,
+				A0A1E7BA6632EC7A2E0D9244C92D3EAD /* JWTError.swift */,
+				BD16B5E4B8D1F7415C33A3A6C7C0B28D /* JWTSigner.swift */,
+				EF7BFF4AD601A6ACFCD5355990FF5B89 /* JWTVerifier.swift */,
+				10B956DC3EEEA46678B9CADCFD78A49A /* NoneAlgorithm.swift */,
+				D2F3625D91730DF3D7A760EC6874D8A0 /* RSAKeyType.swift */,
+				669D20F9C3D039D182DF26F843C9BFB3 /* SignerAlgorithm.swift */,
+				A795549C08352456F3B974D5419E9FA1 /* ValidateClaimsResult.swift */,
+				FB9F4514E22C1C655F5890B0E7D109A1 /* VerifierAlgorithm.swift */,
+				57817F135E024721B89AAD0896934DD4 /* Support Files */,
+			);
+			name = SwiftJWT;
+			path = SwiftJWT;
+			sourceTree = "<group>";
+		};
+		96AB7D10A01E6DB099AEFD54E3D2FFBC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F40014EF29AE847E0EF5EFCDE5DF210 /* Pods-Health Card */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9DAEB99B1D330EF2D7AC410B6756FAA6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CE56FE01C6ED9B2975B091BF8402BF5 /* BlueCryptor.modulemap */,
+				45EEE64B908E00EC598FC450E64DAC8B /* BlueCryptor.xcconfig */,
+				65779D178957FA97414D1237A040C2B8 /* BlueCryptor-dummy.m */,
+				09BC47DEB23E350195FF98846D0686B4 /* BlueCryptor-Info.plist */,
+				3B3C8BC7F2C16D27A7F6B1BC1E33EAA5 /* BlueCryptor-prefix.pch */,
+				DD29864D7A44EBC7F0557E5B947FDCE8 /* BlueCryptor-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BlueCryptor";
+			sourceTree = "<group>";
+		};
+		A4B8275F821C6F4729AAFA7DA8B958AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B33B55D96BE7BC4DB19565E58911ACC8 /* Cryptor.framework */,
+				6B7E4A5BADC579D25EFCA2C6F81B3E0A /* CryptorECC.framework */,
+				410F6200D47BE87A32B4DF31242105BB /* CryptorRSA.framework */,
+				119DECCAA352AD9FF31E07E2B41307D3 /* KituraContracts.framework */,
+				601B7827068B6D34E47C07E138CF608B /* LoggerAPI.framework */,
+				8A9DFBEC7355961810D10D14E3EF17CF /* Pods_Health_Card.framework */,
+				7C08F72B322DA609FE938D689703F1A4 /* SwiftJWT.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C34AEFCC17415659960810C8848B30F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0F300BABBEB6BC0E2801A952B20AB2B /* BlueCryptor */,
+				20AA3693E4AB059B3DAE23194B693C91 /* BlueECC */,
+				0871BA3877E99A91B29D167F18065CEE /* BlueRSA */,
+				4B5F81CD5E6855ED7D6BEC517C02C361 /* KituraContracts */,
+				FDF03E99529F9A3DDE16552A31880958 /* LoggerAPI */,
+				762556B165C31975D58B198113BBE98D /* SwiftJWT */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				5D8CEDE7713905A10F7C1DF5EFD2D68F /* Frameworks */,
+				C34AEFCC17415659960810C8848B30F7 /* Pods */,
+				A4B8275F821C6F4729AAFA7DA8B958AB /* Products */,
+				96AB7D10A01E6DB099AEFD54E3D2FFBC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D0F300BABBEB6BC0E2801A952B20AB2B /* BlueCryptor */ = {
+			isa = PBXGroup;
+			children = (
+				047C462D7C948C42362F7A6BCBA7591D /* Crypto.swift */,
+				89DDD3BB2E1C50B16373E90BE3FB1325 /* Cryptor.swift */,
+				5FFCE0658771FC36E8F63B7C531A0114 /* Digest.swift */,
+				9F791480CA6AFE02B04B1B41CE0AF602 /* HMAC.swift */,
+				BC4A45FCE7F8371EDA093A65674E0651 /* KeyDerivation.swift */,
+				069185A415ADBDEAF4EEE33F1DE81E83 /* Random.swift */,
+				469239F9638F03CA5BE553D3B860B347 /* SSLPointerTricks.swift */,
+				8455314FF3BB0D9DCC3BB81D5744A884 /* Status.swift */,
+				A35538FEBEDB01225AEFBA12F82B6BD3 /* StreamCryptor.swift */,
+				E49D86D6FC80EE9A4C0B11397557A26B /* Updatable.swift */,
+				CEF4650307CE2860A98F1A25134EEBE4 /* Utilities.swift */,
+				9DAEB99B1D330EF2D7AC410B6756FAA6 /* Support Files */,
+			);
+			name = BlueCryptor;
+			path = BlueCryptor;
+			sourceTree = "<group>";
+		};
+		DE258673D28271BA7654B7A5E89149B9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B72D65D2E7415B7E192749B05C7AC41 /* LoggerAPI.modulemap */,
+				9964D3A792391D77D41356D43D35DDA7 /* LoggerAPI.xcconfig */,
+				8F69977D242E39A42935CF45A5BD6BAC /* LoggerAPI-dummy.m */,
+				B9AD92E30BB4B02C377554811A3F6CCB /* LoggerAPI-Info.plist */,
+				5C68806ED1EA738813B0418EEFD95B99 /* LoggerAPI-prefix.pch */,
+				C9504AC0711B5E3AF6D0D5BB9ABFE0A6 /* LoggerAPI-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LoggerAPI";
+			sourceTree = "<group>";
+		};
+		EC177109D7026B78238A4272AE2F4768 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0E97650E64FA82DB7EE5A7FAE750A2A /* BlueECC.modulemap */,
+				1F5405D51D1566BA8921C9CA6623CAA2 /* BlueECC.xcconfig */,
+				22E7ED3C9010AE5E0B2AD620EDA68B66 /* BlueECC-dummy.m */,
+				A6CDA795BAFA4666C3601A7E953C6619 /* BlueECC-Info.plist */,
+				678EBB89D96AE5BEFDB93D7A046BC28C /* BlueECC-prefix.pch */,
+				2BB13983670DCF6724354701D1696082 /* BlueECC-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BlueECC";
+			sourceTree = "<group>";
+		};
+		F0035D91132E827EC53FF27DAAB35E8F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				912DD8101A6CCA6760AEA308B7FE556D /* BlueRSA.modulemap */,
+				3B7E0C41B0C5F5FD01C3EBC17AFC9F52 /* BlueRSA.xcconfig */,
+				21AD6D4AC8D598CD171A96EBF269EBFF /* BlueRSA-dummy.m */,
+				A4E88EC3EED61308B0B95736DBE3BBCB /* BlueRSA-Info.plist */,
+				F80FDDDA1AD300DEE347936AA3111DC4 /* BlueRSA-prefix.pch */,
+				1C198112109F94A5F71FB5E7348FBB1A /* BlueRSA-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BlueRSA";
+			sourceTree = "<group>";
+		};
+		FDF03E99529F9A3DDE16552A31880958 /* LoggerAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D3376BDDA60C78C3BE4254AE75ABB33A /* Logger.swift */,
+				DE258673D28271BA7654B7A5E89149B9 /* Support Files */,
+			);
+			name = LoggerAPI;
+			path = LoggerAPI;
+			sourceTree = "<group>";
+		};
+		FFF3F8ECC900F1ABC4356D623EB07169 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				18E2F91E08BCF92DE0900628CA406CC0 /* KituraContracts.modulemap */,
+				7F66E24A54A16A405AAE8B970540B91E /* KituraContracts.xcconfig */,
+				058CB766018100A14F4F19CEE3E66DAD /* KituraContracts-dummy.m */,
+				B9B5070476CF380752B75C5A5438A7A9 /* KituraContracts-Info.plist */,
+				5EC38337DCE4AEEB875FEECE7858B5B0 /* KituraContracts-prefix.pch */,
+				ADDDA8F7B3C148AE03B963FE93C162B2 /* KituraContracts-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KituraContracts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		EF77D5780530F6EB21FEF491BD22B448 /* Headers */ = {
+		2B58838E1B7D8AF0D8A14C8C173F0D49 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39EB588A59EA7A7FE14C5B00A4997800 /* Pods-Health Card-umbrella.h in Headers */,
+				2EF4737210333BFF9BD2AEF1BD28BB03 /* SwiftJWT-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE29BC8B73379F15585772172FA844BA /* Headers */ = {
+		343F56A47814C807C5B8D2D265F0ACB0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5225B5598072D741D8303EB9D122925E /* JSONWebToken-umbrella.h in Headers */,
+				EF82735CE6FD74DE79172A2AE6EFEFDB /* LoggerAPI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50F318030E28805625118C41DA1AF14D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94C2B4699DB7CCA073B556039D038810 /* BlueECC-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5933DB649E14AB40E864E594CDA49F94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FC8ACA64FA1F58D812E417F8A93766 /* BlueRSA-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59D8927A206B96A64152A4E96FE0761C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2F9A93222A51484C9F6912758FA420 /* BlueCryptor-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C00AD3772FFE866F7A23D81471050FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E6869881895019F51ED6BCC6E1C37DE /* Pods-Health Card-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC5674E9AAAFC1AE896C78B8E5065250 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9F5B8A0161493DE7F1AF37FE3D7D47F /* KituraContracts-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		04ACCD651C30E7B6FE864F0FFE983BA5 /* JSONWebToken */ = {
+		095C1594CAC7DD740572EBF2C3982443 /* KituraContracts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5B0B4ADA14C207585034DB73CDE6843 /* Build configuration list for PBXNativeTarget "JSONWebToken" */;
+			buildConfigurationList = E9CF9B62714C6C67AF230204584754A7 /* Build configuration list for PBXNativeTarget "KituraContracts" */;
 			buildPhases = (
-				25FDF0567BC2F55E7F24D8B376A9819B /* Sources */,
-				EDE2104A27978C81AECC50E191EFD699 /* Frameworks */,
-				FE29BC8B73379F15585772172FA844BA /* Headers */,
+				FC5674E9AAAFC1AE896C78B8E5065250 /* Headers */,
+				CCFA1397A21F53DCFE1DDBF3FC27D9F8 /* Sources */,
+				7DF3E116267E15E19370CE97633B8A73 /* Frameworks */,
+				89A4C3DC765FD3775A872E42B4265783 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A56653417B655960BCDB2F0864EC630E /* PBXTargetDependency */,
 			);
-			name = JSONWebToken;
-			productName = JSONWebToken;
-			productReference = F93EEB191351D5C2AF80281F605C04F3 /* JWT.framework */;
+			name = KituraContracts;
+			productName = KituraContracts;
+			productReference = 119DECCAA352AD9FF31E07E2B41307D3 /* KituraContracts.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6B1DD5BF06812C21E8CD469E4F532AA0 /* Pods-Health Card */ = {
+		50A1101C5B7AEC40C025C665C91607AC /* SwiftJWT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E489BE1C4C7841446D879318A419AAE2 /* Build configuration list for PBXNativeTarget "Pods-Health Card" */;
+			buildConfigurationList = A351D0747B1B82964300FB40A695E057 /* Build configuration list for PBXNativeTarget "SwiftJWT" */;
 			buildPhases = (
-				109013AEA13E1DD00F300CD3785F235B /* Sources */,
-				F559617DD28719744D73BE26C741E6F3 /* Frameworks */,
-				EF77D5780530F6EB21FEF491BD22B448 /* Headers */,
+				2B58838E1B7D8AF0D8A14C8C173F0D49 /* Headers */,
+				F79576CC975C3C39B956219778F211AC /* Sources */,
+				0D5CC3382BD69FB77E20A8720415E559 /* Frameworks */,
+				12538D7D1C75422196FC29E48BEC8580 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				137A6BA975C5722E00FB457FACD0C4C7 /* PBXTargetDependency */,
+				49325B0206B20CC33567A75C895BF656 /* PBXTargetDependency */,
+				7187DD6349E89DC2E7C89BFE3660593A /* PBXTargetDependency */,
+				DC5877A3ABC2AEAD45E4403917561777 /* PBXTargetDependency */,
+				B4F4AB9FE68303B306012FF85422C2DD /* PBXTargetDependency */,
+				D75ECB5C1BBDB5F2A3AA12108CF59E4F /* PBXTargetDependency */,
+			);
+			name = SwiftJWT;
+			productName = SwiftJWT;
+			productReference = 7C08F72B322DA609FE938D689703F1A4 /* SwiftJWT.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		57AFD2083A6DCB04DA48DBC41AC39AD5 /* Pods-Health Card */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F502A7468EAE99D0DE3E997E3645F31 /* Build configuration list for PBXNativeTarget "Pods-Health Card" */;
+			buildPhases = (
+				5C00AD3772FFE866F7A23D81471050FF /* Headers */,
+				27351149D51F70C29EC7D181C2A79594 /* Sources */,
+				2A6616A1B298A417F7A784E7EF5576F4 /* Frameworks */,
+				E864B541D8FA7275837A26932279F70D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D74A8382313C739C35C88C90D7914C1 /* PBXTargetDependency */,
+				F7D92E578BF0DCC7216B85DB86C499DA /* PBXTargetDependency */,
+				DE1D5A1D666DD48C0A02C0A7E71D3C9A /* PBXTargetDependency */,
+				1B3E5C81085C47D2208205268BE608EE /* PBXTargetDependency */,
+				FC6248235785D6F0D9999361B173D6A0 /* PBXTargetDependency */,
+				0435F7EB91D38BE43A8A1239F10D579C /* PBXTargetDependency */,
 			);
 			name = "Pods-Health Card";
 			productName = "Pods-Health Card";
-			productReference = 01E0F8628CD3FE5892D9036F9A8E36CB /* Pods_Health_Card.framework */;
+			productReference = 8A9DFBEC7355961810D10D14E3EF17CF /* Pods_Health_Card.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5C44FC504F940D1183D97474C2ED000A /* BlueECC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A49657FF9FF73D768771365693C33CE7 /* Build configuration list for PBXNativeTarget "BlueECC" */;
+			buildPhases = (
+				50F318030E28805625118C41DA1AF14D /* Headers */,
+				4D8E941CB3C9BA1C7BB4FA70AAC6F093 /* Sources */,
+				5FDBBBC60C8BABC766C174144812EA65 /* Frameworks */,
+				140B1022A093DA8A6A8E256BE16DC460 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlueECC;
+			productName = BlueECC;
+			productReference = 6B7E4A5BADC579D25EFCA2C6F81B3E0A /* CryptorECC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6C515C5A46F015A439DE95C0780E82F9 /* LoggerAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBC49895EBA5A9EDA85170DFAA817F41 /* Build configuration list for PBXNativeTarget "LoggerAPI" */;
+			buildPhases = (
+				343F56A47814C807C5B8D2D265F0ACB0 /* Headers */,
+				5903306EAF56D25233AD3A7BE5E2C3B3 /* Sources */,
+				9DA7B876678EFEE442E901FA42E87FD6 /* Frameworks */,
+				C4BC850B112428F99651D6A7E9CD5174 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoggerAPI;
+			productName = LoggerAPI;
+			productReference = 601B7827068B6D34E47C07E138CF608B /* LoggerAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		768F34D6EB7071A48A28DE09F065197F /* BlueRSA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FD6E7ECA3DFDB16B06FE0DBEB9D545E /* Build configuration list for PBXNativeTarget "BlueRSA" */;
+			buildPhases = (
+				5933DB649E14AB40E864E594CDA49F94 /* Headers */,
+				B03185DCA921A4BC5F497C7711B73B3A /* Sources */,
+				6B8F16827D824A0D69B6405272AF555E /* Frameworks */,
+				F20092DCB2EE05E5FC8CBFA273046A4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlueRSA;
+			productName = BlueRSA;
+			productReference = 410F6200D47BE87A32B4DF31242105BB /* CryptorRSA.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DC144A4132E1AF6D69F7C76CDD5EB738 /* BlueCryptor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 461730F03B062488E3BD351B45557208 /* Build configuration list for PBXNativeTarget "BlueCryptor" */;
+			buildPhases = (
+				59D8927A206B96A64152A4E96FE0761C /* Headers */,
+				05F41121E4851EB6F3078457E556C3DB /* Sources */,
+				DE1CBCD664B836639D61A181F000B9A3 /* Frameworks */,
+				2197E2066DB3694872233EA703D98774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlueCryptor;
+			productName = BlueCryptor;
+			productReference = B33B55D96BE7BC4DB19565E58911ACC8 /* Cryptor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 74A56EBC4D89C9EAA6C18F92D18CFEF3 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = A4B8275F821C6F4729AAFA7DA8B958AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04ACCD651C30E7B6FE864F0FFE983BA5 /* JSONWebToken */,
-				6B1DD5BF06812C21E8CD469E4F532AA0 /* Pods-Health Card */,
+				DC144A4132E1AF6D69F7C76CDD5EB738 /* BlueCryptor */,
+				5C44FC504F940D1183D97474C2ED000A /* BlueECC */,
+				768F34D6EB7071A48A28DE09F065197F /* BlueRSA */,
+				095C1594CAC7DD740572EBF2C3982443 /* KituraContracts */,
+				6C515C5A46F015A439DE95C0780E82F9 /* LoggerAPI */,
+				57AFD2083A6DCB04DA48DBC41AC39AD5 /* Pods-Health Card */,
+				50A1101C5B7AEC40C025C665C91607AC /* SwiftJWT */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		109013AEA13E1DD00F300CD3785F235B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		12538D7D1C75422196FC29E48BEC8580 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81D4E5A583268304120A47BFCAFD56F5 /* Pods-Health Card-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25FDF0567BC2F55E7F24D8B376A9819B /* Sources */ = {
+		140B1022A093DA8A6A8E256BE16DC460 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2197E2066DB3694872233EA703D98774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89A4C3DC765FD3775A872E42B4265783 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4BC850B112428F99651D6A7E9CD5174 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E864B541D8FA7275837A26932279F70D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F20092DCB2EE05E5FC8CBFA273046A4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05F41121E4851EB6F3078457E556C3DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D738A06230ED68D87E31FD99FB674CA /* Base64.swift in Sources */,
-				3BFCB70093CDC6323C4CDC56A8309182 /* Claims.swift in Sources */,
-				43CB9FBF4F563866570B3AADCC6E6949 /* ClaimSet.swift in Sources */,
-				B5F5B5C06333376202D27E88D7D5BF09 /* Decode.swift in Sources */,
-				5F7B8955B7CFB46DCF40C334C1FA868D /* Encode.swift in Sources */,
-				D86844F60046B5C66BF80E3105FE2930 /* HMAC.swift in Sources */,
-				039D41FAE2DD868260758D89001EC69A /* HMACCommonCrypto.swift in Sources */,
-				5D5490C4D59F4170AB2EE20A9DC87820 /* JOSEHeader.swift in Sources */,
-				B37E22D2C326CEDE8C0B899C0BDD573D /* JSONWebToken-dummy.m in Sources */,
-				1C8DE41099A890D58CA488076828B350 /* JWT.swift in Sources */,
+				265F81B5E83DB897F377B0CB0E3BAD95 /* BlueCryptor-dummy.m in Sources */,
+				5078CAC607A95429512000F63D6F2E09 /* Crypto.swift in Sources */,
+				7AAB5FFCA6D4B66F661B143D36580A2F /* Cryptor.swift in Sources */,
+				71204D2770BEC08919F7817ABAB011A6 /* Digest.swift in Sources */,
+				810DD7DCDB8A990B09B4C2F58FBE5364 /* HMAC.swift in Sources */,
+				3E532B7B79221E5CC456C14F7E37F773 /* KeyDerivation.swift in Sources */,
+				98FCB62E16B28D4367BDB464A144C7D1 /* Random.swift in Sources */,
+				3513DBF0285D6A60BB75743007738120 /* SSLPointerTricks.swift in Sources */,
+				A272BCE8FF24E48003257E9BB43E13D4 /* Status.swift in Sources */,
+				BE50566E50E7356A603B43D073678741 /* StreamCryptor.swift in Sources */,
+				497138EEDC6A2390C04177C3B90F296F /* Updatable.swift in Sources */,
+				79DCE1DC140F2ADC4C5D68489FA8ADCB /* Utilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27351149D51F70C29EC7D181C2A79594 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E20D6E1D59D79FC0728B4315E9A626E /* Pods-Health Card-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8E941CB3C9BA1C7BB4FA70AAC6F093 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7948F28406951AA33DD6D236A93924E3 /* ASN1.swift in Sources */,
+				B7DCB25F0735B4CB16BA70DA698015EA /* BlueECC-dummy.m in Sources */,
+				C16BCB76792B537151E7B9B6CDF45FD0 /* Data+Extensions.swift in Sources */,
+				7A4F6ADD2141DF806CE96148C6EB3A35 /* ECDecryptable.swift in Sources */,
+				02C0EF5EAF1245F0F326F91532C9D199 /* ECEncryptable.swift in Sources */,
+				4619F44A026F80E4DEF15C47388211BE /* ECError.swift in Sources */,
+				31C6E893E32DA12AF0DC6D41BC41C128 /* ECPrivateKey.swift in Sources */,
+				7113636DA94F63376B17562E3A20B71D /* ECPublicKey.swift in Sources */,
+				C892648168798E65B598A71BCCD3B909 /* ECSignable.swift in Sources */,
+				D33E11D2605270C460AA4701726BAC48 /* ECSignature.swift in Sources */,
+				241748E3999CCB2FB81556DB2EE5083C /* EllipticCurve.swift in Sources */,
+				7280CF0DF061FB412EB61E5ABA6D8B7A /* SSLPointerTricks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5903306EAF56D25233AD3A7BE5E2C3B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E23185A99198C4742C5D1F6544CCA27D /* Logger.swift in Sources */,
+				070AA1A8E58FF4C39CF26C4EC9929EB4 /* LoggerAPI-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B03185DCA921A4BC5F497C7711B73B3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE565ECBA3DF25165AF8F991D572BD5E /* BlueRSA-dummy.m in Sources */,
+				EF83D9C80F07613A4044C9A312DCA7C1 /* CryptorRSA.swift in Sources */,
+				19B92C19C9069A100FA079F6AC824DAB /* CryptorRSAConstants.swift in Sources */,
+				0CA6C237EBB571B5B388F79FE50CC70F /* CryptorRSADigest.swift in Sources */,
+				F5BAD2418B23D73410407EAD2F102781 /* CryptorRSAErrors.swift in Sources */,
+				52554A5605FA2E4AFA7B18E1FD1AE117 /* CryptorRSAKey.swift in Sources */,
+				88BB314343D5F1E44CE8F75C8BDC76F9 /* CryptorRSAUtilities.swift in Sources */,
+				8A355AD5821BCDD38DD705091CCC57B7 /* Data+Extensions.swift in Sources */,
+				33A1BB44AEC4A8268BE944C0DA04F76F /* SSLPointerTricks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCFA1397A21F53DCFE1DDBF3FC27D9F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48486FFDF171830E0EA206F1CA800C0 /* BodyDecoder.swift in Sources */,
+				DD21F9C132B6D1651030D6A298E51F56 /* BodyEncoder.swift in Sources */,
+				4E4E9FE14E6FAD118B20F94F4CF55354 /* BodyFormat.swift in Sources */,
+				0B7F8BECB6F6F63BB14DB49E4FA07E1E /* ClosureAliases.swift in Sources */,
+				3AC097852FBD7D52D4535943EDE56579 /* Coder.swift in Sources */,
+				069775BAEC89A8DA571F5BD2F2D8053F /* Contracts.swift in Sources */,
+				388A7F27C350F4DC250C6456DFA6599E /* Extensions.swift in Sources */,
+				66D16DFC7B1AF2A91D2F4CB274D3253F /* KituraContracts-dummy.m in Sources */,
+				FA887736F4656B9071DFD1B90858B334 /* QueryDecoder.swift in Sources */,
+				6356FAFAC1E4AE60D2CF97B31578856C /* QueryEncoder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79576CC975C3C39B956219778F211AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C023B25320D0534B1CE0CC67E322E126 /* BlueECDSA.swift in Sources */,
+				7E86AC1039BEBBBA158B1823816B6C5D /* BlueHMAC.swift in Sources */,
+				7181D06D4801E846D040F651D80135D5 /* BlueRSA.swift in Sources */,
+				188A46AF1A69E8F247DC9853E2F0F3D4 /* Claims.swift in Sources */,
+				E580418EE74CFA2EC2F97156A5D930DD /* ClaimsMicroProfile.swift in Sources */,
+				42B03F89A57EC970A69139D9475443A4 /* ClaimsOpenID.swift in Sources */,
+				CB9DD194F73D60331E38D5C26D3F951C /* ClaimsStandardJWT.swift in Sources */,
+				EDD206DBCB8F6F7C9B664B266A35D42F /* Data+Base64URLEncoded.swift in Sources */,
+				A8F643A54D6BA1AD8A92351E130E28A1 /* Header.swift in Sources */,
+				3CECFB3A36E4ADC0BA6ABF1BC6D064C3 /* JWT.swift in Sources */,
+				3E5D6B053A1E947167604DCD6A250391 /* JWTDecoder.swift in Sources */,
+				8B9F4202A109DD25F1B03C033885E5AA /* JWTEncoder.swift in Sources */,
+				43568AE7DAB9639BB9BFD79D0FEC3E27 /* JWTError.swift in Sources */,
+				63AFF2CBF3C880EE554CB849B71B2778 /* JWTSigner.swift in Sources */,
+				EE4967E225267773DC34380A24C8F52C /* JWTVerifier.swift in Sources */,
+				023D622D74F27795FF7277C12AB3B86E /* NoneAlgorithm.swift in Sources */,
+				E251FC927A22E920ABA456EFA714F8D2 /* RSAKeyType.swift in Sources */,
+				8DDB74202F0C32C0CA9B7C49E88C0A7F /* SignerAlgorithm.swift in Sources */,
+				F126F81E6C491E4EC6017E8CB596A437 /* SwiftJWT-dummy.m in Sources */,
+				A927FCAB1451228EE777C3FD92DB31CD /* ValidateClaimsResult.swift in Sources */,
+				5B61A392E5470A5B63F250C88F8A4120 /* VerifierAlgorithm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		137A6BA975C5722E00FB457FACD0C4C7 /* PBXTargetDependency */ = {
+		0435F7EB91D38BE43A8A1239F10D579C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = JSONWebToken;
-			target = 04ACCD651C30E7B6FE864F0FFE983BA5 /* JSONWebToken */;
-			targetProxy = 572B9A10488B3F710C6B5FAE7266A425 /* PBXContainerItemProxy */;
+			name = SwiftJWT;
+			target = 50A1101C5B7AEC40C025C665C91607AC /* SwiftJWT */;
+			targetProxy = 2EAAA3CFB0622A7867B49CC2627E45DC /* PBXContainerItemProxy */;
+		};
+		1B3E5C81085C47D2208205268BE608EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KituraContracts;
+			target = 095C1594CAC7DD740572EBF2C3982443 /* KituraContracts */;
+			targetProxy = D9AED5B7DF8FC7EF6A9DC019847659D2 /* PBXContainerItemProxy */;
+		};
+		49325B0206B20CC33567A75C895BF656 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlueCryptor;
+			target = DC144A4132E1AF6D69F7C76CDD5EB738 /* BlueCryptor */;
+			targetProxy = 1652BAE4E13A5DCBA8DF26FBB7BBC370 /* PBXContainerItemProxy */;
+		};
+		6D74A8382313C739C35C88C90D7914C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlueCryptor;
+			target = DC144A4132E1AF6D69F7C76CDD5EB738 /* BlueCryptor */;
+			targetProxy = D574DDA55994617E064E65E86202EB57 /* PBXContainerItemProxy */;
+		};
+		7187DD6349E89DC2E7C89BFE3660593A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlueECC;
+			target = 5C44FC504F940D1183D97474C2ED000A /* BlueECC */;
+			targetProxy = F04EA57DF6A084F84C80C5F41E736334 /* PBXContainerItemProxy */;
+		};
+		A56653417B655960BCDB2F0864EC630E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LoggerAPI;
+			target = 6C515C5A46F015A439DE95C0780E82F9 /* LoggerAPI */;
+			targetProxy = 2F586889FF86513A92AE47DC4F7CE0EB /* PBXContainerItemProxy */;
+		};
+		B4F4AB9FE68303B306012FF85422C2DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KituraContracts;
+			target = 095C1594CAC7DD740572EBF2C3982443 /* KituraContracts */;
+			targetProxy = 16F7D194C8063F781A04D44E1EAB7DDC /* PBXContainerItemProxy */;
+		};
+		D75ECB5C1BBDB5F2A3AA12108CF59E4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LoggerAPI;
+			target = 6C515C5A46F015A439DE95C0780E82F9 /* LoggerAPI */;
+			targetProxy = D71B2838BB1BA7D81C53064BD411FBD6 /* PBXContainerItemProxy */;
+		};
+		DC5877A3ABC2AEAD45E4403917561777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlueRSA;
+			target = 768F34D6EB7071A48A28DE09F065197F /* BlueRSA */;
+			targetProxy = 7160F61FE04F68EEEF862D5C225738B9 /* PBXContainerItemProxy */;
+		};
+		DE1D5A1D666DD48C0A02C0A7E71D3C9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlueRSA;
+			target = 768F34D6EB7071A48A28DE09F065197F /* BlueRSA */;
+			targetProxy = D3A8930CE9545E2A9052818BFF142C98 /* PBXContainerItemProxy */;
+		};
+		F7D92E578BF0DCC7216B85DB86C499DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlueECC;
+			target = 5C44FC504F940D1183D97474C2ED000A /* BlueECC */;
+			targetProxy = AE88AA64606DE2CA66ED8E6AD07D4FB9 /* PBXContainerItemProxy */;
+		};
+		FC6248235785D6F0D9999361B173D6A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LoggerAPI;
+			target = 6C515C5A46F015A439DE95C0780E82F9 /* LoggerAPI */;
+			targetProxy = 2F31431980E50CDBF5E4E74830935AFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0377E769E3F8C85F26C194D5AEFE5A93 /* Debug */ = {
+		13126BEB321323DACA28496C4B0D252D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A434FDAC99F1660E87CBFD4A3A5A5AD /* Pods-Health Card.debug.xcconfig */;
+			baseConfigurationReference = 3B7E0C41B0C5F5FD01C3EBC17AFC9F52 /* BlueRSA.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -323,28 +1147,193 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Health Card/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/BlueRSA/BlueRSA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BlueRSA/BlueRSA-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Health Card/Pods-Health Card.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Health_Card;
+				MODULEMAP_FILE = "Target Support Files/BlueRSA/BlueRSA.modulemap";
+				PRODUCT_MODULE_NAME = CryptorRSA;
+				PRODUCT_NAME = CryptorRSA;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		323A24856F1A4871A780301AF5C02A2A /* Debug */ = {
+		1FB8BA50A94491963064AC700803F190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F66E24A54A16A405AAE8B970540B91E /* KituraContracts.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KituraContracts/KituraContracts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KituraContracts/KituraContracts-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KituraContracts/KituraContracts.modulemap";
+				PRODUCT_MODULE_NAME = KituraContracts;
+				PRODUCT_NAME = KituraContracts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		27A6CBD6E66E3E2BB17974F50B6BE0A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F5405D51D1566BA8921C9CA6623CAA2 /* BlueECC.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BlueECC/BlueECC-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BlueECC/BlueECC-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BlueECC/BlueECC.modulemap";
+				PRODUCT_MODULE_NAME = CryptorECC;
+				PRODUCT_NAME = CryptorECC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		423423E62183FF1F9F502795FA8C6A6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ED2A9F7452E7FDF7F259CBD112BBA59 /* SwiftJWT.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftJWT/SwiftJWT-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftJWT/SwiftJWT-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftJWT/SwiftJWT.modulemap";
+				PRODUCT_MODULE_NAME = SwiftJWT;
+				PRODUCT_NAME = SwiftJWT;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		49AAFFD951FC5E42CFF9601FDF26394E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B7E0C41B0C5F5FD01C3EBC17AFC9F52 /* BlueRSA.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BlueRSA/BlueRSA-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BlueRSA/BlueRSA-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BlueRSA/BlueRSA.modulemap";
+				PRODUCT_MODULE_NAME = CryptorRSA;
+				PRODUCT_NAME = CryptorRSA;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4CCEB87A51B29BB88F24BC02AE470088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F5405D51D1566BA8921C9CA6623CAA2 /* BlueECC.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BlueECC/BlueECC-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BlueECC/BlueECC-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BlueECC/BlueECC.modulemap";
+				PRODUCT_MODULE_NAME = CryptorECC;
+				PRODUCT_NAME = CryptorECC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4CE281642D6EE9FAB113046B4B6328A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,7 +1365,66 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		6DFA1578582149B7E24AD55CBA30F07A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -396,53 +1444,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		748170F03F598CFDB3EC688795B9BE2E /* Release */ = {
+		71BCAB9957CAADE3CC0C4E68813EF52F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 230A8AAF3D3F1DF6F9BB2DF10F759DC8 /* JSONWebToken.xcconfig */;
+			baseConfigurationReference = 9964D3A792391D77D41356D43D35DDA7 /* LoggerAPI.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JSONWebToken/JSONWebToken-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JSONWebToken/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JSONWebToken/JSONWebToken.modulemap";
-				PRODUCT_NAME = JWT;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		86320AF91A440E5436E0BBDA6B1BC80E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E28D0DB4DDF6D1525DAD1478CB0558D5 /* Pods-Health Card.release.xcconfig */;
-			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -453,89 +1472,30 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Health Card/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/LoggerAPI/LoggerAPI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LoggerAPI/LoggerAPI-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Health Card/Pods-Health Card.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Health_Card;
+				MODULEMAP_FILE = "Target Support Files/LoggerAPI/LoggerAPI.modulemap";
+				PRODUCT_MODULE_NAME = LoggerAPI;
+				PRODUCT_NAME = LoggerAPI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		CA33F186435244FD0FD5B7325332656C /* Release */ = {
+		8773D379AB1B0401D58DF7C551169B02 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9964D3A792391D77D41356D43D35DDA7 /* LoggerAPI.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		CFF13A118452B8A4D158DFC6392F39C8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 230A8AAF3D3F1DF6F9BB2DF10F759DC8 /* JSONWebToken.xcconfig */;
-			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -545,18 +1505,224 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JSONWebToken/JSONWebToken-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JSONWebToken/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/LoggerAPI/LoggerAPI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LoggerAPI/LoggerAPI-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JSONWebToken/JSONWebToken.modulemap";
-				PRODUCT_NAME = JWT;
+				MODULEMAP_FILE = "Target Support Files/LoggerAPI/LoggerAPI.modulemap";
+				PRODUCT_MODULE_NAME = LoggerAPI;
+				PRODUCT_NAME = LoggerAPI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A2D5724EB6BC236A125AED159C3AFBAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45EEE64B908E00EC598FC450E64DAC8B /* BlueCryptor.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BlueCryptor/BlueCryptor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BlueCryptor/BlueCryptor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BlueCryptor/BlueCryptor.modulemap";
+				PRODUCT_MODULE_NAME = Cryptor;
+				PRODUCT_NAME = Cryptor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CDB7C8FD255B38B67DA4013FA46F025B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8C7AD736E3F66243A5208BC0B01E79D /* Pods-Health Card.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Health Card/Pods-Health Card-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Health Card/Pods-Health Card.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D8EB167C24F9DA1BDE1C75CF36CDD832 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ED2A9F7452E7FDF7F259CBD112BBA59 /* SwiftJWT.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftJWT/SwiftJWT-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftJWT/SwiftJWT-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftJWT/SwiftJWT.modulemap";
+				PRODUCT_MODULE_NAME = SwiftJWT;
+				PRODUCT_NAME = SwiftJWT;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EC45ACE722AF7BD5D140F2204E164151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F66E24A54A16A405AAE8B970540B91E /* KituraContracts.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KituraContracts/KituraContracts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KituraContracts/KituraContracts-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KituraContracts/KituraContracts.modulemap";
+				PRODUCT_MODULE_NAME = KituraContracts;
+				PRODUCT_NAME = KituraContracts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F2A1CA3DD81123704104858376D1F5B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45EEE64B908E00EC598FC450E64DAC8B /* BlueCryptor.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BlueCryptor/BlueCryptor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BlueCryptor/BlueCryptor-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BlueCryptor/BlueCryptor.modulemap";
+				PRODUCT_MODULE_NAME = Cryptor;
+				PRODUCT_NAME = Cryptor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FE212146F021B5941116EF0C661FD61C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E93E1D13EBD5E70D2EFAF05233B46F2B /* Pods-Health Card.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Health Card/Pods-Health Card-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Health Card/Pods-Health Card.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -566,34 +1732,79 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		1F502A7468EAE99D0DE3E997E3645F31 /* Build configuration list for PBXNativeTarget "Pods-Health Card" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				323A24856F1A4871A780301AF5C02A2A /* Debug */,
-				CA33F186435244FD0FD5B7325332656C /* Release */,
+				FE212146F021B5941116EF0C661FD61C /* Debug */,
+				CDB7C8FD255B38B67DA4013FA46F025B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E489BE1C4C7841446D879318A419AAE2 /* Build configuration list for PBXNativeTarget "Pods-Health Card" */ = {
+		461730F03B062488E3BD351B45557208 /* Build configuration list for PBXNativeTarget "BlueCryptor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0377E769E3F8C85F26C194D5AEFE5A93 /* Debug */,
-				86320AF91A440E5436E0BBDA6B1BC80E /* Release */,
+				A2D5724EB6BC236A125AED159C3AFBAA /* Debug */,
+				F2A1CA3DD81123704104858376D1F5B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5B0B4ADA14C207585034DB73CDE6843 /* Build configuration list for PBXNativeTarget "JSONWebToken" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CFF13A118452B8A4D158DFC6392F39C8 /* Debug */,
-				748170F03F598CFDB3EC688795B9BE2E /* Release */,
+				6DFA1578582149B7E24AD55CBA30F07A /* Debug */,
+				4CE281642D6EE9FAB113046B4B6328A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FD6E7ECA3DFDB16B06FE0DBEB9D545E /* Build configuration list for PBXNativeTarget "BlueRSA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13126BEB321323DACA28496C4B0D252D /* Debug */,
+				49AAFFD951FC5E42CFF9601FDF26394E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A351D0747B1B82964300FB40A695E057 /* Build configuration list for PBXNativeTarget "SwiftJWT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8EB167C24F9DA1BDE1C75CF36CDD832 /* Debug */,
+				423423E62183FF1F9F502795FA8C6A6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A49657FF9FF73D768771365693C33CE7 /* Build configuration list for PBXNativeTarget "BlueECC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CCEB87A51B29BB88F24BC02AE470088 /* Debug */,
+				27A6CBD6E66E3E2BB17974F50B6BE0A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9CF9B62714C6C67AF230204584754A7 /* Build configuration list for PBXNativeTarget "KituraContracts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB8BA50A94491963064AC700803F190 /* Debug */,
+				EC45ACE722AF7BD5D140F2204E164151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBC49895EBA5A9EDA85170DFAA817F41 /* Build configuration list for PBXNativeTarget "LoggerAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71BCAB9957CAADE3CC0C4E68813EF52F /* Debug */,
+				8773D379AB1B0401D58DF7C551169B02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

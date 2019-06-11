@@ -86,8 +86,8 @@ class AppointmentViewController: UIViewController, JTAppleCalendarViewDelegate, 
         formatter.timeZone = Calendar.current.timeZone;
         formatter.locale = Calendar.current.locale;
         
-        let startDate = formatter.date(from: "2018 01 01")!;
-        let endDate = formatter.date(from: "2018 12 31")!;
+        let startDate = formatter.date(from: "2019 06 01")!;
+        let endDate = formatter.date(from: "2019 12 31")!;
         var parameters = ConfigurationParameters(startDate: startDate, endDate: endDate);
         parameters.firstDayOfWeek = DaysOfWeek.monday;
         return parameters;
@@ -134,6 +134,7 @@ class AppointmentViewController: UIViewController, JTAppleCalendarViewDelegate, 
     @IBAction func logoutFromCalendar(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
         UserDefaults.standard.set("", forKey: "citizenCPR");
+        UserDefaults.standard.set(false, forKey:"showedBiometricPrompt");
         self.performSegue(withIdentifier: "backToMainFromCalendar", sender: self);
     }
     

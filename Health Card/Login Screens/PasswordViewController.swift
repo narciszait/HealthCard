@@ -30,8 +30,6 @@ class PasswordViewController: UIViewController, UITextFieldDelegate, URLSessionD
         super.viewDidLoad();
         self.navigationController?.navigationBar.isHidden = false;
         
-        
-        
         loginSession = Foundation.URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: OperationQueue.main);
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(getPatientInfo));
@@ -95,7 +93,6 @@ class PasswordViewController: UIViewController, UITextFieldDelegate, URLSessionD
                     self.errorInHttpResponse = true;
                     DispatchQueue.main.async {
                         self.showAlerts(title: "Error", message: "Could not login. \n Check username and password");
-//                        SVProgressHUD.dismiss();
                     }
                 } else {
                     if let returnedJSON = (try? JSON(data: data)) {
@@ -136,14 +133,3 @@ class PasswordViewController: UIViewController, UITextFieldDelegate, URLSessionD
     }
     
 }
-
-//                    let jsonSwifty = try? JSON(data:data);
-//                    print(jsonSwifty!);
-////                    let json = try? JSONSerialization.jsonObject(with: data, options: []) as! [String: Any];
-//                    print(jsonSwifty!["request"]["url"]);
-//
-//                    self.cprNr = jsonSwifty!["cpr"].stringValue;
-//                    self.nemIDChallenge = jsonSwifty!["nemid"].stringValue;
-//                    self.token = jsonSwifty!["token"].stringValue;
-////                    let nextCall = try? JSONSerialization.jsonObject(with: json!["request"]!, options: []) as! [String: Any];
-////                    self.next =

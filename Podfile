@@ -6,6 +6,7 @@ target 'Health Card' do
   use_frameworks!
 
   # Pods for Health Card
-  pod 'JSONWebToken'
+  # pod 'JSONWebToken'
+  # pod 'SwiftJWT'
 
 end

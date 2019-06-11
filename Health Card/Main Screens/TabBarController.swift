@@ -34,6 +34,24 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         self.view.setNeedsLayout();
+        
+//        if (UserDefaults.standard.bool(forKey: "firstLoginSuccessful")) {
+//            if (!UserDefaults.standard.bool(forKey: "showedBiometricPrompt")) {
+//                let alert = UIAlertController(title: "Use biometric?", message: "Do you want to use your phone's biometrics to login next time? \n You can use the biometric login until you log out of the application", preferredStyle: .alert)
+//                
+//                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (alertAction) in
+//                    print("Yes to biometric");
+//                    UserDefaults.standard.set(true, forKey: "firstLoginSuccessful");
+//                    UserDefaults.standard.set(true, forKey: "showedBiometricPrompt");
+//                }));
+//                alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (alertAction) in
+//                    print("No to biometric");
+//                    UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
+//                }))
+//                
+//                self.present(alert, animated: true);
+//            }
+//        }
     }
     
     func getPatientInfo(){
@@ -51,57 +69,55 @@ class TabBarController: UITabBarController, URLSessionDelegate, URLSessionDataDe
         } else {
             cpr = cprNrFromUserDefaults!;
         }
-//        if let cpr = cprNr  {
-            var request = URLRequest(url: URL(string: "https://pacific-reaches-57767.herokuapp.com/api/patient/\(cpr)")!); //localhost:3000/api/patient/cprNr
-            request.httpMethod = "GET";
-            request.setValue(("application/json"), forHTTPHeaderField: "Content-Type");
-            request.setValue("Bearer \(self.token!)", forHTTPHeaderField: "Authorization");
-            print("request to \(request) + \(self.token)");
-            print("1");
-            
-            loginTask = loginSession.dataTask(with: request, completionHandler: { (data, response, error) in
-                print("1.5");
-                guard let data = data, error == nil else {
-                    print("error= \(String(describing: error))");
+
+        var request = URLRequest(url: URL(string: "https://pacific-reaches-57767.herokuapp.com/api/patient/\(cpr)")!); //localhost:3000/api/patient/cprNr
+        request.httpMethod = "GET";
+        request.setValue(("application/json"), forHTTPHeaderField: "Content-Type");
+        request.setValue("Bearer \(self.token!)", forHTTPHeaderField: "Authorization");
+        
+        loginTask = loginSession.dataTask(with: request, completionHandler: { (data, response, error) in
+            print("1.5");
+            guard let data = data, error == nil else {
+                print("error= \(String(describing: error))");
+                DispatchQueue.main.async {
+                    self.showAlerts(title: "Error", message: "Error: \(error!.localizedDescription) \n Try again later.");
+                    SVProgressHUD.dismiss();
+                }
+                return
+            };
+            print("2");
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 401 {
+                
+                DispatchQueue.main.async {
+                    self.showAlerts(title: "Error", message: "Could not get user data. \n Try again later");
+                }
+            } else {
+                print("3");
+                if let returnedJSON = (try? JSON(data: data)) {
+                    
+                    self.doctor = Doctor(name: returnedJSON["doctor"]["name"].string!, address: returnedJSON["doctor"]["address"].string!, phone: returnedJSON["doctor"]["phone"].string!);
+                    
+                    self.patient = Patient(cpr: returnedJSON["_cpr"].stringValue, address: returnedJSON["address"].string!, name: returnedJSON["name"].string!, lastName: returnedJSON["last_name"].string!);
+                    
+
+                    for (index,subJson):(String, JSON) in returnedJSON["history"] {
+                        self.history.append(History(diagnostic: subJson["diagnostic"].string!, period: subJson["period"].string!, status: subJson["status"].string!));
+                    }
+
+                    for (index,subJson):(String, JSON) in returnedJSON["receipt"] {
+                        self.treatment.append(Treatment(medication: subJson["medication"].string!, repeatInterval: subJson["repeat"].string!, endPeriod: subJson["endperiod"].string!));
+                    }
+
                     DispatchQueue.main.async {
-                        self.showAlerts(title: "Error", message: "Error: \(error!.localizedDescription) \n Try again later.");
+                        self.view.setNeedsLayout();
+                        UIApplication.shared.isNetworkActivityIndicatorVisible = false;
                         SVProgressHUD.dismiss();
                     }
-                    return
-                };
-                print("2");
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode == 401 {
-                    print ("status should be 200, but is \(httpStatus.statusCode)");
-                    DispatchQueue.main.async {
-                        self.showAlerts(title: "Error", message: "Could not get user data. \n Try again later");
-                    }
-                } else {
-                    print("3");
-                    if let returnedJSON = (try? JSON(data: data)) {
-                        print(returnedJSON);
-                        self.doctor = Doctor(name: returnedJSON["doctor"]["name"].string!, address: returnedJSON["doctor"]["address"].string!, phone: returnedJSON["doctor"]["phone"].string!);
-                        print(self.doctor);
-                        self.patient = Patient(cpr: returnedJSON["_cpr"].stringValue, address: returnedJSON["address"].string!, name: returnedJSON["name"].string!, lastName: returnedJSON["last_name"].string!);
-                        print(self.patient);
-
-                        for (index,subJson):(String, JSON) in returnedJSON["history"] {
-                            self.history.append(History(diagnostic: subJson["diagnostic"].string!, period: subJson["period"].string!, status: subJson["status"].string!));
-                        }
-
-                        for (index,subJson):(String, JSON) in returnedJSON["receipt"] {
-                            self.treatment.append(Treatment(medication: subJson["medication"].string!, repeatInterval: subJson["repeat"].string!, endPeriod: subJson["endperiod"].string!));
-                        }
-
-                        DispatchQueue.main.async {
-                            self.view.setNeedsLayout();
-                            UIApplication.shared.isNetworkActivityIndicatorVisible = false;
-                            SVProgressHUD.dismiss();
-                        }
-                    }
                 }
-            });
-            loginTask.resume();
-//        }
+            }
+        });
+        loginTask.resume();
+
         
     }
     

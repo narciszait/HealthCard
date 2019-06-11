@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JWT
+import SwiftJWT
 import LocalAuthentication
 
 class InitialViewController: UIViewController {
@@ -23,8 +23,9 @@ class InitialViewController: UIViewController {
     }
     
     @objc func getPatientInfo(){
-        let string = JWT.encode(claims: ["":""], algorithm: .hs256("SecretKey".data(using: .utf8)!));
-        print(string);
+//        let string = JWT.encode(claims: ["":""], algorithm: .hs256("SecretKey".data(using: .utf8)!));
+//        let string = JWTSigner.hs256(key: Data(base64Encoded: "SecretKey")!)
+//        print(string);
         self.performSegue(withIdentifier: "touchIDSegue", sender: self);
     }
     
@@ -44,58 +45,64 @@ class InitialViewController: UIViewController {
     
     //self.performSegue(withIdentifier: "touchIDSegue", sender: self);
     @IBAction func loginAction(_ sender: Any) {
-        if (UserDefaults.standard.value(forKey: "firstLoginSuccessful") as? Bool ?? false){
-//            authenticateUserUsingTouchId()
-            let laContext = LAContext();
-            let touchIDAvailable = laContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil);
-            
-            if touchIDAvailable {
-                laContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authenticate") { (authenticated, error) in
-                    if authenticated {
-                        DispatchQueue.main.async{
-                            self.performSegue(withIdentifier: "touchIDSegue", sender: self);
-                        }
-                        
-                    } else {
-                        print(error?.localizedDescription);
-                        let laError = error as! LAError;
-                        if laError.code == .userFallback {
-                            print("fallback");
-                            DispatchQueue.main.async{
-                                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
-                            }
-                            
-                        }
-                        if laError.code == .userCancel {
-                            print("cancel");
-                            DispatchQueue.main.async{
-                                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
-                            }
-                        }
-                        if laError.code == .authenticationFailed {
-                            print("failed");
-                            DispatchQueue.main.async{
-                                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
-                            }
-                        }
-                    }
-                }
-            } else {
-                print("no touch id");
-                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
-            }
-        } else {
+//        if (UserDefaults.standard.bool(forKey: "firstLoginSuccessful")){
+////            authenticateUserUsingTouchId()
+//            if (UserDefaults.standard.bool(forKey: "showedBiometricPrompt")){
+//                let laContext = LAContext();
+//                let touchIDAvailable = laContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil);
+//
+//                if touchIDAvailable {
+//                    laContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Please authenticate") { (authenticated, error) in
+//                        if authenticated {
+//                            DispatchQueue.main.async{
+//                                self.performSegue(withIdentifier: "touchIDSegue", sender: self);
+//                            }
+//
+//                        } else {
+//                            print(error?.localizedDescription);
+//                            let laError = error as! LAError;
+//                            if laError.code == .userFallback {
+//                                print("fallback");
+//                                DispatchQueue.main.async{
+//                                    self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+//                                }
+//
+//                            }
+//                            if laError.code == .userCancel {
+//                                print("cancel");
+//                                DispatchQueue.main.async{
+//                                    self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+//                                }
+//                            }
+//                            if laError.code == .authenticationFailed {
+//                                print("failed");
+//                                DispatchQueue.main.async{
+//                                    self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+//                                }
+//                            }
+//                        }
+//                    }
+//                } else {
+//                    print("no touch id");
+//                    self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+//                }
+//            }
+//            else {
+//                self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
+//            }
+//        }
+//        else {
             self.performSegue(withIdentifier: "showPasswordScreenSegue", sender: self);
-        }
+//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "touchIDSegue" {
-            let controller = segue.destination as! TabBarController
-            controller.cprNr = UserDefaults.standard.value(forKey: "citizenCPR") as? String;
-            controller.token = JWT.encode(claims: ["":""], algorithm: .hs256("SecretKey".data(using: .utf8)!));
-            print("moving to main");
-        }
+//        if segue.identifier == "touchIDSegue" {
+//            let controller = segue.destination as! TabBarController
+//            controller.cprNr = UserDefaults.standard.value(forKey: "citizenCPR") as? String;
+//            controller.token = JWTSigner.hs256(key: Data(base64Encoded: "SecretKey")!) //JWT.encode(claims: ["":""], algorithm: .hs256("SecretKey".data(using: .utf8)!));
+//            print("moving to main");
+//        }
     }
     
     @IBAction func segueToMe(segue: UIStoryboardSegue) {
@@ -104,14 +111,4 @@ class InitialViewController: UIViewController {
         UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
         UserDefaults.standard.set("", forKey: "citizenCPR");
     }
-    
-//    override func segueForUnwinding(to toViewController: UIViewController, from fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
-//        if let id = identifier {
-//            if id == "returnToMainViewController" {
-//                let unwindSegue = UIStoryboardUnwindSegueFromRight(identifier: id, source: fromViewController, destination: toViewController)
-//                return unwindSegue
-//            }
-//        }
-//        return super.segueForUnwinding(to: toViewController, from: fromViewController, identifier: identifier)!
-//    }
 }

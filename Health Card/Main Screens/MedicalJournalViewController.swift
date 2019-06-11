@@ -42,6 +42,7 @@ class MedicalJournalViewController: UIViewController, UITableViewDelegate, UITab
     @IBAction func logoutFromHistory(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "firstLoginSuccessful");
         UserDefaults.standard.set("", forKey: "citizenCPR");
+        UserDefaults.standard.set(false, forKey:"showedBiometricPrompt");
         self.performSegue(withIdentifier: "backToMainFromHistory", sender: self);
     }
     
