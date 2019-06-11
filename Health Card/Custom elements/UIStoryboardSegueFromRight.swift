@@ -20,7 +20,7 @@ class UIStoryboardSegueFromRight: UIStoryboardSegue {
         
         UIView.animate(withDuration: 1.0,
                                    delay: 0.0,
-                                   options: UIViewAnimationOptions.curveEaseInOut,
+                                   options: UIView.AnimationOptions.curveEaseInOut,
                                    animations: {
                                     dst.view.transform = CGAffineTransform(translationX: 0, y: 0);
                                     let effectView = UIVisualEffectView()
@@ -50,7 +50,7 @@ class UIStoryboardUnwindSegueFromRight: UIStoryboardSegue {
         
         UIView.animate(withDuration: 0.25,
                                    delay: 0.0,
-                                   options: UIViewAnimationOptions.curveEaseInOut,
+                                   options: UIView.AnimationOptions.curveEaseInOut,
                                    animations: {
                                     src.view.transform = CGAffineTransform(translationX: src.view.frame.size.width, y: 0)
                                     },

@@ -228,7 +228,7 @@ open class IQKeyboardReturnKeyHandler: NSObject , UITextFieldDelegate, UITextVie
                 textView.delegate = modal.textViewDelegate
             }
             
-            if let index = textFieldInfoCache.index(where: { $0.textFieldView == view}) {
+            if let index = textFieldInfoCache.firstIndex(where: { $0.textFieldView == view}) {
 
                 textFieldInfoCache.remove(at: index)
             }
@@ -300,7 +300,7 @@ open class IQKeyboardReturnKeyHandler: NSObject , UITextFieldDelegate, UITextVie
         }
 
         //Getting index of current textField.
-        if let index = textFields.index(of: view) {
+        if let index = textFields.firstIndex(of: view) {
             //If it is not last textField. then it's next object becomeFirstResponder.
             if index < (textFields.count - 1) {
                 
@@ -380,7 +380,7 @@ open class IQKeyboardReturnKeyHandler: NSObject , UITextFieldDelegate, UITextVie
     }
     
     @available(iOS 10.0, *)
-    open func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+    open func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
 
         var aDelegate : UITextFieldDelegate? = delegate
         

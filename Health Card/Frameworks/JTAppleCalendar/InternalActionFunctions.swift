@@ -65,7 +65,7 @@ extension JTAppleCalendarView {
         
         super.dataSource = self
         super.delegate = self
-        decelerationRate = UIScrollViewDecelerationRateFast
+        decelerationRate = UIScrollView.DecelerationRate.fast
         
         #if os(iOS)
             if isPagingEnabled {
@@ -76,7 +76,7 @@ extension JTAppleCalendarView {
         #endif
     }
     
-    func scrollTo(indexPath: IndexPath, triggerScrollToDateDelegate: Bool, isAnimationEnabled: Bool, position: UICollectionViewScrollPosition, extraAddedOffset: CGFloat, completionHandler: (() -> Void)?) {
+    func scrollTo(indexPath: IndexPath, triggerScrollToDateDelegate: Bool, isAnimationEnabled: Bool, position: UICollectionView.ScrollPosition, extraAddedOffset: CGFloat, completionHandler: (() -> Void)?) {
         isScrollInProgress = true
         if let validCompletionHandler = completionHandler { scrollDelayedExecutionClosure.append(validCompletionHandler) }
         self.triggerScrollToDateDelegate = triggerScrollToDateDelegate
@@ -97,7 +97,7 @@ extension JTAppleCalendarView {
                                  completionHandler: (() -> Void)? = nil) {
         if !calendarViewLayout.thereAreHeaders { return }
         let indexPath = IndexPath(item: 0, section: section)
-        guard let attributes = calendarViewLayout.layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionHeader, at: indexPath) else { return }
+        guard let attributes = calendarViewLayout.layoutAttributesForSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, at: indexPath) else { return }
         
         isScrollInProgress = true
         if let validHandler = completionHandler { scrollDelayedExecutionClosure.append(validHandler) }
@@ -127,7 +127,7 @@ extension JTAppleCalendarView {
                       indexPath: IndexPath? = nil,
                       triggerScrollToDateDelegate: Bool = true,
                       isAnimationEnabled: Bool,
-                      position: UICollectionViewScrollPosition? = .left,
+                      position: UICollectionView.ScrollPosition? = .left,
                       extraAddedOffset: CGFloat = 0,
                       completionHandler: (() -> Void)?) {
         

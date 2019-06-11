@@ -46,7 +46,7 @@ class BackgroundVideo {
         
         if self.hasBeenUsed {
             NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
-            NotificationCenter.default.removeObserver(self, name: .UIApplicationWillEnterForeground, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
         }
         
     }
@@ -71,7 +71,7 @@ class BackgroundVideo {
         
         // prevent video from disturbing audio services from other apps
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category(rawValue: convertFromAVAudioSessionCategory(AVAudioSession.Category.ambient)))
             
         }
         catch {
@@ -83,14 +83,14 @@ class BackgroundVideo {
         /// Loop the video when it ends using NSNotifcationCenter
         NotificationCenter.default.addObserver(self, selector: #selector(self.loopVideo), name: .AVPlayerItemDidPlayToEndTime, object: nil)
         // call the background video again if your application goes to background and foreground again
-        NotificationCenter.default.addObserver(self, selector: #selector(self.loopVideo), name: .UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.loopVideo), name: UIApplication.willEnterForegroundNotification, object: nil)
         self.hasBeenUsed = true
     
     }
     
     // A function that will restarts the video for the purpose of looping
    @objc private func loopVideo() {
-        self.backGroundPlayer?.seek(to: kCMTimeZero)
+        self.backGroundPlayer?.seek(to: CMTime.zero)
         self.backGroundPlayer?.play()
     }
     
@@ -105,4 +105,9 @@ class BackgroundVideo {
     }
     
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }
