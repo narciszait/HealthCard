@@ -118,6 +118,11 @@ class NemIDViewController: UIViewController, SlideButtonDelegate, URLSessionDele
             controller.token = self.token;
             controller.nextCall = self.nextCall;
             controller.view.setNeedsLayout();
+            
+            if #available(iOS 13.0, *) {
+                controller.isModalInPresentation = true
+                controller.modalPresentationStyle = .fullScreen
+            }
         }
     }
 
